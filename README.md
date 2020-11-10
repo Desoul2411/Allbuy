@@ -61,8 +61,8 @@
 ```
 
 ## Gulp
-`gulp build` - собрать проект
-`gulp dev` - сборка проекта в режиме разработки (watch + browserSync)
-`gulp lint` - проверка js 
-`gulp styles` - сборка/обновление только стилевых файлов
-`gulp clean` - очистка public
+- `gulp build` - собрать проект
+- `gulp dev` - сборка проекта в режиме разработки (watch + browserSync)
+- `gulp lint` - проверка js 
+- `gulp styles` - сборка/обновление только стилевых файлов
+- `gulp clean` - очистка public
