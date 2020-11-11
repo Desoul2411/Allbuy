@@ -65,4 +65,5 @@
 - `gulp dev` - сборка проекта в режиме разработки (watch + browserSync)
 - `gulp lint` - проверка js 
 - `gulp styles` - сборка/обновление только стилевых файлов
+- `gulp images` - оптимизация картинок
 - `gulp clean` - очистка public
