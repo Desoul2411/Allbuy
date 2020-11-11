@@ -1,2 +1,0 @@
-
-let badLine = 6
