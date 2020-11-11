@@ -1,0 +1,61 @@
+
+.header {
+    &__top {
+        background-color: $darkBackround;
+    }
+
+    &__top-content {
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__top-logo {
+        margin-right: 60px;
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+    }
+
+    &__search-icon {
+
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__bottom {
+        background-color: #FFFFFF;
+    }
+
+    &__bottom-content {
+        padding: 15px 0;
+    }
+}
+
+.main-menu {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    &__item {
+        display: flex;
+        align-items: center
+    }
+
+    &__item-image {
+        margin-right: 10px;
+    }
+}
