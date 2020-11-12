@@ -1,36 +1,38 @@
-body {
-  /* color: red;
-  font-size: 48px;
-  border-color: salmon;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  transition: transform 1s;
-  border-top: 6px solid crimson;
-  background: crimson;
-  background-image: url("../../assets/images/bg.jpg");
-  background-size: cover;
 
-  & h1 {
-    color: gold;
-    border-bottom: 5px solid blue;
-    padding: 50px;
-    margin-bottom: 50px;
-    font-size: 60px;
+  @font-face {
+    font-family: 'Acrom';
+    src: url("../../assets/fonts/Acrom-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Acrom-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Acrom';
+    src: url("../../assets/fonts/Acrom-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/Acrom-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Acrom';
+    src: url('../../assets/fonts/Acrom-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/Acrom-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
   }
 
-  & p {
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    line-height: 1.2;
-  } */
 
-  .container {
-    margin: 0 auto;
-    width: 95.83%;
+  body {
+    font-family: Acrom, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: #5A5A5A;
+  
   }
-}
+
+  

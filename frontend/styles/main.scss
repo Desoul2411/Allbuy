@@ -5,4 +5,14 @@
 @import "abstracts/mixins";
 @import "abstracts/functions";
 
+@import "elements/buttons";
+@import "elements/headings";
+@import "elements/paragraphs";
+@import "elements/inputs";
+@import "elements/links";
+
+
+
+
 @import "components/header.scss";
+@import "components/containers.scss";

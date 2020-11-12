@@ -1,0 +1,19 @@
+@mixin acrom-normal(){
+    font-family: Acrom, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin acrom-500(){
+    font-family: Acrom, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@mixin acrom-bold(){
+    font-family: Acrom, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
