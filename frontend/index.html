@@ -2,6 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
         <title>Title</title>
         <link rel="stylesheet" href="styles/main.css">
     </head>
@@ -10,6 +11,7 @@
             <div class="header__top">
                 <div class="container">
                     <div class="header__top-content">
+                        <span class="header__open-menu-burger"></span>
                         <div class="header__left">
                             <a href="index.html" class="header__logo-link">
                                 <svg class="header__top-logo" width="139" height="36" viewBox="0 0 139 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +27,11 @@
                                     <path d="M121.11 19.224L118.052 9.81818H121.408L122.937 14.8451L124.307 9.81818H127.524L124.526 19.224V25.7236H121.11V19.224Z" fill="white"/>
                                 </svg>
                             </a>
-                            <div class="header__search">
+
+                            <div class="header__search" data-da="header__top-content,3,768">
+                                <svg class="header__search-mobile-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.7243 18.2609L14.8255 13.2919C16.1146 11.8012 16.7592 10.0621 16.7592 8.07453C16.7592 3.60248 13.0206 0 8.37961 0C3.7386 0 0 3.60248 0 8.07453C0 12.5466 3.7386 16.1491 8.37961 16.1491C10.0555 16.1491 11.7315 15.6522 13.1495 14.6584L18.0484 19.6273C18.3062 19.8758 18.5641 20 18.8219 20C19.0797 20 19.3376 19.8758 19.5954 19.7516C20.1111 19.2547 20.1111 18.6335 19.7243 18.2609ZM8.37961 2.23602C11.7315 2.23602 14.5676 4.84472 14.5676 8.19876C14.5676 11.5528 11.8604 14.1615 8.37961 14.1615C4.89885 14.1615 2.19159 11.5528 2.19159 8.19876C2.19159 4.84472 5.02777 2.23602 8.37961 2.23602Z" fill="#FFFFFF"/>
+                                </svg>
                                 <form class="header__search-form" action="#">
                                     <button class="header__search-submit-button" type="submit">
                                         <svg class="header__search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +43,7 @@
                             </div>
                         </div>
                         <div class="header__right">
-                            <div class="header__select-city">
+                            <div class="header__select-city" data-da="header__top-content,4,576">
                                 <svg class="header__select-city-icon" width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7.00024 0.443962C3.13367 0.443962 0 3.13699 0 6.45941C0 11.7456 7.00024 17.4766 7.00024 17.4766C7.00024 17.4766 14 11.745 14 6.45941C14.0002 3.13699 10.8668 0.443962 7.00024 0.443962ZM7.00024 10.2551C4.56064 10.2551 2.58312 8.55541 2.58312 6.45901C2.58312 4.36301 4.56064 2.66349 7.00024 2.66349C9.43984 2.66349 11.4171 4.36301 11.4171 6.45901C11.4171 8.55541 9.43984 10.2551 7.00024 10.2551Z" fill="white"/>
                                 </svg> 
@@ -67,7 +73,7 @@
             <div class="header__bottom">
                 <div class="container">
                     <div class="header__bottom-content">
-                        <nav class="main-menu">
+                        <nav class="main-menu" data-da="header__bottom,0,576" >
                             <svg class="main-menu__arrow-left" width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 2L3 10.5L11 19" stroke="#858585" stroke-width="4"/>
                             </svg>
@@ -141,6 +147,12 @@
                 </div>
             </div>
         </header>
+        <main class="main main_main-page">
+
+        </main>
+        <script src="assets/libs/move-elements.js"></script>
+        <script src="assets/libs/easy-smooth-scroll-easing.js"></script>
         <script src="js/main.js"></script>
+
     </body>
 </html>
