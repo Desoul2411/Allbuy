@@ -63,6 +63,126 @@
                                 </button>
                                 <input type="text" class="header__search-input" placeholder="Поиск товаров для дома">
                             </form>
+                            <div class="search-modal-overlay"></div>
+                            <div class="search-modal">
+                                <div class="search-modal__search-input-block">
+                                    <button class="search-modal__back-arrow-button">
+                                        <svg class="search-modal__back-arrow-icon" width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 2L3 10.5L11 19" stroke="#353535" stroke-width="4"/>
+                                        </svg>                                            
+                                    </button>
+                                    <form action="#" class="search-modal__search-input-form">
+                                        <svg class="search-modal__search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.7243 18.2609L14.8255 13.2919C16.1146 11.8012 16.7592 10.0621 16.7592 8.07453C16.7592 3.60248 13.0206 0 8.37961 0C3.7386 0 0 3.60248 0 8.07453C0 12.5466 3.7386 16.1491 8.37961 16.1491C10.0555 16.1491 11.7315 15.6522 13.1495 14.6584L18.0484 19.6273C18.3062 19.8758 18.5641 20 18.8219 20C19.0797 20 19.3376 19.8758 19.5954 19.7516C20.1111 19.2547 20.1111 18.6335 19.7243 18.2609ZM8.37961 2.23602C11.7315 2.23602 14.5676 4.84472 14.5676 8.19876C14.5676 11.5528 11.8604 14.1615 8.37961 14.1615C4.89885 14.1615 2.19159 11.5528 2.19159 8.19876C2.19159 4.84472 5.02777 2.23602 8.37961 2.23602Z" fill="#353535"/>
+                                        </svg>                                            
+                                        <input type="text" name="search_input" class="search-modal__search-input" placeholder="Поиск товаров для дома">
+                                    </form>
+                                    <button class="search-modal__clear-button">
+                                        <svg class="search-modal__clear-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 2L8 8M14 14L8 8M8 8L14 2L2 14" stroke="#353535" stroke-width="4"/>
+                                        </svg>                                                                                    
+                                    </button>
+                                </div>
+                                <div class="search-modal__search-results">
+                                    <ul class="search-modal__search-results-groups">
+                                        <li class="search-modal__search-results-group">
+                                            <span class="search-modal__results-group-title">
+                                                Рубрики
+                                            </span>
+                                            <ul class="search-modal__results-group-list">
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Бурение скважин</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Роторное бурение скважин</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Бурение под абиссинский колодец</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Ремонт скважин</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Бурение скважин</a>
+                                                </li>
+                                            </ul>
+                                            <span class="search-modal__show-more-search-items">
+                                                Показать ещё 
+                                                <svg class="search-modal__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="5" height="5" fill="#5C5C5C" />
+                                                    <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                                    <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="search-modal__search-results-group">
+                                            <span class="search-modal__results-group-title">
+                                                Компании
+                                            </span>
+                                            <ul class="search-modal__results-group-list">
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">KOTLOFF.BY</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Надёжные котлы</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Юстон котлы</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Ferroli</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">ООО КотловБай</a>
+                                                </li>
+                                            </ul>
+                                            <span class="search-modal__show-more-search-items">
+                                                Показать ещё 
+                                                <svg class="search-modal__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="5" height="5" fill="#5C5C5C" />
+                                                    <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                                    <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="search-modal__search-results-group">
+                                            <span class="search-modal__results-group-title">
+                                                Товар
+                                            </span>
+                                            <ul class="search-modal__results-group-list">
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Тепло и уют вашего дома с твердотопливным котлом "Атмос"</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Котёл N1</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Котёл N2</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Котёл N3</a>
+                                                </li>
+                                                <li class="search-modal__results-group-list-item">
+                                                    <a href="#" class="search-modal__results-group-list-link">Котёл N4</a>
+                                                </li>
+                                            </ul>
+                                            <span class="search-modal__show-more-search-items">
+                                                Показать ещё 
+                                                <svg class="search-modal__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="5" height="5" fill="#5C5C5C" />
+                                                    <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                                    <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                                                </svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="header__right">
@@ -192,6 +312,186 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Магазины
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Прихожие
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Гардеробные
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Спальни
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Обеденные столы
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ортопедические матрасы
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение скважин
+                                    </a>
+                                </li>
+                                <li>
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                                    </svg>
+                                </li>
+                            </ul>
+                            <ul class="main-submenu__column">
+                                <li class="main-submenu__column-headline">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Услуги
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт коттеджей
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт под ключ
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Дизайн офиса
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Клининг
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт окон ПВХ
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение скважин
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Обустройство скважины
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Роторное бурение скважин
+                                    </a>
+                                </li>
+                                <li>
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                                    </svg>
+                                </li>
+                            </ul>
+                            <ul class="main-submenu__column">
+                                <li class="main-submenu__column-headline">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Буровые работы
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение скважин
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Обустройство скважины
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Роторное бурение скважин
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
+                                <li>
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                                    </svg>
+                                </li>
+                            </ul>
+                            <ul class="main-submenu__column">
+                                <li class="main-submenu__column-headline">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Буровые работы
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение скважин
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Обустройство скважины
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Роторное бурение скважин
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
+                                <li>
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                                    </svg>
+                                </li>
+                            </ul>
+                            <ul class="main-submenu__column">
+                                <li class="main-submenu__column-headline">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
                                         Мебель
                                     </a>
                                 </li>
@@ -221,7 +521,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -261,7 +561,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                   <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -301,7 +601,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                   <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -341,167 +641,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
-                                    </svg>
-                                </li>
-                            </ul>
-                            <ul class="main-submenu__column">
-                                <li class="main-submenu__column-headline">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Прихожие
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Гардеробные
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Спальни
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Обеденные столы
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Ортопедические матрасы
-                                    </a>
-                                </li>
-                                <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
-                                    </svg>
-                                </li>
-                            </ul>
-                            <ul class="main-submenu__column">
-                                <li class="main-submenu__column-headline">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Услуги
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Ремонт коттеджей
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Ремонт под ключ
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Дизайн офиса
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Клининг
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Ремонт окон ПВХ
-                                    </a>
-                                </li>
-                                <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
-                                    </svg>
-                                </li>
-                            </ul>
-                            <ul class="main-submenu__column">
-                                <li class="main-submenu__column-headline">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Буровые работы
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Бурение скважин
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Обустройство скважины
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Роторное бурение скважин
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Бурение под абиссинский колодец
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Ремонт скважин
-                                    </a>
-                                </li>
-                                <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="7" width="5" height="5" fill="#5C5C5C" />
-                                        <rect x="14" width="5" height="5" fill="#5C5C5C" />
-                                    </svg>
-                                </li>
-                            </ul>
-                            <ul class="main-submenu__column">
-                                <li class="main-submenu__column-headline">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Буровые работы
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Бурение скважин
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Обустройство скважины
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Роторное бурение скважин
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Бурение под абиссинский колодец
-                                    </a>
-                                </li>
-                                <li class="main-submenu__column-list-item">
-                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Ремонт скважин
-                                    </a>
-                                </li>
-                                <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                   <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -543,7 +683,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                                                        <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -583,7 +723,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                                                        <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -623,7 +763,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                                                        <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -663,7 +803,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -702,8 +842,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -742,8 +892,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -782,8 +942,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -822,8 +992,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -836,7 +1016,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Ремонт и отделка
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -864,8 +1044,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -904,8 +1094,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -944,8 +1144,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -984,8 +1194,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1024,8 +1244,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1064,8 +1294,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1104,8 +1344,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1144,8 +1394,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1158,7 +1418,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Декор интерьера
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -1186,8 +1446,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1226,8 +1496,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1266,8 +1546,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1306,8 +1596,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1346,8 +1646,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1386,8 +1696,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1426,8 +1746,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1466,8 +1796,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1480,7 +1820,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Строительство
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -1508,8 +1848,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1548,8 +1898,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1588,8 +1948,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1628,8 +1998,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1668,8 +2048,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1708,8 +2098,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1748,8 +2148,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1788,8 +2198,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1802,7 +2222,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Бытовая техника
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -1830,8 +2250,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1870,8 +2300,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1910,8 +2350,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1950,8 +2400,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -1990,8 +2450,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2030,8 +2500,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2070,8 +2550,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2110,8 +2600,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2124,7 +2624,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Инструмент
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -2152,8 +2652,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2192,8 +2702,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2232,8 +2752,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2272,8 +2802,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2312,8 +2852,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2352,8 +2902,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2392,8 +2952,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2432,8 +3002,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2446,7 +3026,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Дача и сад
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -2474,8 +3054,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2514,8 +3104,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2554,8 +3154,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2594,8 +3204,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2634,8 +3254,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2674,8 +3304,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2714,8 +3354,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2754,8 +3404,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2768,7 +3428,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Услуги
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -2796,8 +3456,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2836,8 +3506,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2876,8 +3556,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2916,8 +3606,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2956,8 +3656,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -2996,8 +3706,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3036,8 +3756,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3076,8 +3806,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3090,7 +3830,7 @@
                             <ul class="main-submenu__column">
                                 <li class="main-submenu__column-headline">
                                     <a href="catalog.html" class="main-submenu__column-list-item-link">
-                                        Мебель
+                                        Статьи
                                     </a>
                                 </li>
                                 <li class="main-submenu__column-list-item">
@@ -3118,8 +3858,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3158,8 +3908,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3198,8 +3958,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3238,8 +4008,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3278,8 +4058,18 @@
                                         Ортопедические матрасы
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3318,8 +4108,18 @@
                                         Ремонт окон ПВХ
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3358,8 +4158,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
@@ -3398,8 +4208,18 @@
                                         Ремонт скважин
                                     </a>
                                 </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Бурение под абиссинский колодец
+                                    </a>
+                                </li>
+                                <li class="main-submenu__column-list-item">
+                                    <a href="catalog.html" class="main-submenu__column-list-item-link">
+                                        Ремонт скважин
+                                    </a>
+                                </li>
                                 <li>
-                                    <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                    <svg class="main-submenu__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <rect width="5" height="5" fill="#5C5C5C" />
                                         <rect x="7" width="5" height="5" fill="#5C5C5C" />
