@@ -11,6 +11,10 @@
 @import "elements/inputs";
 @import "elements/links";
 
+@import "pages/index";
+
 @import "components/header.scss";
 @import "components/search-modal.scss";
 @import "components/containers.scss";
+
+@import "utilities/common-classes";
