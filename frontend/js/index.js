@@ -12,6 +12,7 @@ let mainMenuItems = document.querySelectorAll('.main-menu__item');
 let submenuSections = document.querySelectorAll('.main-submenu__section');
 let submenuCloseButton = document.querySelector('.main-submenu__close-button');
 
+let searchMobileIcon = document.querySelector('.header__search-mobile-icon');
 let clearSearchResultsButton = document.querySelector('.search-modal__clear-button');
 let searchResaultsContainer = document.querySelector('.search-modal__search-results-groups');
 let searchModalCloseButton = document.querySelector('.search-modal__back-arrow-button');
@@ -51,6 +52,7 @@ const showHideMenuItems = (menuColumnClass,menuListClass,menuDotsClass, itemsAmo
             });
     
            showMoreItemsDots.addEventListener('click', () => {
+               console.log(55)
                 currentListItems.forEach((listItem,index) => {
                     if (index > itemsAmountToShow - 1) {
                         listItem.classList.remove('hidden');
@@ -69,7 +71,7 @@ const closeSubmenu = () => {
     submenu.style.display = 'none';
     mainMenuItems.forEach(item => item.classList.remove('active'));
     submenuSections.forEach(item => item.classList.remove('active'));
-}
+};
 
 const showMobileSubmenu = () => {
     for (let i = 0; i < mainMenuItems.length; i++) {
@@ -121,20 +123,6 @@ const openModal = (modal,overlay) => {
 };
 
 
-//Open search modal
-headerSearchField.addEventListener('click', () => {
-    openModal(searchModal,searchModalOverlay);
-    setInterval(() => {
-        modalSearchField.focus()
-    },100);
-})
-
-//Close search modal
-searchModalCloseButton.addEventListener('click',() => closeModal(searchModal,searchModalOverlay));
-
-//Close search modal when click on overlay
-searchModalOverlay.addEventListener('click',() => closeModal(searchModal,searchModalOverlay));
-
 //Scroll main menu when click on arrows
 leftMainMenuArrow.addEventListener('click', () => {
     easyScroll({
@@ -155,8 +143,8 @@ righttMainMenuArrow.addEventListener('click', () => {
     });
 });
 
-//Show/hide main submenu items and show dots instead
-showHideMenuItems('.main-submenu__column','.main-submenu__column-list-item', '.main-submenu__show-more-dots', 5);
+//Show/hide main submenu/footer top menu items and hide dots
+showHideMenuItems('.menu-column','.menu-column__list-item', '.menu-column__show-more-dots', 5);
 
 //Show/hide search modal menu items and show dots instead
 showHideMenuItems('.search-modal__search-results-group','.search-modal__results-group-list-item', '.search-modal__show-more-search-items', 3);
@@ -176,8 +164,39 @@ showMobileSubmenu();
 submenuCloseButton.addEventListener('click', closeSubmenu);
 
 
+/*** Search modal component ***/
+//Open search modal
+headerSearchField.addEventListener('click', () => {
+    openModal(searchModal,searchModalOverlay);
+    setInterval(() => {
+        modalSearchField.focus()
+    },100);
+});
+
+searchMobileIcon.addEventListener('click', () => {
+    openModal(searchModal,searchModalOverlay);
+    setInterval(() => {
+        modalSearchField.focus()
+    },100);
+});
+
+//Close search modal
+searchModalCloseButton.addEventListener('click',() => closeModal(searchModal,searchModalOverlay));
+
+//Close search modal when click on overlay
+searchModalOverlay.addEventListener('click',() => closeModal(searchModal,searchModalOverlay));
+
 //Clear search results
 clearSearchResultsButton.addEventListener('click', clearSearchResults);
+
+
+/*** Footer ***/
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,85 @@
+.main-submenu {
+    position: relative;
+    z-index: 100000;
+    background-color: #FFFFFF;
+    @media (max-width: 576px) {
+        position: absolute;
+        top: 126px;
+    }
+
+    &__sections {
+        display: none;
+        position: relative;
+        flex: 1;
+        padding: 40px 0;
+        min-height: 100%;
+        -webkit-overflow-scrolling: touch;
+        border-top: 0.5px solid #1D1D1D;
+        z-index: 1000;
+        @media (max-width: 576px) {
+            min-height: 100%;
+            padding-bottom: 20px;
+        }
+    }
+    
+    &__section {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        max-width: 1208px;
+        margin: 0 auto;
+
+        &.active {
+            display: flex;
+        }
+
+        @media only screen and (max-width: 1279px) and (min-width: 0) {
+            max-width: 906px;
+        }
+
+        @media only screen and (max-width: 959px) and (min-width: 0) {
+            max-width: 604px;
+        }
+
+        @media only screen and (max-width: 767px) and (min-width: 0) {
+            max-width: none;
+        }
+    }
+
+
+    &__close-button {
+        position: absolute;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        height: 34px;
+        top: 26px;
+        right: 91px;
+
+        @media (max-width: 767px) {
+            right: 12px;
+        }
+
+        @media (max-width: 576px) {
+            position: fixed;
+            top: 157px;
+        }
+    }
+
+    &__close-button-icon {
+        &:hover {
+            path {
+                transition: .2s;
+                stroke: #353535;
+            }
+
+            circle {
+                transition: .2s;
+                stroke: #353535;
+            }
+        }
+    }
+}
+
