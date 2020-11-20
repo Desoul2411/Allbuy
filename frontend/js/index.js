@@ -190,7 +190,49 @@ searchModalOverlay.addEventListener('click',() => closeModal(searchModal,searchM
 clearSearchResultsButton.addEventListener('click', clearSearchResults);
 
 
-/*** Footer ***/
+/*** Promo-slider ***/
+/* var swiper = new Swiper('.promo-slider', {
+    slidesPerView: auto,
+    spaceBetween: 30,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  }); */
+ /*  var before = document.querySelector('#options-peek-before')
+  var after = document.querySelector('#options-peek-after') */
+  
+  var glide = new Glide('#promo-slider', {
+    type: 'carousel',
+    focusAt: 'center',
+    rewind:true,
+    peek: 50,
+    breakpoints: {
+        576: {
+            peek: 25
+        }
+    }
+    
+  })
+  
+  function peek () {
+    glide.update({
+      peek: {
+        before: 100,
+        after: 100
+      }
+    })
+  }
+
+
+  
+ /*  before.addEventListener('input', peek)
+  after.addEventListener('input', peek) */
+  
+  glide.mount()
+
+
 
 
 

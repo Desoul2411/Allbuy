@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="styles/main.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+    
 </head>
 
 <body>
     <header class="header">
         <div class="header__top">
-            <div class="container">
+            <div class="container-wide">
                 <div class="header__top-content">
                     <span class="header__open-menu-burger"></span>
                     <div class="header__left">
@@ -279,7 +281,7 @@
         <div class="header__bottom">
 
             <div class="header__bottom-content">
-                <div class="container">
+                <div class="container-wide">
                     <nav class="main-menu" data-da="header__bottom-content,0,576">
                         <svg class="main-menu__arrow-left" width="13" height="21" viewBox="0 0 13 21" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -4300,17 +4302,50 @@
         </div>
     </header>
     <main class="main main_main-page">
-
+            <div id="promo-slider" class="promo-slider glide">
+                <div class="promo-slider__track glide__track" data-glide-el="track">
+                    <div class="promo-slides__wrapper glide__slides">
+                        <div class="promo-slider__item glide__slide" style="background-image: url(./assets/images/promo-slider-images/slide-1.jpg);">
+                            <a href="#" class="promo-slider__item-link"></a>
+                            <div class="promo-slider__item-content">
+                                <div class="promo-slider__item-headline">Популярные категории</div>
+                                <span class="promo-slider__item-text">Однополосная двухслойная паркетная доска из дуба Paola AF Bianco (Белая)</span>
+                            </div>
+                        </div>
+                        <div class="promo-slider__item glide__slide" style="background-image: url(./assets/images/promo-slider-images/slide-1.jpg);">
+                            <a href="#" class="promo-slider__item-link"></a>
+                            <div class="promo-slider__item-content">
+                                <div class="promo-slider__item-headline">Популярные категории</div>
+                                <span class="promo-slider__item-text">Однополосная двухслойная паркетная доска из дуба Paola AF Bianco (Белая)</span>
+                            </div>
+                        </div>
+                        <div class="promo-slider__item glide__slide" style="background-image: url(./assets/images/promo-slider-images/slide-1.jpg);">
+                            <a href="#" class="promo-slider__item-link"></a>
+                            <div class="promo-slider__item-content">
+                                <div class="promo-slider__item-headline">Популярные категории</div>
+                                <span class="promo-slider__item-text">Однополосная двухслойная паркетная доска из дуба Paola AF Bianco (Белая)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> <img src="assets/images/glide-slider-arrows/glide-arrow-left.svg" alt=""> </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="assets/images/glide-slider-arrows/glide-arrow-right.svg" alt=""></button>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
     </main>
     <footer class="footer">
         <div class="footer__top">
-            <div class="container">
+            <div class="container-wide">
                 <div class="footer__top-nav">
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4357,10 +4392,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4407,10 +4440,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4457,10 +4488,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4507,10 +4536,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4557,10 +4584,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4607,10 +4632,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4657,10 +4680,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4707,10 +4728,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4757,10 +4776,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -4807,110 +4824,8 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Услуги
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт коттеджей
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт под ключ
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Дизайн офиса
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Клининг
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт окон ПВХ
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Бурение под абиссинский колодец
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт скважин
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="menu-column__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="5" height="5" fill="#5C5C5C" />
-                                <rect x="7" width="5" height="5" fill="#5C5C5C" />
-                                <rect x="14" width="5" height="5" fill="#5C5C5C" />
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Услуги
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт коттеджей
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт под ключ
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Дизайн офиса
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Клининг
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт окон ПВХ
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Бурение под абиссинский колодец
-                            </a>
-                        </li>
-                        <li class="menu-column__list-item">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Ремонт скважин
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="menu-column__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="5" height="5" fill="#5C5C5C" />
-                                <rect x="7" width="5" height="5" fill="#5C5C5C" />
-                                <rect x="14" width="5" height="5" fill="#5C5C5C" />
-                            </svg>
-                        </li>
-                    </ul>
-                    <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
-                            <a href="catalog.html" class="menu-column__list-item-link">
-                                Услуги
-                            </a>
                         </li>
                         <li class="menu-column__list-item">
                             <a href="catalog.html" class="menu-column__list-item-link">
@@ -5005,7 +4920,103 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
+                                Услуги
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт коттеджей
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт под ключ
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Дизайн офиса
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Клининг
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт окон ПВХ
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Бурение под абиссинский колодец
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт скважин
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="menu-column__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="5" height="5" fill="#5C5C5C" />
+                                <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="menu-column menu-column--footer-top-menu">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
+                                Услуги
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт коттеджей
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт под ключ
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Дизайн офиса
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Клининг
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт окон ПВХ
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Бурение под абиссинский колодец
+                            </a>
+                        </li>
+                        <li class="menu-column__list-item">
+                            <a href="catalog.html" class="menu-column__list-item-link">
+                                Ремонт скважин
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="menu-column__show-more-dots" width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="5" height="5" fill="#5C5C5C" />
+                                <rect x="7" width="5" height="5" fill="#5C5C5C" />
+                                <rect x="14" width="5" height="5" fill="#5C5C5C" />
+                            </svg>
+                        </li>
+                    </ul>
+                    <ul class="menu-column menu-column--footer-top-menu">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                             Услуги
                         </li>
                         <li class="menu-column__list-item">
@@ -5053,7 +5064,7 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu">
                                 Лестницы
                         </li>
                         <li class="menu-column__list-item">
@@ -5101,7 +5112,7 @@
                         </li>
                     </ul>
                     <ul class="menu-column menu-column--footer-top-menu">
-                        <li class="menu-column__headline">
+                        <li class="menu-column__headline menu-column__headline--footer-top-menu menu-column__headline--hover-active">
                             <a href="catalog.html" class="menu-column__list-item-link">
                                 Журнал
                             </a>
@@ -5124,7 +5135,7 @@
             </div>
         </div>
         <div class="footer__add-company">
-            <div class="container">
+            <div class="container-wide">
                 <div class="footer__add-company-content">
                     <span class="footer__add-company-text">Не нашли вашу компанию в каталоге?</span>
                     <a  href="#" class="footer__add-company-link">
@@ -5135,7 +5146,7 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="container">
+            <div class="container-wide">
                 <div class="footer__bottom-content">
                     <div class="footer__bottom-top">
                         <a href="#" class="footer__logo-link">
@@ -5181,6 +5192,7 @@
         </div>
     </footer>
     <script src="assets/libs/move-elements.js"></script>
+    <script src="assets/libs/glide.min.js"></script>
     <script src="assets/libs/easy-smooth-scroll-easing.js"></script>
     <script src="js/main.js"></script>
 

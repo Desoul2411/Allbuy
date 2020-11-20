@@ -1,6 +1,8 @@
 @import "base/reset";
 @import "base/typography";
 
+@import "libs/glide.core.min";
+
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/functions";
@@ -13,12 +15,16 @@
 
 @import "pages/index";
 
+
 @import "components/header.scss";
 @import "components/search-modal.scss";
 @import "components/containers.scss";
 @import "components/main-menu.scss";
 @import "components/main-submenu.scss";
 @import "components/menu-column.scss";
+
+/* main-page */
+@import "components/promo-slider.scss";
 @import "components/footer.scss";
 
 @import "utilities/common-classes";
