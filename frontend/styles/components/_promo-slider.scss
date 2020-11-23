@@ -1,10 +1,7 @@
 .promo-slider {
     overflow: hidden;
     position: relative;
-    &__wrapper.swiper-wrapper {
-        
-        height: 500px;
-    }
+    margin-bottom: 68px;
 
     &__item {
         position: relative;
@@ -116,6 +113,7 @@
     }
 
     .glide__arrow--left {
+        cursor: pointer;
         position: absolute;
         display: flex;
         align-items: center;
@@ -131,6 +129,7 @@
     }
 
     .glide__arrow--right {
+        cursor: pointer;
         position: absolute;
         display: flex;
         align-items: center;
@@ -143,5 +142,48 @@
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(8px);
         outline: none;
+    }
+
+
+    .glide__bullets {
+        position: absolute;
+        bottom: 57px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media(max-width: 767px) {
+            bottom: 22px;
+        }
+
+        @media(max-width: 480px) {
+            bottom: 12px;
+        }
+    }
+
+    .glide__bullet {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #FFFFFF;
+        margin-right: 12px;
+
+        @media(max-width: 767px) {
+            width: 10px;
+            height: 10px;
+           /*  margin-right: 10px; */
+        }
+
+        @media(max-width: 480px) {
+            width: 8px;
+            height: 8px;
+           /*  margin-right: 8px; */
+        }
+
+        &:last-of-type {
+            margin-right: 0px;
+        }
+
+        &--active {
+            background-color: #FFFFFF;
+        }
     }
 }
