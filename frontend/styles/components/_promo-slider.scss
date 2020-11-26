@@ -1,12 +1,15 @@
 .promo-slider {
     overflow: hidden;
     position: relative;
-    margin-bottom: 68px;
+    margin-bottom: 60px;
+
+    @media(max-width: 768px) {
+        margin-bottom: 40px ;
+    }
 
     &__item {
         position: relative;
         height: 500px;
-        /* max-width: 1436px; */
         background: url(../assets/images/promo-slider-images/slide-1.jpg) 50% 50% no-repeat;
         background-size: cover;
         display: flex;

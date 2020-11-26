@@ -1,12 +1,21 @@
 .main_main-page {
-    height: 2000px;
     background-color: #E5E5E5;
+
+    section {
+        margin-bottom: 60px;
+        @media(max-width: 768px) {
+            margin-bottom: 40px ;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+            padding-bottom: 60px;
+
+            @media(max-width: 768px) {
+                padding-bottom: 40px ;
+            }
+
+        }
+    }
 }
 
-.popular-categories {
-    margin-bottom: 68px;
-}
-
-.sales {
-    margin-bottom: 68px;
-}

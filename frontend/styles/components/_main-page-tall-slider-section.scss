@@ -6,13 +6,9 @@
         align-items: baseline;
         margin-bottom: 28px;
 
-        @media (max-width: 767px)  {
+        @media (max-width: 768px)  {
             flex-direction: column;
-            /* margin-bottom: 32px; */
-        }
-
-        @media (max-width: 468px)  {
-            /* margin-bottom: 20px; */
+            margin-bottom: 15px;
         }
     }
 
@@ -21,6 +17,7 @@
         font-size: 20px;
         line-height: 160%;
         color: $mainDarkColor;
+
         @media (max-width: 767px)  {
             font-size: 18px;
         }

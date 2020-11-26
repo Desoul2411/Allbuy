@@ -6,8 +6,9 @@
         align-items: baseline;
         margin-bottom: 28px;
 
-        @media (max-width: 767px)  {
+        @media (max-width: 768px)  {
             flex-direction: column;
+            margin-bottom: 15px;
         }
     }
 
@@ -16,7 +17,7 @@
         font-size: 20px;
         line-height: 160%;
         color: $mainDarkColor;
-        @media (max-width: 767px)  {
+        @media (max-width: 768px)  {
             font-size: 18px;
         }
     }
@@ -92,6 +93,24 @@
         }
     }
 
+    &__image-link--news, 
+    &__image-link--popular-products,
+    &__image-link--best-performers {
+
+        &:after {
+            display: none;
+        }
+
+    }
+
+    &__image-link--news-banner {
+        position: static;
+
+        &:after {
+            display: none;
+        }
+    }
+
     &__image {
         display: block;
         position: absolute;
@@ -100,8 +119,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
     }
+
+    &__image--news-banner {
+        object-fit: unset;
+    }
+
 
     &__description-block {
         display: flex;
@@ -109,6 +132,11 @@
         padding: 20px 40px 20px 20px;  
         background-color: #FFFFFF;
         height: 196px;
+    }
+
+    &__description-block--best-performers {
+        height: 92px;
+        padding-right: 20px;
     }
 
     &__description-headline {
@@ -123,13 +151,24 @@
     }
 
     &__description-text {
+        @include acrom-500;
         font-size: 16px;
         line-height: 150%;
-        color: $greyColor;
+        color: $mainDarkColor;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
+    }
+
+    &__description-text--best-performers {
+        -webkit-line-clamp: 1;
+    }
+
+    &__description-headline,  &__description-text {
+        &:hover {
+            color: $hoverColor;
+        }
     }
 
     &__sales-mark {

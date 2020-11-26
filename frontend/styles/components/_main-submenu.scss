@@ -2,6 +2,14 @@
     position: relative;
     z-index: 100000;
     background-color: #FFFFFF;
+
+    @media(min-width: 577px) {
+        height: 100%;
+        min-height: 100%;
+        /* padding-bottom: 20px; */
+        overflow: auto;
+    }
+
     @media (max-width: 576px) {
         position: absolute;
         top: 126px;

@@ -190,20 +190,8 @@ searchModalOverlay.addEventListener('click',() => closeModal(searchModal,searchM
 clearSearchResultsButton.addEventListener('click', clearSearchResults);
 
 
-/*** Promo-slider ***/
-/* var swiper = new Swiper('.promo-slider', {
-    slidesPerView: auto,
-    spaceBetween: 30,
-    centeredSlides: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  }); */
- /*  var before = document.querySelector('#options-peek-before')
-  var after = document.querySelector('#options-peek-after') */
-  
-  var glide = new Glide('#promo-slider', {
+/*** Sliders ***/
+var glide = new Glide('#promo-slider', {
     type: 'carousel',
     focusAt: 'center',
     rewind:true,
@@ -213,22 +201,13 @@ clearSearchResultsButton.addEventListener('click', clearSearchResults);
             peek: 25
         }
     }
-    
-  })
-  
-  function peek () {
-    glide.update({
-      peek: {
-        before: 100,
-        after: 100
-      }
-    })
-  }
-  
-  glide.mount()
+
+});
+
+glide.mount()
 
 
-  var popularCategoriesSlider = new Glide('#popular-categories-slider', {
+var popularCategoriesSlider = new Glide('#popular-categories-slider', {
     type: 'carousel',
     rewind:true,
     startAt: 0,
@@ -262,12 +241,12 @@ clearSearchResultsButton.addEventListener('click', clearSearchResults);
             perView: 1,
         }
     }
-  });
+});
 
-  popularCategoriesSlider.mount();
+popularCategoriesSlider.mount();
 
-  
-  var salesSlider = new Glide('#sales-slider', {
+
+var salesSlider = new Glide('#sales-slider', {
     type: 'carousel',
     rewind:true,
     startAt: 0,
@@ -281,7 +260,6 @@ clearSearchResultsButton.addEventListener('click', clearSearchResults);
             perView: 3,
             peek: 25
         }, 
-
         767: {
             perView: 2,
             peek: 25
@@ -297,14 +275,150 @@ clearSearchResultsButton.addEventListener('click', clearSearchResults);
             peek: 25
         },
     }
-  });
-  
+});
 
-  salesSlider.mount();
-  
+salesSlider.mount();
 
 
+var newsSlider = new Glide('#news-slider', {
+    type: 'carousel',
+    rewind:true,
+    startAt: 0,
+    perView: 4,
+    gap: 16,
+    breakpoints: {
+        1100: {
+            perView: 3,
+        }, 
+        992: {
+            perView: 3,
+            peek: 25
+        }, 
+        767: {
+            perView: 2,
+            peek: 25
+        },
+        500: {
+            focusAt: 'center',
+            perView: 1,
+            peek: 50
+        },
+        425: {
+            focusAt: 'center',
+            perView: 1,
+            peek: 25
+        },
+    }
+});
 
+newsSlider.mount();
+
+
+var shopsSlider = new Glide('#shops-slider', {
+    type: 'carousel',
+    rewind:true,
+    startAt: 0,
+    perView: 6,
+    gap: 16,
+    breakpoints: {
+        1200: {
+            perView: 5,
+        },
+        992: {
+            perView: 5,
+            peek: 25
+        },
+        960: {
+            perView: 4,
+            peek: 25
+        },
+        678: {
+            perView: 3,
+            peek: 25
+        },
+        576: {
+            perView: 2,
+            gap: 12,
+            peek: 40
+        },
+    
+        425: {
+            focusAt: 'center',
+            peek: 65,
+            perView: 1,
+        }
+    }
+});
+    
+shopsSlider.mount();
+
+
+var popularProductsSlider = new Glide('#popular-products-slider', {
+    type: 'carousel',
+    rewind:true,
+    startAt: 0,
+    perView: 4,
+    gap: 16,
+    breakpoints: {
+        1100: {
+            perView: 3,
+        }, 
+        992: {
+            perView: 3,
+            peek: 25
+        }, 
+        767: {
+            perView: 2,
+            peek: 25
+        },
+        500: {
+            focusAt: 'center',
+            perView: 1,
+            peek: 50
+        },
+        425: {
+            focusAt: 'center',
+            perView: 1,
+            peek: 25
+        },
+    }
+});
+    
+popularProductsSlider.mount();
+
+
+var bestPerformersSlider = new Glide('#best-performers-slider', {
+    type: 'carousel',
+    rewind:true,
+    startAt: 0,
+    perView: 4,
+    gap: 16,
+    breakpoints: {
+        1100: {
+            perView: 3,
+        }, 
+        992: {
+            perView: 3,
+            peek: 25
+        }, 
+        767: {
+            perView: 2,
+            peek: 25
+        },
+        500: {
+            focusAt: 'center',
+            perView: 1,
+            peek: 50
+        },
+        425: {
+            focusAt: 'center',
+            perView: 1,
+            peek: 25
+        },
+    }
+});
+    
+bestPerformersSlider.mount();
 
 
 
