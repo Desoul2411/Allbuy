@@ -1,3 +1,6 @@
+
+if (document.querySelector('.main_main-page')) {
+
 let body = document.querySelector('body');
 let leftMainMenuArrow = document.querySelector('.main-menu__arrow-left');
 let righttMainMenuArrow = document.querySelector('.main-menu__arrow-right');
@@ -20,7 +23,6 @@ let searchModal = document.querySelector('.search-modal');
 let searchModalOverlay = document.querySelector('.search-modal-overlay');
 let headerSearchField = document.querySelector('.header__search-input');
 let modalSearchField = document.querySelector('.search-modal__search-input');
-
 
 const showHideMobileMenu = () => {
     if (mainMenuContainer.classList.contains('opened')) {
@@ -52,7 +54,6 @@ const showHideMenuItems = (menuColumnClass,menuListClass,menuDotsClass, itemsAmo
             });
     
            showMoreItemsDots.addEventListener('click', () => {
-               console.log(55)
                 currentListItems.forEach((listItem,index) => {
                     if (index > itemsAmountToShow - 1) {
                         listItem.classList.remove('hidden');
@@ -67,16 +68,22 @@ const showHideMenuItems = (menuColumnClass,menuListClass,menuDotsClass, itemsAmo
 };
 
 const closeSubmenu = () => {
-    headBottomContent.style.height = 'auto';
+    const windowInnerWidth = document.documentElement.clientWidth;
+    if (windowInnerWidth >= 576) {
+        body.style.overflow = 'auto';
+    } 
+    
+    headBottomContent.classList.remove('submenu-shown');
     submenu.style.display = 'none';
     mainMenuItems.forEach(item => item.classList.remove('active'));
     submenuSections.forEach(item => item.classList.remove('active'));
 };
 
-const showMobileSubmenu = () => {
+const showSubmenu = () => {
     for (let i = 0; i < mainMenuItems.length; i++) {
         mainMenuItems[i].addEventListener('click', (e) => {
-            headBottomContent.style.height = '100vh';
+            body.style.overflow = 'hidden';
+            headBottomContent.classList.add('submenu-shown');
             submenu.style.display = 'flex';
             mainMenuItems.forEach(item => item.classList.remove('active'));
             submenuSections.forEach(item => item.classList.remove('active'));
@@ -157,8 +164,8 @@ mainMenuLinks.forEach( (item) => {
 //Show/hide mobile menu
 burgerOpenMenuButton.addEventListener('click', showHideMobileMenu);
 
-//Show mobile submenu when click on mobile menu item
-showMobileSubmenu();
+//Show submenu when click on menu item
+showSubmenu();
 
 //Hide submenu when click on close button 'X'
 submenuCloseButton.addEventListener('click', closeSubmenu);
@@ -419,14 +426,7 @@ var bestPerformersSlider = new Glide('#best-performers-slider', {
 });
     
 bestPerformersSlider.mount();
-
-
-
-
-
-
-
-
+}
 
 
 

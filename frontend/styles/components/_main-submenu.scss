@@ -62,20 +62,26 @@
         background-color: transparent;
         cursor: pointer;
         outline: none;
-        height: 34px;
-        top: 26px;
+        height: 34px;   
         right: 91px;
+        position: fixed;
+        top: 138px;
 
         @media (max-width: 767px) {
             right: 12px;
         }
 
-        @media (max-width: 576px) {
-            position: fixed;
-            top: 157px;
+        @media (max-width: 768px) {
+            top: 185px;
         }
-    }
 
+        @media (max-width: 576px) {
+            top: 162px;
+        }
+            
+  
+    }
+  
     &__close-button-icon {
         &:hover {
             path {

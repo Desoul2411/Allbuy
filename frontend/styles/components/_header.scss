@@ -311,6 +311,15 @@
     &__bottom-content {
         height: auto;
 
+        &.submenu-shown {
+            height: 100vh;
+            padding-bottom: 103px;
+
+            @media(max-width: 576px) {
+                padding-bottom: 0px;
+            }
+        }
+
         @media (max-width: 1700px) {
             padding: 0;
         }
@@ -324,5 +333,6 @@
             height: 0;
             overflow: auto;
         }
+        
     }
 }

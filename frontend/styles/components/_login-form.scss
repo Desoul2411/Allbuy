@@ -1,0 +1,133 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $darkBrownBackground;
+    width: 781px;
+    padding-top: 64px;
+    padding-bottom: 79px;
+    /* margin-top: 88px;
+    margin-top: 104px; */
+
+
+    @media(max-width: 992px) {
+        width: 80%;
+    }
+
+    @media(max-width: 576px) {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    @media(max-width: 425px) {
+        width: 100%;
+        margin: 0 12px;
+    }
+
+    &__logo {
+        margin-bottom: 24px;;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 316px;
+
+        @media(max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    &__input-label {
+        @include acrom-normal;
+        font-size: 14px;
+        line-height: 143%;
+        color: #FFFFFF;
+    }
+
+    &__login-input, &__password-input  {
+        @include acrom-normal;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        height: 36px;
+        font-size: 14px;
+        line-height: 143%;
+        padding-left: 12px;
+        margin-top: 6px;
+    }
+
+    &__login-input {
+        margin-bottom: 20px;
+    }
+
+    &__password-input {
+        margin-bottom: 22px;
+    }
+
+    &__remember-password-checkbox-label {
+        @include acrom-normal;
+        color: #FFFFFF;
+        display: flex;
+        align-items:center;
+        font-size: 14px;
+        line-height: 143%;
+        margin-bottom: 32px;
+    }
+
+    &__remember-password-checkbox {
+        margin-right: 7px;
+        position: absolute;
+        z-index: -1;
+
+        &:checked + .login__custom-remember-password-checkbox {
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__custom-remember-password-checkbox {
+        display: block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        background: #F1F1F1;
+        border: 1px solid #696969;
+        position: relative;
+        margin-bottom: 2px;
+        margin-right: 9px;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            background-color: $hoverColor;
+            transition: 0.2s;
+        }
+    }
+
+    &__submit-button {
+        align-self: center;
+        background: $hoverColor;
+        border: 1px solid $hoverColor;
+        font-size: 13px;
+        line-height: 154%;
+        text-align: center;
+        color: #FFFFFF;
+        width: 164px;
+        height: 36px;
+        cursor: pointer;
+        transition: .3s;
+        border: none;
+        
+        &:hover {
+            background-color: #FF9933;
+        }
+    }
+}

@@ -14,20 +14,23 @@
 @import "elements/links";
 
 @import "pages/index";
+@import "pages/login-page";
 
 
-@import "components/header.scss";
-@import "components/search-modal.scss";
-@import "components/containers.scss";
-@import "components/main-menu.scss";
-@import "components/main-submenu.scss";
-@import "components/menu-column.scss";
+@import "components/header";
+@import "components/search-modal";
+@import "components/containers";
+@import "components/main-menu";
+@import "components/main-submenu";
+@import "components/menu-column";
 /* main-page */
-@import "components/promo-slider.scss";
+@import "components/promo-slider";
 @import "components/_main-page-tall-slider-section";
 @import "components/_main-page-short-slider-section";
 @import "components/_banner";
+/* login-page */
+@import "components/_login-form";
 
-@import "components/footer.scss";
+@import "components/footer";
 
 @import "utilities/common-classes";

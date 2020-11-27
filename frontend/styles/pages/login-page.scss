@@ -1,0 +1,14 @@
+.main--login-page {
+    background-color: $greyBackground;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 88px;
+    padding-bottom: 104px;
+
+    @media(max-width: 425px) {
+        padding-top: 60px;
+    padding-bottom: 75px;
+    }
+}
