@@ -1,0 +1,14 @@
+.catalog-section {
+    &__catalog-headline {
+        @include acrom-bold;
+        font-size: 20px;
+        line-height: 160%;
+        color: $mainDarkColor;
+        margin-bottom: 30px;
+    }
+
+    &__catalog {
+        display: flex;
+    }
+}
+

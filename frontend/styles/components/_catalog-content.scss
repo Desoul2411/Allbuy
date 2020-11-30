@@ -1,0 +1,26 @@
+.catalog-content {
+    &__filters {
+        margin-bottom: 8px;
+    }
+
+    &__filter-buttons {
+        display: flex;
+    }
+
+    &__show-more-dots {
+        cursor: pointer;
+        background-color: rgba(0,0,0,.04);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 28px;
+        width: 28px;
+        transition-duration: .2s;
+        outline: none;
+        margin-bottom: 8px;
+        &:hover {
+            background: rgba(0,0,0,.08);
+        }
+    }
+}
+

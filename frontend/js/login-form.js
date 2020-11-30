@@ -1,25 +1,32 @@
-let loginForm = document.querySelector('.login__form');
+document.addEventListener('DOMContentLoaded', () => {
+    let loginForm = document.querySelector('.login__form');
 
-if(loginForm) {
-
-    const ajaxSend = (formData) => {
-        fetch('../mail.php', { 
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json', 
-            },
-            body: JSON.stringify(formData)
-        }).then(response => console.log(response))
-        .catch(error => console.error(error))
-    };
-
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('fetch')
-        let formData = new FormData(this);
-        formData = Object.fromEntries(formData);  // create JSON
-        ajaxSend(formData);
-	    this.reset(); // reset form fields
+    if(loginForm) {
+        const ajaxSend = async (formData) => {
+            const fetchResp = await fetch('../mail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (!fetchResp.ok) {
+                throw new Error(`Ошибка! Cтатус ошибки ${fetchResp.status}`);
+            }
+            return await fetchResp.text();
+        };
         
-    })
-}
+        
+        
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+        
+            ajaxSend(formData)
+                .then((response) => {
+                    loginForm.reset(); // очищаем поля формы 
+                })
+                .catch((err) => console.error(err))
+        });
+    };
+});
+
+
+

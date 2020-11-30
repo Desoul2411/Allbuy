@@ -1,5 +1,5 @@
 <?php
-$email = "desoul2411@gmail.ru";// enter email!
+$email = "desoul2411@gmail.com";// enter email!
 
 $name = $_SERVER['HTTP_HOST'];
 //Validation

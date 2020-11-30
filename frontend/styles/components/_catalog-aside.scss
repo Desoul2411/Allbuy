@@ -1,0 +1,37 @@
+.catalog-aside {
+    flex: 0 0 356px;
+    max-width: 356px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    &__map-link {
+        background: url(../assets/images/catalog-page-map-image.jpg) no-repeat 50%;
+        border-radius: 4px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    &__map-link-title {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        color: $mainDarkColor;
+        padding: 8px 50px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    &__link-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}

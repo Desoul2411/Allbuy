@@ -1,0 +1,45 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    padding-top: 20px;
+    margin-bottom: 28px;
+
+    &__item {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 21px;
+        color: $mainDarkColor;
+        transition: .2s;
+    
+        &:before {
+            content: '\2022';
+            margin: 0 3px 0 8px;
+        }
+    
+        &:first-of-type {
+            &:before {
+                display: none;
+            }
+        }
+    
+        &:hover {
+            color: $mainDarkColor;
+            &:before {
+                color: $mainDarkColor;
+            }
+        }
+    
+        &.active {
+            color: $hoverColor;
+            pointer-events: none;
+        }
+    }
+
+    &__link {
+        color: inherit;
+    }
+}
+

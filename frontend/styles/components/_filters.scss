@@ -1,0 +1,84 @@
+.filters {
+    background-color: #FFFFFF;
+
+    &__item {
+        padding: 15px 15px 27px 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    &__filter-title {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    &__amount-inputs {
+        display: flex;
+    }
+
+    &__amount-from {
+        margin-right: 28px;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.16);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            right: -24px;
+        }
+    }
+
+    &__amount-input {
+        width: 100%;
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154% ;
+        color: $mainDarkColor;
+        padding: 0 10px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        height: 34px;
+    }
+
+    &__filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__reset-button {
+        text-align: center;
+        padding: 12px 0;
+        font-size: 14px;
+        line-height: 171%;
+        color: #626262;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    &__show-more-dots, &__hide-arrow {
+        cursor: pointer;
+        background-color: rgba(0,0,0,.04);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 28px;
+        width: 28px;
+        transition-duration: .2s;
+        outline: none;
+        margin-bottom: 8px;
+        &:hover {
+            background: rgba(0,0,0,.08);
+        }
+    }
+
+    &__hide-arrow {
+        display: none;
+    }
+}
