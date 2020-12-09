@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-right: 20px;
+    padding-right: 20px;
     padding-top: 20px;
-    margin-bottom: 28px;
+    padding-bottom: 20px;
 
     &__item {
         font-style: normal;
@@ -40,6 +40,30 @@
 
     &__link {
         color: inherit;
+    }
+}
+
+.breadcrumbs--text-page {
+    background-color: #FFFFFF;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px 40px;
+    
+    @media(max-width: 767px) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.breadcrumbs--shops-page {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @media(max-width: 767px) {
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
 

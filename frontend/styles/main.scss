@@ -2,6 +2,7 @@
 @import "base/typography";
 
 @import "libs/glide.core.min";
+@import "libs/baguetteBox.min";
 
 @import "abstracts/variables";
 @import "abstracts/mixins";
@@ -16,6 +17,10 @@
 @import "pages/index";
 @import "pages/login-page";
 @import "pages/razdel-kataloga";
+@import "pages/kartochka-tovara";
+@import "pages/kartochka-magazina";
+@import "pages/text-page";
+@import "pages/shops-page";
 
 
 @import "components/header";
@@ -29,14 +34,40 @@
 @import "components/filters";
 @import "components/filter-button";
 @import "components/catalog-content";
+@import "components/modal-overlay";
+@import 'components/modal-ask-question';
+@import 'components/modal-submit-app';
 
 /* main-page */
 @import "components/promo-slider";
-@import "components/_main-page-tall-slider-section";
-@import "components/_main-page-short-slider-section";
-@import "components/_banner";
+@import "components/main-page-tall-slider-section";
+@import "components/main-page-short-slider-section";
+@import "components/banner";
 /* login-page */
-@import "components/_login-form";
+@import "components/login-form";
+@import "components/product-card";
+
+/* kartochka-tovara */
+@import "components/main-card-gallery";
+@import "components/main-card-info";
+@import "components/seller-card";
+
+/* kartochka-magazina */
+@import "components/return-back.scss";
+@import "components/shop-card";
+@import "components/shop-detailed-info";
+@import "components/comments";
+@import "components/leave-comment";
+@import "components/shop-card-gallery";
+@import "components/shop-card-categories";
+@import "components/star-rating";
+
+/* text-page */
+@import "components/text-page-content";
+
+/* shops-page */
+@import "components/shop-list-item";
+
 
 @import "components/footer";
 

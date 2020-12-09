@@ -1,0 +1,241 @@
+.shop-card {
+    display: flex;
+    background-color: #FFFFFF;
+    margin-bottom: 32px;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 28px 16px 78px 40px;
+    }
+
+    &__headline {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__shop-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    &__shop-info-top {
+        display: flex;
+        margin-bottom: 45px;
+    }
+
+    &__shop-logo-link {
+        display: flex;
+        min-width: 114px;
+        margin-right: 12px;
+    }
+
+    &__shop-logo {
+        max-width: 114px;
+        max-height: 52px;
+    }
+
+    &__name-rating-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__shop-type {
+        @include acrom-normal;
+        font-size: 12px;
+        line-height: 167%;
+        color: $lightGreyColor;
+    }
+
+    &__shop-rating-name {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+    }
+    
+    &__shop-name {
+        @include acrom-bold;
+        font-size: 16px;
+        line-height: 200%;
+        color: $mainDarkColor;
+        margin-right: 28px;
+        transition: .2s;
+
+        &:hover {
+            color:$hoverColor;
+        }
+    }
+
+    &__shop-rating {
+        position: relative;
+    }
+
+    &__shop-rating-star {
+        position: absolute;
+        top: -1px;
+    }
+
+    &__shop-rating-amount {
+        @include acrom-normal;
+        font-size: 15px;
+        line-height: 160%;
+        color: $mainDarkColor;
+        padding-left: 20px;
+        margin-right: 6px;
+    }
+
+    &__comments {
+        color: $lightGreyColor;
+        text-decoration: underline;
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+
+    &__shop-info-bottom {
+
+    }
+
+    &__shop-location {
+        margin-bottom: 9px;
+    }
+
+    &__location {
+        margin-bottom: 9px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: #FC4301;
+            top: 36%;
+            left: -11px;
+        }
+    }
+
+    &__location-label {
+        @include acrom-500;
+        font-size: 16px;
+        line-height: 125%;
+        color: $mainDarkColor;
+        margin-right: 14px;
+    }
+
+    &__seller-days-hours {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        color: $mainDarkColor;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: #FC4301;
+            top: 38%;
+            left: -11px;
+        }
+    }
+
+    &__shop-work-time-label {   
+        @include acrom-500;
+        font-size: 16px;
+        line-height: 125%;
+        color: $mainDarkColor;
+        margin-right: 14px;
+        position: relative;
+    }
+
+    &__phone-link-button {  
+        @include acrom-500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        width: 164px;
+        height: 36px;
+        background-color: $hoverColor;
+        font-size: 13px;
+        line-height: 154%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+
+        &:hover {
+            background-color: $buttonHoverColor;
+        }
+    }
+
+    &__site-link-button {
+        @include light-blue-button;
+        white-space: nowrap;
+        width: 164px;
+        height: 36px;
+    }
+
+    &__slider {
+        width: 590px;
+    }
+
+    &__slides {
+
+    }
+
+    &__slide {
+        display: flex;
+    }
+
+    &__image {
+        width: 590px;
+        height: 763px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .glide__arrows {
+        @media(max-width: 992px) {
+            display: none;
+        }
+    }
+
+    .glide__arrow--left {
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        width: 48px;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(8px);
+        outline: none;
+    }
+
+    .glide__arrow--right {
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(8px);
+        outline: none;
+    }
+
+}

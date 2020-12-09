@@ -1,0 +1,23 @@
+.return-back {
+    background-color: #FFFFFF;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-left: 40px;
+    
+    &__link {
+        position: relative;
+    }
+
+    &__link-text {
+        @include acrom-normal;
+        font-size: 12px;
+        line-height: 167%;
+        color: $hoverColor;
+        padding-left: 12px;
+    }
+
+    &__arrow-image {
+        position: absolute;
+        top: 5px;
+    }
+}

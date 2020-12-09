@@ -1,0 +1,155 @@
+.modal-ask-question {
+    position: absolute;
+    z-index: 1100001;
+    top: 80px;
+    width: 1120px;
+    background-color: $greyBackground;
+
+    @media(max-width: 1200px) {
+        width: 90%;
+    }
+
+    &__header {
+        position: relative;
+        background: $hoverColor;
+        @include acrom-bold;
+        font-size: 20px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 8px 0;
+        text-align: center;
+
+        @media(max-width: 600px) {
+            font-size: 16px;
+        }
+    }
+
+    &__close-button {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 34px;
+        cursor: pointer;
+
+        @media(max-width: 600px) {
+            right: 20px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px 28px 40px;
+
+        @media(max-width: 600px) {
+            padding: 15px 20px 20px 20px;
+        }
+    }
+
+    &__question {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    &__input--question {
+        height: 160px;
+        padding: 20px;
+        resize: none;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 154%;
+        color:$lightGreyColor;
+        border: 1px solid #EDEDED;
+
+        @media(max-width: 600px) {
+            padding: 10px;
+        }
+    }
+
+    &__label {
+        @include acrom-bold;
+        display: flex;
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 200%;
+        color: $mainDarkColor;
+
+        @media(max-width: 768px) {
+            margin-bottom: 6px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        @include modal-input-style;
+    }
+
+    &__name-phone {
+        display: flex;
+        margin-bottom: 32px;
+
+        @media(max-width: 768px) {
+            flex-direction: column;;
+        }
+    }
+
+    &__name {
+        width: 100%;
+        margin-right: 40px;
+
+        @media(max-width: 768px) {
+            margin-bottom: 15px;
+        }
+
+    }
+
+    &__phone {
+        width: 100%;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__send-button {
+        @include modal-button;
+
+        @media(max-width: 768px) {
+            margin-bottom: 10px;
+            margin-right: 0px;
+        }
+
+        @media(max-width: 425px) {
+            width: 100%;
+        }
+    }
+
+    &__personal-data {
+        max-width: 373px;
+        @include acrom-500;
+        font-size: 13px;
+        line-height: 154%;
+        color: $lightGreyColor;
+
+        @media(max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+    &__personal-data-link {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+}

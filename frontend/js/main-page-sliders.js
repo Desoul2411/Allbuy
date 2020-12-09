@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     gap: 12,
                     peek: 40
                 },
-        
                 425: {
                     focusAt: 'center',
                     peek: 65,

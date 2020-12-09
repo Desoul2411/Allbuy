@@ -1,0 +1,83 @@
+.comments { 
+    margin-bottom: 32px;
+    &__headline {
+        background-color: #FFFFFF;
+        padding: 28px 48px 28px 40px;
+    }
+
+    &__text {
+        @include acrom-bold;
+        font-size: 20px;
+        line-height: 160%;
+        color: $mainDarkColor;
+        margin-right: 6px;
+    }
+
+    &__amount {
+        @include acrom-normal;
+        font-size: 20px;
+        line-height: 160%;
+        color: $lightGreyColor;
+    }
+
+    &__list-item {
+        background-color: #FFFFFF;
+        display: flex;
+        padding: 28px 48px 28px 40px;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    &__comment-date {
+        flex: 0 0 25%;
+        padding-right: 5%;
+        font-size: 16px;
+        line-height: 200%;
+        color: $lightGreyColor;
+    }
+
+    &__comment-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__user-name {
+        @include acrom-500;
+        font-size: 20px;
+        line-height: 160%;
+        color: $lightGreyColor;
+        margin-right: 38px;
+    }
+
+    &__rating-star {
+        font-size: 20px;
+        color: $hoverColor;
+    }
+
+    &__comment-text {
+        @include acrom-normal;
+        font-size: 16px;
+        line-height: 125%;
+        color: $lightGreyColor;
+    }
+
+    &__show-more-comments {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #E5E5E5;
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__show-more-comments-button {
+        font-size: 13px;
+        line-height: 154%;
+        text-align: center;
+        color: $hoverColor;
+
+        &:hover {
+            color: $buttonHoverColor;
+        }
+    }
+}

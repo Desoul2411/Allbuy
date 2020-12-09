@@ -24,10 +24,14 @@
         line-height: 154% ;
         color: $mainDarkColor;
         padding: 3px 9px 5px 9px;
-        background: rgba(0, 0, 0, 0.04);
+        background-color: rgba(0, 0, 0, 0.04);
         transition: .2s;
         &:hover {
-            background: rgba(0,0,0,.08);
+            background-color: $lightBlueHoverColor;
         }
+    }
+
+    &.hidden {
+        display: none;
     }
 }

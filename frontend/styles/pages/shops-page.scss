@@ -1,0 +1,61 @@
+.main--shops-page {
+    padding-bottom: 60px;
+
+    @media (max-width: 768px)  {
+        padding-bottom: 40px;
+    }
+}
+
+.shops-page-content {
+    background-color: #FFFFFF;
+    display: flex;
+    height: 984px;
+    overflow: hidden;
+
+    @media (max-width: 1320px)  {
+        height: auto;
+        flex-direction: column;
+    }
+    
+    &__text-content {
+        width: 43.1%;
+
+        @media (max-width: 1320px)  {
+            width: 100%;
+        }
+    }
+
+    &__map-content {
+        width: 56.9%;
+
+        @media (max-width: 1320px)  {
+            width: 100%;
+        }
+    }
+
+    &__map {
+        @media (max-width: 1320px)  {
+            height: 600px;
+        }
+
+        @media (max-width: 767px)  {
+            height: 480px;
+        }
+
+        @media (max-width: 425px)  {
+            height: 400px;
+        }
+    }
+
+    &__shop-list {
+        height: 921px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
+        
+    }
+}

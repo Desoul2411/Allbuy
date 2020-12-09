@@ -1,0 +1,83 @@
+.main-card-info {
+    width: 100%;
+    padding: 28px 0 50px 28px;
+    background-color: #FFFFFF;
+
+    &__headline {
+        @include acrom-bold;
+        font-size: 20px;
+        line-height: 160%;
+        color: $mainDarkColor;
+        padding-bottom: 28px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        margin-bottom: 28px;
+    }
+
+    &__description {
+        margin-bottom: 20px;
+    }
+
+    &__description-item {
+        display: flex;
+    }
+
+    &__description-item-name {
+        @include acrom-500;
+        font-size: 13px;
+        line-height: 28px;
+    }
+
+    &__description-item-value {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 28px;
+    }
+
+    &__price {
+        @include acrom-bold;
+        font-size: 20px;
+        line-height: 140%;
+        color: $mainDarkColor;
+        margin-bottom: 28px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    &__offers-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $hoverColor;
+        width: 164px;
+        height: 36px;
+        @include acrom-500;
+        font-size: 13px;
+        line-height: 154%;
+        text-align: center;
+        color: #FFFFFF;
+        transition: .2s;
+        margin-right: 20px;
+        
+        &:hover {
+            background-color: $buttonHoverColor;
+        }
+    }
+
+    &__ask-question-button {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        color: $hoverColor;
+        cursor: pointer;
+
+        &:hover {
+            color: $buttonHoverColor;
+        }
+    }
+}
+
+
+

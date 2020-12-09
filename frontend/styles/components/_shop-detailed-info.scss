@@ -1,0 +1,44 @@
+.shop-detailed-info {
+    display: flex;
+    padding: 32px 40px;
+    background-color: #FFFFFF;
+    margin-bottom: 32px;
+
+    &__items-list {
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &__item-label { 
+        @include acrom-500;
+        margin-bottom: 12px;
+        font-size: 13px;
+        line-height: 154%;
+        color: $lightGreyColor;
+        flex: 0 0 25%;
+        padding-right: 5%;
+
+    }
+
+    &__item-value {
+        @include acrom-normal;
+        margin-bottom: 12px;
+        font-size: 13px;
+        line-height: 154%;
+        color: $lightGreyColor;
+        flex: 1 1 auto;
+        word-break: break-word;
+    }
+
+    &__item-link {
+        color: inherit;
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+}

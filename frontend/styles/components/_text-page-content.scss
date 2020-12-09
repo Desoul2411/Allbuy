@@ -1,0 +1,130 @@
+.text-page-content {
+    background-color: #FFFFFF;
+    padding: 30px 14.2% 100px 40px;
+    @media(max-width: 1024px) {
+        padding-right: 40px;
+    }
+
+    @media(max-width: 767px) {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 60px;
+        padding-top: 20px;
+    }
+
+    &__title {
+        @include acrom-500;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        color: $mainDarkColor;
+        margin-bottom: 32px;
+        max-width: 1137px;
+
+        @media(max-width: 767px) {
+            margin-bottom: 20px;
+        }
+
+        @media(max-width: 425px) {
+            font-size: 22px;
+        }
+    }
+
+    &__subtitle {   
+        @include acrom-normal;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        color: $mainDarkColor;
+        margin-bottom: 20px;
+        max-width: 1137px;
+
+        @media(max-width: 767px) {
+            margin-bottom: 15px;
+        }
+
+        @media(max-width: 425px) {
+            font-size: 17px;
+        }
+    }
+
+    &__text-block {
+        @include acrom-normal;
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: 0.02em;
+        color: $lightGreyColor;
+        max-width: 1137px;
+
+        @media(max-width: 425px) {
+            font-size: 13px;
+        }
+
+    }
+
+    &__link {
+        color: $hoverColor;
+        text-decoration: underline;
+        
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__image-wrapper {
+        margin-top: 18px;
+        margin-bottom: 60px;
+
+        @media(max-width: 767px) {
+            margin-bottom: 35px;
+        }
+
+        @media(max-width: 425px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+
+        @media(max-width: 576px) {
+            height: 230px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media(max-width: 425px) {
+            height: 210px;
+        }
+    }
+
+    &__list {
+        padding-left: 40px;
+        margin: 28px 0;
+        max-width: 1137px;
+
+        @media(max-width: 767px) {
+            padding-left: 30px;
+            margin: 18px 0;
+        }
+    }
+
+    &__list-item {
+        position: relative;
+        margin-bottom: 16px;
+        max-width: 1137px;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            left: -22px;
+            width: 8px;
+            height: 8px;
+            top: 48%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background-color: $hoverColor;
+        }
+    }
+}

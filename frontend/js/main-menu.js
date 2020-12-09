@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let body = document.querySelector('body');
     let leftMainMenuArrow = document.querySelector('.main-menu__arrow-left');
     let righttMainMenuArrow = document.querySelector('.main-menu__arrow-right');
     let mainMenuContainer = document.querySelector('.main-menu');
@@ -42,14 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     index > itemsAmountToShow - 1 && listItem.classList.add('hidden');
                 });
         
-            showMoreItemsDots.addEventListener('click', () => {
+                showMoreItemsDots.addEventListener('click', () => {
                     currentListItems.forEach((listItem,index) => {
                         if (index > itemsAmountToShow - 1) {
                             listItem.classList.remove('hidden');
                             showMoreItemsDots.style.display = 'none';
                         };
                     });
-            });
+                });
             } else {
                 item.querySelector(menuDotsClass).style.display = 'none';
             };

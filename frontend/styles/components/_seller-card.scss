@@ -1,0 +1,220 @@
+.seller-card {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 28px 30px 28px;
+    margin-bottom: 2px;
+
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    &__main-content {
+        display: flex;
+        flex-direction: column;
+        width: 810px;
+    }
+
+    &__seller-info-blocks {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    &__first-info-block {
+        margin-right: 115px;
+    }
+
+    &__second-info-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__first-info-block-top {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    &__seller-logo-link {
+        display: flex;
+        min-width: 114px;
+        margin-right: 12px;
+    }
+
+    &__seller-logo {
+        max-width: 114px;
+        max-height: 52px;
+    }
+
+    &__name-rating-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__seller-type {
+        @include acrom-normal;
+        font-size: 12px;
+        line-height: 167%;
+        color: $lightGreyColor;
+    }
+
+    &__seller-rating-name {
+        margin-top: 4px;
+    }
+
+    &__seller-rating {
+        position: relative;
+    }
+
+    &__seller-rating-amount {
+        @include acrom-normal;
+        font-size: 15px;
+        line-height: 160%;
+        color: $mainDarkColor;
+        padding-left: 20px;
+    }
+
+    &__seller-rating-star {
+        position: absolute;
+        top: -1px;
+    }
+
+    &__seller-name {
+        @include acrom-bold;
+        font-size: 16px;
+        line-height: 200%;
+        color: $mainDarkColor;
+        margin-left: 8px;
+        transition: .2s;
+
+        &:hover {
+            color:$hoverColor;
+        }
+    }
+
+    &__seller-location-work-time {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        color: $mainDarkColor;
+        height: 28px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__seller-location {
+        color: inherit;
+        margin-right: 27px;
+    }
+
+    &__seller-work-hours {
+        position: relative;
+        color: inherit;
+        font-size: 12px;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: $hoverColor;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -7px;
+        }
+    }
+
+    &__product-price {
+        @include acrom-bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 175%;
+        color: $mainDarkColor;
+    }
+
+    &__in-stock {
+        margin-bottom: 15px;
+        @include acrom-normal;
+        font-size: 12px;
+        line-height: 154%;
+        color: $lightGreyColor;
+    }
+
+    &__link-buttons-block {
+        display: flex;
+    }
+
+    &__comments-link ,&__comments-addresses, &__seller-site {
+        @include light-blue-button;
+        width: 92px;
+        height: 28px;
+        
+    }
+
+    &__comments-link  {
+        margin-right: 8px;
+    }
+
+    &__comments-addresses {
+        @include light-blue-button;
+        margin-right: 8px;
+    }
+
+    &__seller-site {
+        @include light-blue-button;
+    }
+
+    &__additional-text-info {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        color: $lightGreyColor;
+    }
+
+    &__phone-link-button {  
+        @include acrom-500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        width: 164px;
+        height: 36px;
+        background-color: $hoverColor;
+        font-size: 13px;
+        line-height: 154%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+
+        &:hover {
+            background-color: $buttonHoverColor;
+        }
+    }
+
+    &__leave-app-link-button {
+        @include light-blue-button;
+        white-space: nowrap;
+        width: 164px;
+        height: 36px;
+    }
+
+    &__site-link-button {
+        @include light-blue-button;
+        white-space: nowrap;
+        width: 164px;
+        height: 36px;
+        margin-top: 12px;
+    }
+}
+
+.seller-card--no-site {
+
+    .seller-card__site-link-button {
+        display: none;
+    }
+
+    .seller-card__seller-site {
+        display: none;
+    }
+}

@@ -1,0 +1,41 @@
+.main-card-gallery {
+    display: flex;
+
+    &__nav-list {
+        min-width: 0;
+        max-width: 80px;
+        margin-right: 4px;      
+        max-height: 420px;
+        cursor: grab;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    &__nav-item {
+
+    }
+
+    &__nav-image {
+        width: 80px;
+        height: 136px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__images-list {
+
+    }
+
+    &__images-list-item {
+        display: flex;
+    }
+
+    &__image {
+        width: 416px;
+        height: 420px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
