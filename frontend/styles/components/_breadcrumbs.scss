@@ -6,6 +6,11 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
+    @media(max-width: 768px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
     &__item {
         font-style: normal;
         font-weight: normal;
@@ -60,6 +65,10 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding-left: 40px;
     padding-right: 40px;
+
+    @media(max-width: 1320px) {
+        border: none;
+    }
 
     @media(max-width: 767px) {
         padding-right: 20px;

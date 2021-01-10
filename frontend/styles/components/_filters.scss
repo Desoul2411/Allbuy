@@ -1,9 +1,65 @@
 .filters {
     background-color: #FFFFFF;
+    position: relative;
+    z-index: 200003;
+
+    @media(max-width: 1080px) {
+        height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+
+    &__close-filter-button {
+        padding: 10px 0;
+        padding-left: 20px;
+        display: none;
+        align-items: center;
+        background-color: $hoverColor;
+        cursor: pointer;
+
+        @media(max-width: 1080px) {
+            display: flex;
+        }
+    }
+
+    &__close-filter-icon {
+        margin-right: 10px;
+    }
+
+    &__close-filter-text {
+        @include acrom-bold;
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 6.5px 0;
+        transition: .2s;
+        text-transform: uppercase;
+    }
+
+    &__filters-list {
+        @media(max-width: 1080px) {
+            height: calc(100% - 103px);
+            overflow-y: scroll;
+            overflow-x: hidden;
+            
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1080px) { 
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+        }
+    }
 
     &__item {
         padding: 15px 15px 27px 15px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        &:last-of-type {
+            border-bottom:  none;
+        }
     }
 
     &__filter-title {
@@ -56,6 +112,7 @@
         color: #626262;
         cursor: pointer;
         transition: .2s;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
 
         &:hover {
             background: rgba(0, 0, 0, 0.04);

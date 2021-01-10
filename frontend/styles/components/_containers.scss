@@ -7,6 +7,13 @@
     }
 }
 
+.container-wide--cabinet-main {
+    @media (max-width: 768px)  {
+        width: auto;
+        padding: 0 20px;
+    }
+}
+
 .container {
     margin: 0 auto;
     max-width: 1436px;
@@ -36,4 +43,16 @@
     @media (max-width: 768px)  {
         padding: 0 12px;
     }
+}
+
+.container-cabinet  {
+    padding-right: 40px;
+}
+
+.container-cabinet--main {
+    @media (max-width: 768px)  {
+        width: auto;
+        padding: 0;
+    }
+    
 }

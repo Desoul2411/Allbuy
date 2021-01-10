@@ -1,0 +1,212 @@
+.cabinet-photogallery {
+    background-color: #FFFFFF;
+
+    &__table {
+        width: 100%;
+    }
+
+    &__table-thead {
+        border-bottom:  1px solid #EBEBEB;
+    }
+
+    &__table-th {
+        text-align: left;
+        padding: 20px 10px;
+        @include cabinet-block-headline-font;
+        line-height: 110%;
+        vertical-align: top;
+
+        &--check-all-checkboxes {
+            width: 83px;
+            min-width: 83px;
+            text-align: center;
+        }
+
+        &--active-line {
+            width: 6px;
+            min-width: 6px;
+            padding: 0;
+        }
+
+        &--status {
+            width: 10.5%ж
+        }
+
+        &--gallery-name {
+            width: 17.1%;
+        }
+
+        &--show-on-main-page {
+            width: 20%;
+            text-align: center;
+        }
+
+        &--show-in-feed {
+            width: 17.9%;
+            text-align: center;
+        }
+
+        &--show-in-galery {
+            width: 18%;
+            text-align: center;
+        }
+
+        &--controls {
+            width: 100px;
+            padding-right: 20px;
+        }
+    }
+
+    &__checkbox-label {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__checkbox--check-all-checkbox {
+        position: absolute;
+        z-index: -1;
+
+        &:checked + .cabinet-photogallery__custom-checkbox {
+            text-align: center;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__custom-checkbox {
+        @include custom-checkbox;
+    }
+
+    &__photogallery-item {
+        border-bottom:  1px solid #EBEBEB;
+        background-color: #FFFFFF;
+
+        &.active {
+            .cabinet-photogallery__td--active-line {
+                background-color: #05AB33;
+            }
+        }
+    }
+
+    &__td {
+        @include cabinet-main-font;
+        padding: 20px 10px;
+        padding-bottom: 52px;
+        line-height: 1.0em;
+        vertical-align: top;
+
+        a {
+            color: inherit;
+        }
+
+        a:hover {
+            color: $buttonHoverColor;
+        }
+
+        &--active-line {
+            padding: 0;
+        }
+
+        &--selected-checkbox {
+            text-align: center;
+            padding-top: 18px;
+        }
+
+        &--show-on-main-page {
+            text-align: center;
+        }
+
+        &--show-in-feed {
+            text-align: center;
+        }
+
+        &--show-in-galery {
+            text-align: center;
+        }
+
+        &--controls {
+            text-align: right;
+            padding-right: 20px;
+        }
+    }
+
+    &__button {
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+            path {
+                fill: $buttonHoverColor;
+                stroke: $buttonHoverColor;
+            }
+        }
+
+        path {
+            transition: .2s;
+        }
+    }
+
+    &__button--settings-button {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+
+        &:checked + .cabinet-photogallery__custom-checkbox {
+            text-align: center;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__td--check-all-checkbox {
+        text-align: center;
+    }
+
+    &__checkbox-label--switch-on-off-selected {
+        @include cabinet-main-font;
+        display: flex;
+        margin-right: 40px;
+    }
+
+    &__bottom {
+        padding: 30px 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__custom-checkbox--switch-on-off-selected {
+        margin-right: 10px;
+    }
+
+    &__button--apply-changes {
+        @include cabinet-orange-button-style;
+        padding: 6px 24px;
+        margin-right: 20px;
+    }
+
+    &__link-button {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        text-align: center;
+        color: $mainDarkColor;
+        margin-right: 24px;
+
+        &:last-of-type {
+            margin-right: 0px;
+        }
+
+        &:hover {
+            color: $buttonHoverColor;
+        }
+    }
+}

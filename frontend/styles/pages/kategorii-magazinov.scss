@@ -1,0 +1,13 @@
+.shops-category-section {
+    &__title {
+        @include acrom-bold;
+        font-size: 20px;
+        line-height: 160%;
+        color: $mainDarkColor;
+        margin-bottom: 28px;
+
+        @media(max-width: 768px) {
+            margin-bottom: 18px;
+        }
+    }
+}

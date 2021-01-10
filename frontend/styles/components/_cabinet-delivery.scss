@@ -1,0 +1,43 @@
+.cabinet-delivery {
+    &__cabinet-delivery-option {
+        display: flex;
+        margin-bottom: 20px;
+    } 
+
+    &__input-option {
+        &:nth-child(1) {
+            margin-right: 16px;
+            width: 120px;
+        }
+
+        &:nth-child(2) {
+            margin-right: 16px;
+            width: 31.2%;
+        }
+
+        &:nth-child(3) {
+            margin-right: 32px;
+            width: 29%
+        }
+    }
+
+    &__input {
+        @include cabinet-big-input-style;
+        width: 100%;
+    }
+
+    &__delivery-option-controls {
+        align-self: flex-end;
+        display: flex;
+        margin-bottom: 7px;
+    }
+
+    .cabinet-content__control-button--delivery-edit {
+        margin-right: 12px;
+    }
+
+    &__add-delivery-option-button {
+        @include cabinet-orange-button-style;
+        padding: 6px 32px;
+    }
+}

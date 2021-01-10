@@ -1,11 +1,36 @@
 .catalog-content {
     &__filters {
-        margin-bottom: 8px;
+        margin-bottom: 15px;
     }
 
     &__filter-buttons {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    &__show-filter-block-button {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 130% ;
+        color: $mainDarkColor;
+        padding: 5px 9px 5px 9px;
+        background-color: rgba(0, 0, 0, 0.04);
+        transition: .2s;
+        display: none;
+        align-items: center;
+        outline: none;
+
+        @media(max-width: 1080px) {
+            display: flex;
+        }
+
+        &:hover {
+            background-color: $lightBlueHoverColor;
+        }
+    }
+
+    &__filter-block-button-icon {
+        margin-left: 13px;
     }
 
     &__show-more-dots {
@@ -25,10 +50,32 @@
     }
 
     &__product-cards {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -1.277%;
-        margin-bottom: -1.227%;
+        position: relative;
+        z-index: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 14px;
+
+        @media (max-width: 1300px)  {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 1080px)  {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 900px)  {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 650px)  {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 425px)  {
+            grid-gap: 10px;
+        }
     }
+    
 }
 

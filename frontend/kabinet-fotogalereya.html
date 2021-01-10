@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Личный кабинет - фотогалерея</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="body-cabinet-content">
+    <div class="cabinet-page-wrapper">
+        <header class="header header--cabinet-content-page">
+            <div class="header__top">
+                <div class="container-wide container-wide--cabinet-main">
+                    <div class="header__top-content">
+                        <div class="header__left">
+                            <a href="index.html" class="header__logo-link">
+                                <svg class="header__top-logo" width="139" height="36" viewBox="0 0 139 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.35639 6.54545H10.1649L14.4644 29.3523H9.76628L8.99751 24.5375H5.60921L4.81196 29.3523H0L4.35639 6.54545ZM8.51347 21.5248L7.28912 12.6273L6.06478 21.5248H8.51347Z"
+                                        fill="white" />
+                                    <path d="M16.7929 6.54545H21.8896V25.9454H27.1856V29.3523H16.7929V6.54545Z"
+                                        fill="white" />
+                                    <path d="M29.4167 6.54545H34.5134V25.9454H39.8094V29.3523H29.4167V6.54545Z"
+                                        fill="white" />
+                                    <path
+                                        d="M42.0406 6.54545H48.0484C49.548 6.54545 50.8198 6.70501 51.8638 7.02412C52.9268 7.32445 53.781 7.91574 54.4264 8.79798C55.0718 9.68022 55.3945 10.9191 55.3945 12.5147C55.3945 13.8662 55.1003 14.9174 54.5118 15.6682C53.9234 16.419 53.0882 16.8977 52.0062 17.1042C53.3349 17.2731 54.3505 17.8269 55.0528 18.7654C55.7551 19.704 56.1063 20.9804 56.1063 22.5947C56.1063 27.0998 53.781 29.3523 49.1304 29.3523H42.0406V6.54545ZM48.1338 15.6682C49.2158 15.6682 49.9466 15.4242 50.3263 14.9361C50.7249 14.4481 50.9242 13.6878 50.9242 12.6554C50.9242 11.7544 50.6774 11.0787 50.1839 10.6282C49.6904 10.1589 48.969 9.92425 48.0199 9.92425H47.1373V15.6682H48.1338ZM48.2192 25.8327C49.3012 25.8327 50.0605 25.5699 50.4971 25.0443C50.9527 24.5 51.1805 23.6553 51.1805 22.5102C51.1805 21.215 50.9527 20.3046 50.4971 19.7791C50.0605 19.2535 49.2917 18.9907 48.1908 18.9907H47.1373V25.8327H48.2192Z"
+                                        fill="white" />
+                                    <path
+                                        d="M65.4424 29.6902C63.715 29.6902 62.3483 29.418 61.3422 28.8736C60.3362 28.3105 59.6244 27.494 59.2068 26.424C58.8081 25.3353 58.6088 23.9556 58.6088 22.285V6.54545H63.6486V23.0452C63.6486 23.965 63.7625 24.6971 63.9902 25.2414C64.237 25.7858 64.7211 26.058 65.4424 26.058C66.1637 26.058 66.6382 25.7858 66.866 25.2414C67.0938 24.6971 67.2077 23.965 67.2077 23.0452V6.54545H72.2759V22.285C72.2759 23.9556 72.0671 25.3353 71.6495 26.424C71.2319 27.494 70.5201 28.3105 69.514 28.8736C68.527 29.418 67.1697 29.6902 65.4424 29.6902Z"
+                                        fill="white" />
+                                    <path
+                                        d="M78.423 20.0325L74.0381 6.54545H78.8501L81.0425 13.7535L83.0072 6.54545H87.6198L83.3204 20.0325V29.3523H78.423V20.0325Z"
+                                        fill="white" />
+                                    <path d="M94.3218 0H139V36H94.3218V0Z" fill="#FC4301" />
+                                    <path d="M102.595 22.6996H105.653V25.7236H102.595V22.6996Z" fill="white" />
+                                    <path
+                                        d="M107.721 9.81818H111.911C112.957 9.81818 113.844 9.92945 114.572 10.152C115.313 10.3615 115.909 10.7738 116.359 11.3891C116.809 12.0044 117.034 12.8684 117.034 13.9811C117.034 14.9236 116.829 15.6567 116.419 16.1804C116.008 16.704 115.426 17.0378 114.671 17.1818C115.598 17.2996 116.306 17.6858 116.796 18.3404C117.286 18.9949 117.531 19.8851 117.531 21.0109C117.531 24.1527 115.909 25.7236 112.666 25.7236H107.721V9.81818ZM111.971 16.1804C112.725 16.1804 113.235 16.0102 113.5 15.6698C113.778 15.3295 113.917 14.7993 113.917 14.0793C113.917 13.4509 113.744 12.9796 113.4 12.6655C113.056 12.3382 112.553 12.1745 111.891 12.1745H111.276V16.1804H111.971ZM112.03 23.2691C112.785 23.2691 113.314 23.0858 113.619 22.7193C113.936 22.3396 114.095 21.7505 114.095 20.952C114.095 20.0487 113.936 19.4138 113.619 19.0473C113.314 18.6807 112.778 18.4975 112.01 18.4975H111.276V23.2691H112.03Z"
+                                        fill="white" />
+                                    <path
+                                        d="M121.11 19.224L118.052 9.81818H121.408L122.937 14.8451L124.307 9.81818H127.524L124.526 19.224V25.7236H121.11V19.224Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <button class="header__cabinet-menu-button">Меню</button>
+                            <!-- <span class="header__open-menu-burger active visually-hidden"></span> -->
+                        </div>
+                        <div class="header__right">
+                            <a href="login.html" class="header__log-out">
+                                <svg class="header__log-in-icon" width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.733786 7.12649C0.892891 7.12649 1.0425 7.1906 1.16123 7.27134L4.2341 9.61517C4.32671 9.68642 4.40745 9.76953 4.48344 9.87164C4.93464 10.4772 4.8064 11.3297 4.20323 11.788L1.15648 14.1129C1.0425 14.2007 0.892891 14.2506 0.733786 14.2506C0.330086 14.2506 0 13.9205 0 13.5168V7.85789C0 7.45657 0.330086 7.12649 0.733786 7.12649ZM9.50119 2.37945H11.8759V1.37733C11.8759 0.615049 12.4909 0 13.2485 0C13.5263 0 13.7828 0.0807419 13.9965 0.227972L18.3422 3.12749L18.347 3.13223C18.7435 3.40295 19 3.85177 19 4.36233V6.30959V19H9.50119C8.18798 19 7.12886 17.9385 7.12886 16.6253V4.75416C7.12886 3.43857 8.18798 2.37945 9.50119 2.37945ZM9.50119 16.0316C9.50119 16.3593 9.76715 16.6253 10.0949 16.6253H15.4379L12.5289 14.6899V14.6852C12.1324 14.4144 11.8759 13.9633 11.8759 13.4551V4.75416H10.0949C9.76715 4.75416 9.50119 5.01775 9.50119 5.34783V16.0316Z"
+                                        fill="white" />
+                                </svg>
+                                <span class="header__log-out-text">Выйти</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main-cabinet-page">
+            <div class="container-cabinet container-cabinet--main">
+                <div class="cabinet-content-wrapper">
+                    <div class="cabinet-menu-overlay visually-hidden"></div>
+                    <div class="cabinet-menu cabinet-menu--content-page">
+                        <div class="cabinet-menu__header">
+                            <span class="cabinet-menu__company-name">Байдорс</span>
+                            <span class="cabinet-menu__company-location">Минск</span>
+                            <svg class="cabinet-menu__close-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"/>
+                            </svg>                                
+                        </div>
+                        <ul class="cabinet-menu__menu-list">
+                            <li class="cabinet-menu__menu-list-item">
+                                <a href="kabinet-otzivy.html" class="cabinet-menu__menu-list-item-link cabinet-menu__menu-list-item-link--has-amount">
+                                Отзывы
+                                <span className="cabinet-menu__items-amount">5</span>
+                            </a>
+                            </li>
+                            <li class="cabinet-menu__menu-list-item"><a href="kabinet-tovary.html" class="cabinet-menu__menu-list-item-link">Товары</a></li>
+                            <li class="cabinet-menu__menu-list-item"><a href="kabinet-novosti.html" class="cabinet-menu__menu-list-item-link">Новости</a></li>
+                            <li class="cabinet-menu__menu-list-item"><a href="kabinet-anketa.html" class="cabinet-menu__menu-list-item-link">Анкета</a></li>
+                            <li class="cabinet-menu__menu-list-item"><a href="kabinet-harakteristiki.html" class="cabinet-menu__menu-list-item-link">Характеристики</a></li>
+                            <li class="cabinet-menu__menu-list-item active">
+                                <a href="kabinet-fotogalereya.html" class="cabinet-menu__menu-list-item-link cabinet-menu__menu-list-item-link--has-amount">
+                                    Фотогалерея
+                                    <span className="cabinet-menu__items-amount">5</span>
+                                </a>
+                            </li>
+                            <li class="cabinet-menu__menu-list-item"><a href="kabinet-dostavka.html" class="cabinet-menu__menu-list-item-link">Доставка</a></li>
+                            <li class="cabinet-menu__menu-list-item"><a href="kabinet-sposoby-oplaty.html" class="cabinet-menu__menu-list-item-link">Способы оплаты</a></li>
+                            <li class="cabinet-menu__menu-list-item"><a href="kabinet-video.html" class="cabinet-menu__menu-list-item-link">Видео</a></li>
+                        </ul>
+                    </div>
+                    <div class="cabinet-content">
+                        <div class="cabinet-content__cabinet-search cabinet-search">
+                            <form action="#" class="cabinet-search__form">
+                                <span class="cabinet-search__title">Управление товарами и ценами <a href="https://buydoors.by/" class="cabinet-search__company-name-link">Байдорс</a></span>
+                                <div class="cabinet-search__search-input-wrapper">
+                                    <svg class="cabinet-search__search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.7243 18.2609L14.8255 13.2919C16.1146 11.8012 16.7592 10.0621 16.7592 8.07453C16.7592 3.60248 13.0206 0 8.37961 0C3.7386 0 0 3.60248 0 8.07453C0 12.5466 3.7386 16.1491 8.37961 16.1491C10.0555 16.1491 11.7315 15.6522 13.1495 14.6584L18.0484 19.6273C18.3062 19.8758 18.5641 20 18.8219 20C19.0797 20 19.3376 19.8758 19.5954 19.7516C20.1111 19.2547 20.1111 18.6335 19.7243 18.2609ZM8.37961 2.23602C11.7315 2.23602 14.5676 4.84472 14.5676 8.19876C14.5676 11.5528 11.8604 14.1615 8.37961 14.1615C4.89885 14.1615 2.19159 11.5528 2.19159 8.19876C2.19159 4.84472 5.02777 2.23602 8.37961 2.23602Z" fill="#353535"/>
+                                    </svg>                                    
+                                    <input type="text" class="cabinet-search__search-input" placeholder="Поиск товара">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="cabinet-content__cabinet-photogallery cabinet-photogallery">
+                            <form action="#" class="cabinet-photogallery__form">
+                                <table class="cabinet-photogallery__table">
+                                    <thead class="cabinet-photogallery__table-thead">
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--active-line"></th>
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--check-all-checkboxes">
+                                            <label class="cabinet-photogallery__checkbox-label">
+                                                <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--check-all-checkbox" name="check_all_checkbox" type="checkbox">
+                                                <span class="cabinet-photogallery__custom-checkbox"></span>
+                                            </label>
+                                        </th>
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--status">Статус</th>
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--gallery-name">Название галереи</th>
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--show-on-main-page">Показывать на главной</th>
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--show-in-feed">Показывать в ленте</th>
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--show-in-galery">Показывать в галерее</th>
+                                        <th class="cabinet-photogallery__table-th cabinet-photogallery__table-th--controls">Управление</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="cabinet-photogallery__photogallery-item active">
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--active-line"></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--selected-checkbox">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--selected-checkbox" name="selected_checkbox" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--status">Включено</td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--gallery-name"> <a href="/cmscatalog/places/photo/id/17333/galleryId/3113/">Металлические двери</a></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-on-main-page">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-on-main-page-checkbox" name="show-on-main-page" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-feed">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-feed-checkbox" name="show-in-feed" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-galery">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-galery-checkbox" name="show-in-galery" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--controls">
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                </svg>
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="cabinet-photogallery__photogallery-item active">
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--active-line"></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--selected-checkbox">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--selected-checkbox" name="selected_checkbox" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--status">Включено</td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--gallery-name"> <a href="/cmscatalog/places/photo/id/17333/galleryId/3113/">Металлические двери</a></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-on-main-page">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-on-main-page-checkbox" name="show-on-main-page" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-feed">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-feed-checkbox" name="show-in-feed" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-galery">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-galery-checkbox" name="show-in-galery" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--controls">
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                </svg>
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="cabinet-photogallery__photogallery-item active">
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--active-line"></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--selected-checkbox">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--selected-checkbox" name="selected_checkbox" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--status">Включено</td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--gallery-name"> <a href="/cmscatalog/places/photo/id/17333/galleryId/3113/">Металлические двери</a></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-on-main-page">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-on-main-page-checkbox" name="show-on-main-page" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-feed">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-feed-checkbox" name="show-in-feed" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-galery">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-galery-checkbox" name="show-in-galery" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--controls">
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                </svg>
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="cabinet-photogallery__photogallery-item">
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--active-line"></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--selected-checkbox">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--selected-checkbox" name="selected_checkbox" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--status">Включено</td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--gallery-name"> <a href="/cmscatalog/places/photo/id/17333/galleryId/3113/">Металлические двери</a></td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-on-main-page">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-on-main-page-checkbox" name="show-on-main-page" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-feed">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-feed-checkbox" name="show-in-feed" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--show-in-galery">
+                                                <label class="cabinet-photogallery__checkbox-label">
+                                                    <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--show-in-galery-checkbox" name="show-in-galery" type="checkbox">
+                                                    <span class="cabinet-photogallery__custom-checkbox"></span>
+                                                </label>
+                                            </td>
+                                            <td class="cabinet-photogallery__td cabinet-photogallery__td--controls">
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                </svg>
+                                                <svg class="cabinet-photogallery__button cabinet-photogallery__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="cabinet-photogallery__bottom">
+                                    <label class="cabinet-photogallery__checkbox-label cabinet-photogallery__checkbox-label--switch-on-off-selected">
+                                        <input class="cabinet-photogallery__checkbox cabinet-photogallery__checkbox--switch_on_off_selected" name="switch_on_off_selected" type="checkbox">
+                                        <span class="cabinet-photogallery__custom-checkbox cabinet-photogallery__custom-checkbox--switch-on-off-selected"></span>
+                                        Включить
+                                    </label>
+                                    <button class="cabinet-photogallery__button cabinet-photogallery__button--apply-changes" type="submit">Применить</button>
+                                    <a href="/cmscatalog/places/createNews/id/17333/" class="cabinet-photogallery__link-button cabinet-photogallery__link-button--add-gallery">Добавить галлерею</a>
+                                    <a href="/cmscatalog/places/createNews/id/17333/" class="cabinet-photogallery__link-button cabinet-photogallery__link-button--sort-ribrics-photo">Сортировать фото рубрик</a>
+                                    <a href="/cmscatalog/places/createNews/id/17333/" class="cabinet-photogallery__link-button cabinet-photogallery__link-button--show-no-phot-rubrics">Показывать рубрики без фото</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__bottom">
+                <div class="container-wide">
+                    <div class="footer__bottom-content">
+                        <div class="footer__bottom-top">
+                            <a href="#" class="footer__logo-link">
+                                <svg class="footer__logo" width="139" height="36" viewBox="0 0 139 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.35639 6.5459H10.1649L14.4644 29.3527H9.76628L8.99751 24.538H5.60921L4.81196 29.3527H0L4.35639 6.5459ZM8.51347 21.5252L7.28912 12.6277L6.06478 21.5252H8.51347Z" fill="white"/>
+                                    <path d="M16.7929 6.5459H21.8896V25.9458H27.1856V29.3527H16.7929V6.5459Z" fill="white"/>
+                                    <path d="M29.4167 6.5459H34.5134V25.9458H39.8094V29.3527H29.4167V6.5459Z" fill="white"/>
+                                    <path d="M42.0406 6.5459H48.0484C49.548 6.5459 50.8198 6.70545 51.8638 7.02456C52.9268 7.3249 53.781 7.91619 54.4264 8.79843C55.0718 9.68067 55.3945 10.9196 55.3945 12.5151C55.3945 13.8666 55.1003 14.9178 54.5118 15.6686C53.9234 16.4195 53.0882 16.8981 52.0062 17.1046C53.3349 17.2736 54.3505 17.8273 55.0528 18.7659C55.7551 19.7044 56.1063 20.9809 56.1063 22.5952C56.1063 27.1002 53.781 29.3527 49.1304 29.3527H42.0406V6.5459ZM48.1338 15.6686C49.2158 15.6686 49.9466 15.4246 50.3263 14.9366C50.7249 14.4485 50.9242 13.6883 50.9242 12.6559C50.9242 11.7549 50.6774 11.0791 50.1839 10.6286C49.6904 10.1593 48.969 9.92469 48.0199 9.92469H47.1373V15.6686H48.1338ZM48.2192 25.8332C49.3012 25.8332 50.0605 25.5704 50.4971 25.0448C50.9527 24.5004 51.1805 23.6557 51.1805 22.5107C51.1805 21.2155 50.9527 20.3051 50.4971 19.7795C50.0605 19.2539 49.2917 18.9911 48.1908 18.9911H47.1373V25.8332H48.2192Z" fill="white"/>
+                                    <path d="M65.4424 29.6906C63.715 29.6906 62.3483 29.4184 61.3422 28.8741C60.3362 28.311 59.6244 27.4944 59.2068 26.4245C58.8081 25.3357 58.6088 23.9561 58.6088 22.2854V6.5459H63.6486V23.0457C63.6486 23.9655 63.7625 24.6975 63.9902 25.2419C64.237 25.7862 64.7211 26.0584 65.4424 26.0584C66.1637 26.0584 66.6382 25.7862 66.866 25.2419C67.0938 24.6975 67.2077 23.9655 67.2077 23.0457V6.5459H72.2759V22.2854C72.2759 23.9561 72.0671 25.3357 71.6495 26.4245C71.2319 27.4944 70.5201 28.311 69.514 28.8741C68.527 29.4184 67.1697 29.6906 65.4424 29.6906Z" fill="white"/>
+                                    <path d="M78.423 20.0329L74.0381 6.5459H78.8501L81.0425 13.754L83.0072 6.5459H87.6198L83.3204 20.0329V29.3527H78.423V20.0329Z" fill="white"/>
+                                    <path d="M94.3218 0H139V36H94.3218V0Z" fill="#FC4301"/>
+                                    <path d="M102.595 22.6998H105.653V25.7238H102.595V22.6998Z" fill="white"/>
+                                    <path d="M107.721 9.81836H111.911C112.957 9.81836 113.844 9.92963 114.572 10.1522C115.313 10.3616 115.909 10.774 116.359 11.3893C116.809 12.0045 117.034 12.8685 117.034 13.9813C117.034 14.9238 116.829 15.6569 116.419 16.1805C116.008 16.7042 115.426 17.038 114.671 17.182C115.598 17.2998 116.306 17.686 116.796 18.3405C117.286 18.9951 117.531 19.8853 117.531 21.0111C117.531 24.1529 115.909 25.7238 112.666 25.7238H107.721V9.81836ZM111.971 16.1805C112.725 16.1805 113.235 16.0104 113.5 15.67C113.778 15.3296 113.917 14.7995 113.917 14.0795C113.917 13.4511 113.744 12.9798 113.4 12.6656C113.056 12.3384 112.553 12.1747 111.891 12.1747H111.276V16.1805H111.971ZM112.03 23.2693C112.785 23.2693 113.314 23.086 113.619 22.7195C113.936 22.3398 114.095 21.7507 114.095 20.9522C114.095 20.0489 113.936 19.414 113.619 19.0475C113.314 18.6809 112.778 18.4976 112.01 18.4976H111.276V23.2693H112.03Z" fill="white"/>
+                                    <path d="M121.11 19.2242L118.052 9.81836H121.408L122.937 14.8453L124.307 9.81836H127.524L124.526 19.2242V25.7238H121.11V19.2242Z" fill="white"/>
+                                </svg>                                
+                            </a>
+                            <ul class="footer__bottom-nav">
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Размещение рекламы</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">О проекте</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Вакансии</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Партнеры</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Способы оплаты</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Правовая информация</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Публичный договор</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Написать руководителю AllBuy</a></li>
+                                <li class="footer__bottom-nav-item"><a href="text-page.html" class="footer__bottom-nav-link">Написать в поддержку</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__bottom-bottom">
+                            <div class="footer__copyrights">
+                                <span class="footer__copyrights-item"> © 2020 ООО «ВСЁ КУПИ».</span>
+                                <span class="footer__copyrights-item">УНП 191639980,</span>
+                                <span class="footer__copyrights-item">рег. Мингорисполком 10.12.12 220012</span>
+                                <span class="footer__copyrights-item">г. Минск ул. Толбухина, д. 2, пом. 14, комн. 19</span>
+                            </div>
+                            <div class="footer__additional-info">
+                                <span class="footer__site-producer"><a class="footer__site-producer-link" href="https://aurius.studio/" target="_blank" rel="nofollow">AURIUS STUDIO</a> — Разработка и продвижение сайта</span>
+                                <span class="footer__personal-data-policy">Продолжая пользоваться ресурсом, вы соглашаетесь с условиями <a href="#" class="footer__personal-data-policy-link"> политики обработки персональных данных.</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>  
+    <script src="assets/libs/move-elements.js"></script>
+    <script src="assets/libs/easy-smooth-scroll-easing.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

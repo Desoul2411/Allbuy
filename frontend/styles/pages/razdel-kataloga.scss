@@ -5,11 +5,19 @@
         line-height: 160%;
         color: $mainDarkColor;
         margin-bottom: 30px;
+
+        @media (max-width: 767px)  {
+            margin-bottom: 15px;
+        }
     }
 
     &__catalog {
         display: flex;
         padding-bottom: 68px;
+
+        @media (max-width: 768px)  {
+            padding-bottom: 40px;
+        }
     }
 }
 

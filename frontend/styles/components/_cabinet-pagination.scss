@@ -1,0 +1,41 @@
+.cabinet-pagination {
+    width: 100%;
+
+    @media (max-width: 1600px) {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 1600px) {
+        width: auto;
+    }
+
+    &__page , .cabinet-pagination__page--first-page, .cabinet-pagination__page--last-page {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        text-align: center;
+        color: $mainDarkColor;
+        margin-right: 16px;
+        transition: .2s;
+
+        @media (max-width:1650px) {
+            margin-right: 10px;
+        }
+
+        &:last-of-type {
+            margin-right: 0px;
+        }
+
+        &.current {
+            color: $hoverColor;
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        &:hover {
+            color: $buttonHoverColor;
+        }
+    }
+}

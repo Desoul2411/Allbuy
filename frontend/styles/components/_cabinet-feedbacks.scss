@@ -1,0 +1,190 @@
+.cabinet-feedbacks {
+
+    &__table {
+        width: 100%;
+    }
+
+    &__table-thead {
+        border-bottom: 1px solid #EBEBEB;
+        background-color: #FFFFFF;
+    }
+
+    &__table-th {
+        text-align: left;
+        padding: 20px 10px;
+        @include cabinet-block-headline-font;
+        line-height: 110%;
+        vertical-align: top;
+
+        &--active-line {
+            width: 6px;
+            min-width: 6px;
+            padding: 0;
+        }
+
+        &--check-all {
+            width: 83px;
+            min-width: 83px;
+            text-align: center;
+        }
+
+        &--status {
+            width: 8.72%;
+        }
+
+        &--company {
+            width: 10.49%;
+        }
+
+        &--date {
+            width: 12.73%;
+        }
+
+        &--time {
+            width: 6.33%;
+        }
+
+        &--author {
+            width: 7%;
+        }
+
+        &--feedback-text {
+            /* width: 38.28%; */
+        }
+
+        &--control {
+            padding-right: 25px;
+            width: 85px;
+        }
+    }
+
+    &__checkbox-label {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__checkbox--check-all-checkbox {
+        position: absolute;
+        z-index: -1;
+
+        &:checked + .cabinet-feedbacks__custom-checkbox {
+            text-align: center;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__custom-checkbox {
+        @include custom-checkbox;
+    }
+
+    &__feedbacks-item {
+        border-bottom: 1px solid #EBEBEB;
+        background-color: #FFFFFF;
+
+        &.active {
+            .cabinet-feedbacks__td--active-line {
+                background-color: #05AB33;
+            }
+        }
+    }
+
+    &__td {
+        @include cabinet-main-font;
+        padding: 20px 10px;
+        line-height: 1.0em;
+        vertical-align: top;
+
+        a:hover {
+            color: $buttonHoverColor;
+        }
+
+        &--active-line {
+            padding: 0;
+        }
+
+        &--check-checkbox {
+            text-align: center;
+            padding-top: 18px;
+        }
+
+        &--status {
+  
+        }
+
+        &--company {
+   
+        }
+
+        &--date {
+     
+        }
+
+        &--time {
+        
+        }
+
+        &--author {
+    
+        }
+
+        &--feedback-text {
+
+        }
+
+        &--controls {
+            text-align: center;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+
+        &:checked + .cabinet-feedbacks__custom-checkbox {
+            text-align: center;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__button {
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+            path {
+                fill: $buttonHoverColor;
+                stroke: $buttonHoverColor;
+            }
+        }
+
+        path {
+            transition: .2s;
+        }
+    }
+
+    &__button--settings-button {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    &__table-footer-content {
+        background-color: #FFFFFF;
+        padding: 30px 40px;
+    }
+
+    .cabinet-feedbacks__table-controls-select {
+        @include input-base-style;
+        height: 24px;
+        outline: none;
+    }
+
+    .cabinet-feedbacks__show-feedbacks-amount-label {
+        @include cabinet-main-font;
+    }
+}

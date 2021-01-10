@@ -87,28 +87,9 @@
     }
 
     &__custom-remember-password-checkbox {
-        display: block;
-        position: relative;
-        width: 16px;
-        height: 16px;
-        background: #F1F1F1;
-        border: 1px solid #696969;
-        position: relative;
+        @include custom-checkbox;
         margin-bottom: 2px;
         margin-right: 9px;
-
-        &:before {
-            position: absolute;
-            content: '';
-            width: 10px;
-            height: 10px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            background-color: $hoverColor;
-            transition: 0.2s;
-        }
     }
 
     &__submit-button {

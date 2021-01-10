@@ -7,6 +7,10 @@
         margin-bottom: 40px ;
     }
 
+    @media(max-width: 425px) {
+        margin-bottom: 30px ;
+    }
+
     &__item {
         position: relative;
         height: 500px;

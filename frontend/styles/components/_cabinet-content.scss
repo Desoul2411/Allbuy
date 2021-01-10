@@ -1,0 +1,283 @@
+.cabinet-content {
+    &__content-block {
+        background-color: #FFFFFF;
+        padding: 20px 20px 40px 40px;
+    }
+
+    &__input-option, &__checkboxes-group-option {
+        margin-bottom: 32px;
+    }
+
+    &__checkboxes-group-option {
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__input-option-label, &__checkboxes-group-title, &__block-headline {
+        @include cabinet-block-headline-font;
+    }
+
+    &__input-hint {
+        @include cabinet-input-hint;
+    }
+
+    &__input-option-label, &__block-headline {
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    &__input {
+        @include cabinet-big-input-style;
+    }
+
+    &__option-description {
+        margin-bottom: 24px;
+    }
+
+    &__option-description-title {
+        @include acrom-normal;
+        display: block;
+        font-size: 12px;
+        line-height: 100%;
+        color: #B4B4B4;
+    }
+
+    &__checkboxes-group-title {
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    &__checkboxes-option {
+        margin-bottom: 17px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__checkbox-label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+        &:checked + .cabinet-content__custom-checkbox {
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__custom-checkbox {
+        @include custom-checkbox;
+        margin-right: 12px;
+    }
+
+    &__submit-button {
+        @include cabinet-orange-button-style;
+        
+    }
+
+    &__submit-button--characteristics {
+        width: 124px;
+        height: 32px;
+        margin-top: 44px;
+    }
+
+    &__control-button {
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+            path {
+                fill: $buttonHoverColor;
+                stroke: $buttonHoverColor;
+            }
+        }
+
+        path {
+            transition: .2s;
+        }
+    }
+
+    //kabonet-anketa
+    &__tab-box-option {
+        margin-bottom: 32px;
+    }
+
+    &__tab-items-list-wrapper {
+        padding: 12px 12px 40px 12px;
+        background: #F9F9F9;
+        border: 1px solid #EDEDED;
+        box-sizing: border-box;
+        width: 560px;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 36px;
+    }
+
+    &__tab-box {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -8px;
+        margin-bottom: -8px;
+
+    }
+
+    &__tab-box-item {
+        padding: 2px 14px;
+        font-size: 13px;
+        line-height: 185%;
+        color: $mainDarkColor;
+        background: #FFFFFF;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    &__phones-option {
+        margin-bottom: 32px;
+    }
+
+    &__phones-list {
+        margin-bottom: 20px;
+    }
+
+    &__phones-list-item {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+        width: 560px;
+        height: 36px;
+        background: #F9F9F9;
+        border: 1px solid #EDEDED;
+        box-sizing: border-box;
+        border-radius: 0px;
+        margin-bottom: 8px;
+    }
+
+    &__phone-input {
+        width: 190px;
+        @include acrom-normal;
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        box-sizing: border-box;
+        padding: 0 12px;
+        font-size: 13px;
+        line-height: 185%;
+        color: $mainDarkColor;
+        margin-right: 45px;
+    }
+
+    &__phone-description {
+        margin-right: 13px;
+    }
+
+    &__phone-description-label {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 185% ;
+        color: $mainDarkColor;
+    }
+
+    &__phone-description-input {
+        width: 190px;
+        height: 24px;
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        box-sizing: border-box;
+        padding: 0 12px;
+    }
+
+    &__add-phone-button {
+        @include cabinet-orange-button-style;
+        padding: 6px 24px;
+    }
+
+    &__input-small-label {
+        @include input-small-label;
+    }
+
+    &__work-time-inputs {
+        display: inline-flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    &__work-time-input-option {
+        display: flex;
+        flex-direction: column;
+        margin-right: 16px;
+        width: 119px;
+    }
+
+    &__work-time-inputs-item {
+        position: relative;
+        display: flex;
+        margin-bottom: 12px;
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__input--work-time {
+        width: 100%;
+    }
+
+    &__input-option--work-time-comment {
+        width: 333px;
+    }
+
+    &__input-option--24-hours {
+        position: relative;
+    }
+
+    &__custom-checkbox {
+        cursor: pointer;
+    }
+
+    &__custom-checkbox--24-hours {
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__add-work-time-button {
+        @include cabinet-orange-button-style;
+        display: block;
+        padding: 6px 17px;
+    }
+
+    &__work-time-input-option--opening-time {
+        position: relative;
+    }
+
+    .cabinet-content__control-button--work-time-delete {
+        position: absolute;
+        right: -16px;
+        bottom: 10px;
+    }
+
+    &__bottom-buttons-block {
+        padding: 40px;
+        background-color: #FFFFFF;
+        border-top: 1px solid #EBEBEB;
+    }
+
+    &__submit-button--save {
+        padding: 6px 17px;
+        margin-right: 10px;
+    }
+
+    &__submit-button--save-and-exit {
+        padding: 6px 17px;
+    }
+}

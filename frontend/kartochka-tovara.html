@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="styles/main.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     
 </head>
 
@@ -4311,40 +4311,71 @@
             </ul>
             <div class="main-card">
                 <div class="main-card-gallery">
-                    <ul class="main-card-gallery__nav-list">
-                        <li class="main-card-gallery__nav-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
-                        </li>
-                        <li class="main-card-gallery__nav-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
-                        </li>
-                        <li class="main-card-gallery__nav-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
-                        </li>
-                        <li class="main-card-gallery__nav-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
-                        </li>
-                        <li class="main-card-gallery__nav-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
-                        </li>
-                    </ul>
-                    <ul class="main-card-gallery__images-list">
-                        <li class="main-card-gallery__images-list-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="" class="main-card-gallery__image">
-                        </li>
-                        <!-- <li class="main-card-gallery__images-list-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="" class="main-card-gallery__image">
-                        </li>
-                        <li class="main-card-gallery__images-list-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="" class="main-card-gallery__image">
-                        </li>
-                        <li class="main-card-gallery__images-list-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="" class="main-card-gallery__image">
-                        </li>
-                        <li class="main-card-gallery__images-list-item">
-                            <img src="assets/images/main-product-card-image.jpg" alt="" class="main-card-gallery__image">
-                        </li> -->
-                    </ul>
+                    <div id="nav-slider" class="main-card-gallery__nav-slider splide">
+                        <div class="main-card-gallery__nav-slider-track splide__track">
+                            <ul class="main-card-gallery__nav-list splide__list">
+                                <li class="main-card-gallery__nav-item splide__slide">
+                                    <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
+                                </li>
+                                <li class="main-card-gallery__nav-item splide__slide">
+                                    <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
+                                </li>
+                                <li class="main-card-gallery__nav-item splide__slide">
+                                    <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
+                                </li>
+                                <li class="main-card-gallery__nav-item splide__slide">
+                                    <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
+                                </li>
+                                <li class="main-card-gallery__nav-item splide__slide">
+                                    <img src="assets/images/main-product-card-image.jpg" alt="навигационное изображение товара" class="main-card-gallery__nav-image">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="main-slider" class="main-card-gallery__main-slider splide">
+                        <div class="main-card-gallery__main-slider-track splide__track">
+                            <ul class="main-card-gallery__images-list splide__list">
+                                <li class="main-card-gallery__images-list-item splide__slide">
+                                    <a href="assets/images/main-product-card-image.jpg" class="main-card-gallery__images-list-item-link">
+                                        <img src="assets/images/main-product-card-image.jpg" alt="изображение товара" class="main-card-gallery__image">
+                                    </a>
+                                </li>
+                                <li class="main-card-gallery__images-list-item splide__slide">
+                                    <a href="assets/images/main-product-card-image.jpg" class="main-card-gallery__images-list-item-link">
+                                        <img src="assets/images/main-product-card-image.jpg" alt="изображение товара" class="main-card-gallery__image">
+                                    </a>
+                                </li>
+                                <li class="main-card-gallery__images-list-item splide__slide">
+                                    <a href="assets/images/main-product-card-image.jpg" class="main-card-gallery__images-list-item-link">
+                                        <img src="assets/images/main-product-card-image.jpg" alt="изображение товара" class="main-card-gallery__image">
+                                    </a>
+                                </li>
+                                <li class="main-card-gallery__images-list-item splide__slide">
+                                    <a href="assets/images/main-product-card-image.jpg" class="main-card-gallery__images-list-item-link">
+                                        <img src="assets/images/main-product-card-image.jpg" alt="изображение товара" class="main-card-gallery__image">
+                                    </a>
+                                </li>
+                                <li class="main-card-gallery__images-list-item splide__slide">
+                                    <a href="assets/images/main-product-card-image.jpg" class="main-card-gallery__images-list-item-link">
+                                        <img src="assets/images/main-product-card-image.jpg" alt="изображение товара" class="main-card-gallery__image">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev">
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.07129 17L8.92843 9L2.07129 1" stroke="white" stroke-width="3"/>
+                                </svg>
+                                    
+                            </button>
+                            <button class="splide__arrow splide__arrow--next">
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.07129 17L8.92843 9L2.07129 1" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="main-card-info">
                     <h1 class="main-card-info__headline">Н-планка</h1>
@@ -4407,12 +4438,12 @@
                                     </div>
                                     <div class="seller-card__seller-location-work-hours">
                                         <span class="seller-card__seller-location">Минск, Меньковский тракт, 2Б</span>
-                                        <span class="seller-card__seller-work-time">до <span class="seller-card__seller-work-hours">17:00</span></span>
+                                        <span class="seller-card__seller-work-hours">до 17:00</span>
                                     </div>
                                 </div>
                                 <div class="seller-card__second-info-block">
                                     <span class="seller-card__product-price"><span class="seller-card__product-price-amount">2</span>&nbsp;руб.</span>
-                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9</span>марта)</span>
+                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9 марта</span>)</span>
                                     <div class="seller-card__link-buttons-block">
                                         <a href="kartochka-magazina.html#comments" class="seller-card__comments-link"> <span class="__comments-amount">5</span>&nbsp;отзывов</a>
                                         <a href="kartochka-magazina.html#adresses" class="seller-card__comments-addresses">Все адреса</a>
@@ -4424,10 +4455,12 @@
                                 Наша компания за диалог с клиентом! Мы сумеем договориться с Вами о доступности цены, условиям поставки и способе оплаты! У нас есть высококвалифицированные отделочники и замерщики. Приглашаем к сотрудничеству мастеров, прорабов, региональных представителей
                             </p>
                         </div>
-                        <div class="seller-card__buttons">
-                            <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
-                            <span class="seller-card__leave-app-link-button">Оставить заявку</span>
-                            <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                        <div class="seller-card__buttons-wrapper">
+                            <div class="seller-card__buttons">
+                                <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
+                                <span class="seller-card__leave-app-link-button">Оставить заявку</span>
+                                <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                            </div>
                         </div>
                     </div>
                     <div class="seller-card">
@@ -4458,7 +4491,7 @@
                                 </div>
                                 <div class="seller-card__second-info-block">
                                     <span class="seller-card__product-price"><span class="seller-card__product-price-amount">5</span>&nbsp;руб.</span>
-                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9</span>марта)</span>
+                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9 марта</span>)</span>
                                     <div class="seller-card__link-buttons-block">
                                         <a href="kartochka-magazina.html#comments" class="seller-card__comments-link"> <span class="__comments-amount">5</span>&nbsp;отзывов</a>
                                         <a href="kartochka-magazina.html#adresses" class="seller-card__comments-addresses">Все адреса</a>
@@ -4470,10 +4503,12 @@
                                 Наша компания за диалог с клиентом! Мы сумеем договориться с Вами о доступности цены, условиям поставки и способе оплаты! У нас есть высококвалифицированные отделочники и замерщики. Приглашаем к сотрудничеству мастеров, прорабов, региональных представителей
                             </p>
                         </div>
-                        <div class="seller-card__buttons">
-                            <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
-                            <span class="seller-card__leave-app-link-button">Оставить заявку</span>
-                            <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                        <div class="seller-card__buttons-wrapper">
+                            <div class="seller-card__buttons">
+                                <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
+                                <span class="seller-card__leave-app-link-button">Оставить заявку</span>
+                                <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                            </div>
                         </div>
                     </div>
                     <div class="seller-card">
@@ -4504,7 +4539,7 @@
                                 </div>
                                 <div class="seller-card__second-info-block">
                                     <span class="seller-card__product-price"><span class="seller-card__product-price-amount">4</span>&nbsp;руб.</span>
-                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9</span>марта)</span>
+                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9 марта</span>)</span>
                                     <div class="seller-card__link-buttons-block">
                                         <a href="kartochka-magazina.html#comments" class="seller-card__comments-link"> <span class="__comments-amount">5</span>&nbsp;отзывов</a>
                                         <a href="kartochka-magazina.html#adresses" class="seller-card__comments-addresses">Все адреса</a>
@@ -4516,10 +4551,12 @@
                                 Наша компания за диалог с клиентом! Мы сумеем договориться с Вами о доступности цены, условиям поставки и способе оплаты! У нас есть высококвалифицированные отделочники и замерщики. Приглашаем к сотрудничеству мастеров, прорабов, региональных представителей
                             </p>
                         </div>
-                        <div class="seller-card__buttons">
-                            <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
-                            <span class="seller-card__leave-app-link-button">Оставить заявку</span>
-                            <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                        <div class="seller-card__buttons-wrapper">
+                            <div class="seller-card__buttons">
+                                <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
+                                <span class="seller-card__leave-app-link-button">Оставить заявку</span>
+                                <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                            </div>
                         </div>
                     </div>
                     <div class="seller-card">
@@ -4550,7 +4587,7 @@
                                 </div>
                                 <div class="seller-card__second-info-block">
                                     <span class="seller-card__product-price"><span class="seller-card__product-price-amount">3</span>&nbsp;руб.</span>
-                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9</span>марта)</span>
+                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9 марта</span>)</span>
                                     <div class="seller-card__link-buttons-block">
                                         <a href="kartochka-magazina.html#comments" class="seller-card__comments-link"> <span class="__comments-amount">5</span>&nbsp;отзывов</a>
                                         <a href="kartochka-magazina.html#adresses" class="seller-card__comments-addresses">Все адреса</a>
@@ -4562,10 +4599,12 @@
                                 Наша компания за диалог с клиентом! Мы сумеем договориться с Вами о доступности цены, условиям поставки и способе оплаты! У нас есть высококвалифицированные отделочники и замерщики. Приглашаем к сотрудничеству мастеров, прорабов, региональных представителей
                             </p>
                         </div>
-                        <div class="seller-card__buttons">
-                            <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
-                            <span class="seller-card__leave-app-link-button">Оставить заявку</span>
-                            <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                        <div class="seller-card__buttons-wrapper">
+                            <div class="seller-card__buttons">
+                                <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
+                                <span class="seller-card__leave-app-link-button">Оставить заявку</span>
+                                <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                            </div>
                         </div>
                     </div>
                     <div class="seller-card">
@@ -4596,7 +4635,7 @@
                                 </div>
                                 <div class="seller-card__second-info-block">
                                     <span class="seller-card__product-price"><span class="seller-card__product-price-amount">6</span>&nbsp;руб.</span>
-                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9</span>марта)</span>
+                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9 марта</span>)</span>
                                     <div class="seller-card__link-buttons-block">
                                         <a href="kartochka-magazina.html#comments" class="seller-card__comments-link"> <span class="__comments-amount">5</span>&nbsp;отзывов</a>
                                         <a href="kartochka-magazina.html#adresses" class="seller-card__comments-addresses">Все адреса</a>
@@ -4608,10 +4647,12 @@
                                 Наша компания за диалог с клиентом! Мы сумеем договориться с Вами о доступности цены, условиям поставки и способе оплаты! У нас есть высококвалифицированные отделочники и замерщики. Приглашаем к сотрудничеству мастеров, прорабов, региональных представителей
                             </p>
                         </div>
-                        <div class="seller-card__buttons">
-                            <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
-                            <span class="seller-card__leave-app-link-button">Оставить заявку</span>
-                            <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                        <div class="seller-card__buttons-wrapper">
+                            <div class="seller-card__buttons">
+                                <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
+                                <span class="seller-card__leave-app-link-button">Оставить заявку</span>
+                                <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                            </div>
                         </div>
                     </div>
                     <div class="seller-card">
@@ -4642,7 +4683,7 @@
                                 </div>
                                 <div class="seller-card__second-info-block">
                                     <span class="seller-card__product-price"><span class="seller-card__product-price-amount">4</span>&nbsp;руб.</span>
-                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9</span>марта)</span>
+                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9 марта</span>)</span>
                                     <div class="seller-card__link-buttons-block">
                                         <a href="kartochka-magazina.html#comments" class="seller-card__comments-link"> <span class="__comments-amount">5</span>&nbsp;отзывов</a>
                                         <a href="kartochka-magazina.html#adresses" class="seller-card__comments-addresses">Все адреса</a>
@@ -4654,10 +4695,12 @@
                                 Наша компания за диалог с клиентом! Мы сумеем договориться с Вами о доступности цены, условиям поставки и способе оплаты! У нас есть высококвалифицированные отделочники и замерщики. Приглашаем к сотрудничеству мастеров, прорабов, региональных представителей
                             </p>
                         </div>
-                        <div class="seller-card__buttons">
-                            <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
-                            <span class="seller-card__leave-app-link-button">Оставить заявку</span>
-                            <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                        <div class="seller-card__buttons-wrapper">
+                            <div class="seller-card__buttons">
+                                <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
+                                <span class="seller-card__leave-app-link-button">Оставить заявку</span>
+                                <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                            </div>
                         </div>
                     </div>
                     <div class="seller-card">
@@ -4688,7 +4731,7 @@
                                 </div>
                                 <div class="seller-card__second-info-block">
                                     <span class="seller-card__product-price"><span class="seller-card__product-price-amount">5</span>&nbsp;руб.</span>
-                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9</span>марта)</span>
+                                    <span class="seller-card__in-stock">В наличии (обновлено <span class="seller-card__in-stock-update-date">9 марта</span>)</span>
                                     <div class="seller-card__link-buttons-block">
                                         <a href="kartochka-magazina.html#comments" class="seller-card__comments-link"> <span class="__comments-amount">5</span>&nbsp;отзывов</a>
                                         <a href="kartochka-magazina.html#adresses" class="seller-card__comments-addresses">Все адреса</a>
@@ -4700,10 +4743,12 @@
                                 Наша компания за диалог с клиентом! Мы сумеем договориться с Вами о доступности цены, условиям поставки и способе оплаты! У нас есть высококвалифицированные отделочники и замерщики. Приглашаем к сотрудничеству мастеров, прорабов, региональных представителей
                             </p>
                         </div>
-                        <div class="seller-card__buttons">
-                            <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
-                            <span class="seller-card__leave-app-link-button">Оставить заявку</span>
-                            <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                        <div class="seller-card__buttons-wrapper">
+                            <div class="seller-card__buttons">
+                                <a href="tel:+375333333333" class="seller-card__phone-link-button">+ 375 33 333 33 33</a>
+                                <span class="seller-card__leave-app-link-button">Оставить заявку</span>
+                                <a href="#" class="seller-card__site-link-button">Посетить сайт</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -5583,7 +5628,7 @@
                     </div>
                     <div class="modal-ask-question__phone">
                         <label for="modal-ask-question-phone" class="modal-ask-question__label modal-ask-question__label--phone">Номер телефона</label>
-                        <input id="modal-ask-question-phone" type="tel" class="modal-ask-question__input modal-ask-question__input--phone">
+                        <input id="modal-ask-question-phone" type="tel" class="modal-ask-question__input modal-ask-question__input--phone" placeholder="+375 (__) ___-__-__">
                     </div>
                 </div>
                 <div class="modal-ask-question__bottom">
@@ -5666,7 +5711,7 @@
                     </div>
                     <div class="modal-submit-app__phone">
                         <label for="modal-submit-app-phone" class="modal-submit-app__label modal-submit-app__label--phone">Номер телефона</label>
-                        <input id="modal-submit-app-phone" type="tel" class="modal-submit-app__input modal-submit-app__input--phone">
+                        <input id="modal-submit-app-phone" type="tel" class="modal-submit-app__input modal-submit-app__input--phone" placeholder="+375 (__) ___-__-__">
                     </div>
                 </div>
                 <div class="modal-submit-app__bottom">
@@ -5681,6 +5726,9 @@
     
     <script src="assets/libs/move-elements.js"></script>
     <script src="assets/libs/easy-smooth-scroll-easing.js"></script>
+    <script src="assets/libs/phone-input-mask.js"></script>
+    <script src="assets/libs/baguetteBox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

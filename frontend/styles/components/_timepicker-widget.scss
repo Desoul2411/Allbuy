@@ -1,0 +1,172 @@
+.timepicker-widget {
+    border: 1px solid #aaa;
+    background-color: #FFFFFF;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    transition: .2s;
+    width: 230px;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__headline {
+        background-color: $hoverColor;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        color: #FFFFFF;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    &__content {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    &__content-item {
+        display: flex;
+        align-items: center;
+        height: 32px;
+    }
+
+    &__content-item-label {
+        color: $mainDarkColor;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        font-size: 13px;
+    }
+
+    &__content-item-label--time {
+        color: $mainDarkColor;
+        font-size: 13px;
+        margin-right: 19px;
+        flex-grow: 0;
+    }
+    
+
+    &__content-item-field--hours {
+        margin-left: 21px;
+    }
+
+    &__content-item-field--minutes {
+        margin-left: 10px;
+    }
+
+    .timepicker-widget__content-item-field.timepicker-widget__content-item-field--hours {
+        margin-left: 28.5px;
+    }
+
+    .timepicker-widget__content-item-field.timepicker-widget__content-item-field--minutes {
+        margin-left: 10px;
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        margin: 12px 0;
+        width: 100%;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8.4px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        background: $hoverColor;
+        border-radius: 1.3px;
+        border: 0.2px solid #010101;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 24px;
+        width: 14px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -8px;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $hoverColor;
+    }
+
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 8.4px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        background: $hoverColor;
+        border-radius: 1.3px;
+        border: 0.2px solid #010101;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 24px;
+        width: 14px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+    }
+    
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 8.4px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        border-width: 16px 0;
+        color: transparent;
+    }
+
+    input[type=range]::-ms-fill-lower {
+        background: $hoverColor;
+        border: 0.2px solid #010101;
+        border-radius: 2.6px;
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+
+    input[type=range]::-ms-fill-upper {
+        background: $hoverColor;
+        border: 0.2px solid #010101;
+        border-radius: 2.6px;
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+
+    input[type=range]::-ms-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 24px;
+        width: 14px;
+        margin-top: 0px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+        background: $hoverColor;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+        background: $hoverColor;
+    }
+
+    &__button {
+        @include cabinet-orange-button-style;
+        padding: 0px 12px;
+        outline: none;
+    }
+}

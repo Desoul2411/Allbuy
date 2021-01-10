@@ -1,0 +1,153 @@
+
+.cabinet-edit-goods {
+
+    &__table {
+        width: 100%;
+    }
+
+    &__table-headline {
+        border-bottom:  1px solid #EBEBEB;
+        background-color: #FFFFFF;
+        
+    }
+
+    &__title {
+        text-align: left;
+        padding: 20px 10px;
+        @include cabinet-block-headline-font;
+        line-height: 110%;
+        vertical-align: top;
+
+        &--check-all {
+            width: 83px;
+            min-width: 83px;
+        }
+
+        &--active-line {
+            width: 6px;
+            min-width: 6px;
+            padding: 0;
+        }
+
+        &--photo {
+            width: 177px;
+        }
+
+        &--name {
+            width: 200px;
+            min-width: 150px;
+        }
+
+        &--price {
+            width: 200px;
+        }
+
+        &--description {
+            width: 220px;
+        }
+
+        &--control {
+            padding-right: 25px;
+            width: 85px;
+        }
+    }
+
+    &__checkbox-label {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__check-all-checkbox {
+        position: absolute;
+        z-index: -1;
+
+        &:checked + .cabinet-edit-goods__custom-checkbox {
+            text-align: center;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__custom-checkbox {
+        @include custom-checkbox;
+    }
+
+    //footer
+    &__table-footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 40px;
+        background-color: #FFFFFF;
+
+        @media (max-width: 1600px) {
+            flex-direction: column;
+        }
+    } 
+
+    &__table-controls {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-end;
+
+        @media (max-width: 1600px) {
+            width: auto;
+        }
+    }
+
+    &__table-controls-select {
+        @include input-base-style;
+        outline: none;
+        height: 24px;
+
+        &:first-of-type {
+           margin-right: 6.35%;
+
+            @media (max-width:1600px) {
+                margin-right: 4%;
+            }
+        }
+
+        &:last-of-type {
+            margin-right: 56px;
+
+            @media (max-width:1600px) {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    &__table-submit-button {
+        @include cabinet-orange-button-style;
+        width: 185px;
+        min-width: 185px;
+        height: 32px;
+        outline: none;
+        cursor: pointer;
+        transition: .2s;
+        margin-right: 20px;
+
+        @media (max-width: 1600px) {
+            min-width: 160px;
+        }
+
+        &:hover {
+            background-color: $buttonHoverColor;
+        }
+    }
+
+    &__table-delete-button {
+        @include acrom-normal;
+        font-size: 13px;
+        line-height: 154%;
+        outline: none;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+            color: $buttonHoverColor;
+        }
+    }
+}

@@ -1,0 +1,164 @@
+.cabinet-product {
+    border-bottom:  1px solid #EBEBEB;
+    background-color: #FFFFFF;
+
+    &.active {
+        .cabinet-product__item--active-line {
+            background-color: #05AB33;
+        }
+    }
+
+    &__item {
+        @include cabinet-main-font;
+        padding: 20px 10px;
+        line-height: 1.0em;
+        vertical-align: top;
+
+        &--active-line {
+            padding: 0;
+        }
+
+        &--check-checbox {
+            text-align: center;
+        }
+
+        &--name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--update {
+            text-align: center;
+        }
+
+        &--in-stock {
+            text-align: center;
+        }
+
+        &--controls {
+            display: flex;
+            text-align: right;
+            padding-right: 20px;
+
+            @media (max-width:1468px) {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    .cabinet-product__checkbox-label {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .cabinet-product__checkbox {
+        position: absolute;
+        z-index: -1;
+
+        &:checked + .cabinet-product__custom-checkbox {
+            text-align: center;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    .cabinet-product__custom-checkbox {
+        @include custom-checkbox;
+    }
+
+    .cabinet-product__image {
+        max-width: 120px;
+    }
+
+    .cabinet-product__name-item {
+        line-height: 150%;
+
+    }
+
+    .cabinet-product__currency-radio-buttons {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .cabinet-product__price-radio-item {
+        position: absolute;
+        z-index: -1;
+
+        &:checked  + .cabinet-product__price-radio-label {
+            background-color: $hoverColor;
+            color: #FFFFFF;
+        }
+    }
+
+    .cabinet-product__price-radio-label {
+        @include input-base-style;
+        padding: 0 12px;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+    .cabinet-product__price-item {
+        display: flex;
+        align-items: center;
+        
+        &--retail-price {
+            margin-bottom: 12px;
+        }
+    }
+
+    .cabinet-product__price-label--retail-price {
+        margin-right: 10px
+    }
+    
+    .cabinet-product__price-label--wholesale-price {
+        margin-right: 41px;
+        
+        @media (max-width:1024px) {
+            margin-right: 38px;
+        }
+        
+    }
+
+    .cabinet-product__price-input {
+        @include input-base-style;
+        height: 24px;
+        width: 91px;
+    }
+
+    .cabinet-product__button {
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+            path {
+                fill: $buttonHoverColor;
+                stroke: $buttonHoverColor;
+            }
+        }
+
+        path {
+            transition: .2s;
+        }
+    }
+
+    .cabinet-product__button--settings-button {
+        margin-right: 12px;
+        margin-bottom: 12px;
+        cursor: pointer;
+
+        @media (max-width:1468px) {
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .cabinet-product__button--delete-button {
+        @media (max-width:1468px) {
+            margin-right: 0px;
+            margin-bottom: 8px;
+        }
+    }
+}

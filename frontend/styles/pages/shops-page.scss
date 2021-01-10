@@ -14,7 +14,7 @@
 
     @media (max-width: 1320px)  {
         height: auto;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
     &__text-content {
@@ -34,6 +34,7 @@
     }
 
     &__map {
+        height: 100%;
         @media (max-width: 1320px)  {
             height: 600px;
         }
@@ -57,5 +58,9 @@
         }
         -ms-overflow-style: none;
         
+        @media (max-width: 1320px)  {
+            height: auto;
+            overflow: auto;
+        }
     }
 }

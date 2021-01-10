@@ -21,6 +21,11 @@
 @import "pages/kartochka-magazina";
 @import "pages/text-page";
 @import "pages/shops-page";
+@import "pages/kategorii-magazinov";
+
+/*** kabinet-pages ***/
+@import "pages/kabinet";
+@import "pages/kabinet-tovary";
 
 
 @import "components/header";
@@ -65,9 +70,42 @@
 /* text-page */
 @import "components/text-page-content";
 
-/* shops-page */
+/* magaziny */
 @import "components/shop-list-item";
 
+/* kategorii-magazinov */
+@import "components/shop-categories-cards";
+
+/* kabinet*/
+@import 'components/cabinet-menu';
+
+/* kabinet-tovary*/
+@import 'components/cabinet-content.scss';
+@import 'components/cabinet-prices';
+@import 'components/cabinet-currency';
+@import 'components/cabinet-search';
+@import 'components/cabinet-filter';
+@import 'components/cabinet-edit-goods';
+@import 'components/cabinet-product';
+@import 'components/cabinet-pagination';
+
+/*kabinet-dostavka*/
+@import 'components/cabinet-delivery';
+
+/*kabinet-anketa*/
+@import 'components/timepicker-widget';
+
+/*kabinet-novosti*/
+@import 'components/cabinet-news';
+
+/*kabinet-otzivi*/
+@import 'components/cabinet-feedbacks';
+
+/*kabinet-fotogalereya*/
+@import 'components/cabinet-photogallery';
+
+/*kabinet-video*/
+@import 'components/cabinet-video';
 
 @import "components/footer";
 

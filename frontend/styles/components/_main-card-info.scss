@@ -1,7 +1,15 @@
 .main-card-info {
     width: 100%;
-    padding: 28px 0 50px 28px;
+    padding: 28px 28px 50px 28px;
     background-color: #FFFFFF;
+
+    @media(max-width: 767px) {
+        padding: 20px 20px 30px 20px;
+    }
+
+    @media(max-width: 425px) {
+        padding-top: 15px;
+    }
 
     &__headline {
         @include acrom-bold;
@@ -11,6 +19,20 @@
         padding-bottom: 28px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         margin-bottom: 28px;
+
+        @media(max-width: 1024px) {
+            text-align: center;
+        }
+
+        @media(max-width: 767px) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width: 425px) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
     }
 
     &__description {
@@ -44,6 +66,10 @@
     &__bottom {
         display: flex;
         align-items: center;
+
+        @media(max-width: 425px) {
+            justify-content: space-between;
+        }
     }
 
     &__offers-link {
@@ -60,6 +86,10 @@
         color: #FFFFFF;
         transition: .2s;
         margin-right: 20px;
+
+        @media(max-width: 425px) {
+            margin-right: 12px;
+        }
         
         &:hover {
             background-color: $buttonHoverColor;
@@ -72,6 +102,7 @@
         line-height: 154%;
         color: $hoverColor;
         cursor: pointer;
+        white-space: nowrap;
 
         &:hover {
             color: $buttonHoverColor;

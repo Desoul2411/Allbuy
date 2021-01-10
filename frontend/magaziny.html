@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Магазины</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/libs/leaflet.css"/>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"
+        />
 </head>
 
 <body>
@@ -4301,7 +4306,7 @@
         <div class="container container--shops-page">
             <div class="shops-page-content">
                 <div class="shops-page-content__text-content">
-                    <ul class="breadcrumbs breadcrumbs--shops-page">
+                    <ul class="breadcrumbs breadcrumbs--shops-page" data-da="container--shops-page,0,1320">
                         <li class="breadcrumbs__item">
                             <a href="index.html" class="breadcrumbs__link">Главная</a>
                         </li>
@@ -4332,8 +4337,6 @@
                                             </svg>                                        
                                         </a>
                                     </div>
-                                    
-                                    
                                     <div class="shop-list-item__address-work-time">
                                         <span class="shop-list-item__address">Минск, Меньковский тракт, 2Б</span>
                                         <span class="shop-list-item__work-time">до 17:00</span>
@@ -4345,7 +4348,6 @@
                                         <span class="shop-list-item__link-button shop-list-item__link-button--shop-site">Сайт</span>
                                     </div>
                                 </div>
-                                
                             </li>
                             <li class="shop-list-item">
                                 <div class="shop-list-item__content">
@@ -4371,7 +4373,7 @@
                                     
                                     
                                     <div class="shop-list-item__address-work-time">
-                                        <span class="shop-list-item__address">Минск, Меньковский тракт, 2Б</span>
+                                        <span class="shop-list-item__address">Минск, Сухаревская, 26</span>
                                         <span class="shop-list-item__work-time">до 17:00</span>
                                     </div>
                                     <span class="shop-list-item__price-segment">Ценовой сегмент: <span class="shop-list-item__price-segment-values">эконом, средний, премиум</span></span>
@@ -4407,7 +4409,7 @@
                                     
                                     
                                     <div class="shop-list-item__address-work-time">
-                                        <span class="shop-list-item__address">Минск, Меньковский тракт, 2Б</span>
+                                        <span class="shop-list-item__address">Минск, Притыцкого, 43</span>
                                         <span class="shop-list-item__work-time">до 17:00</span>
                                     </div>
                                     <span class="shop-list-item__price-segment">Ценовой сегмент: <span class="shop-list-item__price-segment-values">эконом, средний, премиум</span></span>
@@ -4443,7 +4445,7 @@
                                     
                                     
                                     <div class="shop-list-item__address-work-time">
-                                        <span class="shop-list-item__address">Минск, Меньковский тракт, 2Б</span>
+                                        <span class="shop-list-item__address">Минск, Варвашени, 6</span>
                                         <span class="shop-list-item__work-time">до 17:00</span>
                                     </div>
                                     <span class="shop-list-item__price-segment">Ценовой сегмент: <span class="shop-list-item__price-segment-values">эконом, средний, премиум</span></span>
@@ -4479,7 +4481,7 @@
                                     
                                     
                                     <div class="shop-list-item__address-work-time">
-                                        <span class="shop-list-item__address">Минск, Меньковский тракт, 2Б</span>
+                                        <span class="shop-list-item__address">Минск, Якуба Коласа, 43 к.1</span>
                                         <span class="shop-list-item__work-time">до 17:00</span>
                                     </div>
                                     <span class="shop-list-item__price-segment">Ценовой сегмент: <span class="shop-list-item__price-segment-values">эконом, средний, премиум</span></span>
@@ -4515,7 +4517,7 @@
                                     
                                     
                                     <div class="shop-list-item__address-work-time">
-                                        <span class="shop-list-item__address">Минск, Меньковский тракт, 2Б</span>
+                                        <span class="shop-list-item__address">Минск, Козыревская, 30</span>
                                         <span class="shop-list-item__work-time">до 17:00</span>
                                     </div>
                                     <span class="shop-list-item__price-segment">Ценовой сегмент: <span class="shop-list-item__price-segment-values">эконом, средний, премиум</span></span>
@@ -4531,7 +4533,7 @@
                     </div>
                 </div>
                 <div class="shops-page-content__map-content">
-                    <iframe class="shops-page-content__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1176.6543692348787!2d27.422773494398744!3d53.85515775429642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda3fdb394c2d%3A0x6c541a83e6480c7f!2sMen&#39;kovskiy%20Trakt%202%2C%20Minsk%20223049!5e0!3m2!1sen!2sby!4v1607515472139!5m2!1sen!2sby" width="100%" height="984" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <div id="map" class="shops-page-content__map"></div>
                 </div>
             </div>
         </div>
@@ -4596,6 +4598,8 @@
     </footer>
     <script src="assets/libs/move-elements.js"></script>
     <script src="assets/libs/easy-smooth-scroll-easing.js"></script>
+    <script src="assets/libs/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
     <script src="js/main.js"></script>
 
 </body>

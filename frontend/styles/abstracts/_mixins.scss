@@ -77,6 +77,104 @@
     }
 }
 
+@mixin cabinet-orange-button-style() {
+    @include acrom-normal;
+    background-color: $orangeColor;
+    font-size: 13px;
+    line-height: 154%;
+    text-align: center;
+    color: #FFFFFF;
+    transition: .2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $buttonHoverColor;
+    }
+}
+
+@mixin cabinet-block-headline-font() {
+    @include acrom-500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $mainDarkColor;
+}
+
+@mixin cabinet-main-font() {
+    @include acrom-normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: $mainDarkColor;
+}
+
+@mixin custom-checkbox() {
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: #F1F1F1;
+    border: 1px solid #EBEBEB;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        background-color: $hoverColor;
+        transition: 0.2s;
+    }
+}
+
+@mixin input-base-style() {
+    @include cabinet-main-font;
+    line-height: 200%;
+    background: #F9F9F9;
+    border: 1px solid #EBEBEB;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@mixin cabinet-big-input-style() {
+    @include acrom-normal;
+    line-height: 200%;
+    background: #F9F9F9;
+    border: 1px solid #EBEBEB;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    line-height: 185%;
+    padding: 6px 12px;
+    color: $mainDarkColor;
+    height: 36px;
+    width: 560px;
+}
+
+@mixin cabinet-input-hint() {
+    @include acrom-normal;
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 100%;
+    color: $mainDarkColor;
+}
+
+
+@mixin input-small-label() {
+    @include acrom-normal;
+    display: block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 100%;
+    color: $mainDarkColor;
+}
+
+
+
+
 
 
 

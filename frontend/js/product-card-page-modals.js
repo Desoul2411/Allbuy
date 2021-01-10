@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             submitAppButtons.forEach(submitAppButton => {
                 submitAppButton.addEventListener('click', (e) => {
-                    let currentSellerCard = e.target.parentElement.parentElement;
+                    let currentSellerCard = e.target.parentElement.parentElement.parentElement;
                     openModal(submitAppModal, overlaySubmitAppModal);
                     setSellerParametersToModal(currentSellerCard);
                     
@@ -93,5 +93,34 @@ document.addEventListener('DOMContentLoaded', () => {
     
             submitAppCloseButton.addEventListener('click', () => closeModal(submitAppModal, overlaySubmitAppModal));
         }
+
+        //phone input mask
+        phoneMask('.modal-submit-app__input--phone');
+        phoneMask('.modal-ask-question__input--phone');
+
+        let navSlider = new Splide( '#nav-slider', {
+            direction  : 'ttb',
+            height: 420,
+            perPage: 3,
+            perMove: 1,
+            pagination: false,
+            arrows: false,
+            isNavigation: true,
+            focus: 'center',
+            cover: true,
+        }).mount();
+
+        let mainSlider = new Splide( '#main-slider', {
+            perPage: 1,
+            perMove: 1,
+            pagination: false,
+            breakpoints: {
+                767: {
+                    pagination: true,
+                },
+            }
+        });
+
+        mainSlider.sync(navSlider).mount();
     };
 });

@@ -116,6 +116,12 @@
 
     &__item-image {
         margin-right: 10px;
+
+        @media (max-width: 576px) {
+            height: 24px;
+            width: 24px;
+        }
+
     }
 
     &__link-text {

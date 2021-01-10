@@ -166,7 +166,6 @@
         display: none;
         @media (max-width: 992px)  {
             display: block;
-            padding: 7px;
         }
 
         @media (max-width: 768px)  {
@@ -272,7 +271,7 @@
         }
     }
 
-    &__log-in {
+    &__log-in, &__log-out  {
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -289,7 +288,7 @@
                     fill: $hoverColor;
                 }
             }
-            .header__log-in-text {
+            .header__log-in-text, .header__log-out-text {
                 color: $hoverColor;
             }
         }
@@ -299,9 +298,10 @@
         margin-right: 10px;
     }
 
-    &__log-in-text {
+    &__log-in-text, &__log-out-text {
         transition: .2s;
         color: #FFFFFF;
+        margin-top: 3px;
     }
 
     &__bottom {
@@ -335,4 +335,52 @@
         }
         
     }
+}
+
+.header--cabinet-main {
+    .header__open-menu-burger {
+        @media(max-width: 576px) {
+            display: none;
+        }
+    }
+
+    .header__logo-link {
+        @media(max-width: 576px) {
+            margin-left: 0px;
+        }
+    }
+}
+
+.header--cabinet-content-page {
+    .header__top-logo {
+        margin-right: 0px;
+    }
+
+    .header__logo-link {
+        margin-right: 40px;
+    }
+    
+    .header__cabinet-menu-button {
+        @include acrom-normal;
+        font-size: 14px;
+        line-height: 114%;
+        color: #FFFFFF;
+        outline: none;
+        cursor: pointer;
+        transition: .2s;
+        display: none;
+
+        &:hover {
+            color: $hoverColor;
+        }
+
+        @media(max-width: 1330px) {
+            display: block;
+        }
+    }
+
+    /* .header__open-menu-burger {
+        display: block;
+        position: static;
+    } */
 }

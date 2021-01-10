@@ -1,7 +1,18 @@
-.shop-card-page-map {
+
+.shop-card-page-map-wrapper {
     padding-bottom: 60px;
 
     @media (max-width: 768px)  {
         padding-bottom: 40px;
     }
 }
+
+.shop-card-page-map {
+    height: 480px;
+
+    @media (max-width: 767px)  {
+        height: 340px;
+    }
+}
+
+

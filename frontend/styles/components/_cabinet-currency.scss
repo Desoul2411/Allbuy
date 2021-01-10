@@ -1,0 +1,106 @@
+
+.cabinet-currency {
+    background-color: #FFFFFF;
+    width: 31%;
+
+    &__header {
+        padding: 20px;
+        border-bottom: 1px solid #EBEBEB;
+
+        .cabinet-currency__headline {
+            @include cabinet-block-headline-font;
+        }
+    }
+
+    &__content {
+        padding: 15px 20px;
+
+        .cabinet-currency__form {
+            .cabinet-currency__form-main-content {
+                display: flex;
+                justify-content: space-between;
+
+                @media (max-width:1630px) {
+                    flex-wrap: wrap;
+                }
+            }
+
+            .cabinet-currency__form-submit-button {
+                @include cabinet-orange-button-style;
+                padding: 6px 25px 6px 25px;
+                cursor: pointer;
+                transition: .2s;
+                white-space: nowrap;
+
+                &:hover {
+                    background-color: $buttonHoverColor;
+                }
+            }
+
+            .cabinet-currency__rates {
+                margin-right: 15px;
+
+                .cabinet-currency__rates-item {
+                    @include cabinet-main-font;
+                    white-space: nowrap;
+
+                    &:first-of-type {
+                        margin-bottom: 12px;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 16px;
+                    }
+                }
+
+                .cabinet-currency__currency-title {
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+
+                .cabinet-currency__currency-title--usd {
+                    margin-right: 3px;
+
+                    @media (max-width:1024px) {
+                        margin-right: 0px;
+                    }
+                }
+
+                .cabinet-currency__rates-input {
+                    @include input-base-style;
+                    width: 65px;
+                    height: 24px;
+                }
+            }
+            
+            .cabinet-currency__use-bank-rates {
+                @include cabinet-main-font;
+
+                .cabinet-currency__use-bank-input-label {
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    margin-bottom: 16px;
+                }
+
+                .cabinet-currency__use-bank-rates-checkbox {
+                    margin-right: 10px;
+                    position: absolute;
+                    z-index: -1;
+
+                    &:checked + .cabinet-currency__custom-checkbox {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .cabinet-currency__custom-checkbox {
+                    @include custom-checkbox;
+                    margin-right: 9px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+
+.cabinet-prices {
+    width: 69%;
+    margin-right: 16px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px 20px 40px;
+        background-color:#FFFFFF;
+        border-bottom: 1px solid #EBEBEB;
+
+      .cabinet-prices__headline {
+        @include cabinet-block-headline-font;
+      }
+
+      .cabinet-prices__update {
+        @include cabinet-main-font;
+        line-height: 200%;
+      }
+    }
+
+    &__content {
+      padding: 15px 20px 20px 40px;
+      display: flex;
+      align-items: center;
+      background-color:#FFFFFF;
+      justify-content: space-between;
+
+      .cabinet-prices__table {
+        width: 100%;
+
+        .headline-table-row {
+          th {
+            @include cabinet-main-font;
+            line-height: 200%;
+            text-align: left;
+            padding-bottom: 12px;
+            width: 29%;
+          }
+
+          .cabinet-prices__table-download-th {
+            width: 42%;
+          }
+        }
+
+        tr {
+          td {
+            text-align: left;
+          }
+
+          .cabinet-prices__price-item {
+            display: inline-block;
+            text-align: center;
+            padding-right: 10px;
+
+            img {
+                height: 40px;
+            }
+
+            .cabinet-prices__price-item-title {
+                @include cabinet-main-font;
+            }
+          }
+        }
+      }
+
+      .cabinet-prices__submit-button {
+        @include cabinet-orange-button-style;
+        padding: 6px 21px 6px 21px;
+        cursor: pointer;
+        transition: .2s;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $buttonHoverColor;
+        }
+      }
+    }
+}

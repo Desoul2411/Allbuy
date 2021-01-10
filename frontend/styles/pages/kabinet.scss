@@ -1,0 +1,19 @@
+
+.cabinet-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-cabinet-page {
+    background-color: $greyBackground;
+    flex-grow: 1;
+}
+.cabinet-content-wrapper {
+    display: flex;
+    margin-bottom: 68px;
+
+    @media (max-width: 768px)  {
+        margin-bottom: 40px;
+    }
+}

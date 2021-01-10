@@ -9,6 +9,11 @@
         cursor: pointer;
         font-size: 100px;
         line-height: 36px;
+
+        @media (max-width: 767px)  {
+            width: 27px;
+            height: 27px;
+        }
         
         path {
             transition: .2s;

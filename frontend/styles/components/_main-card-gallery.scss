@@ -1,20 +1,35 @@
 .main-card-gallery {
     display: flex;
 
+    @media(max-width: 1024px) {
+        justify-content: center;
+        background-color: #FFFFFF;
+        padding-top: 20px;
+    }
+
+    @media(max-width: 425px) {
+        padding-top: 0px;
+    }
+    
+    &__nav-slider {
+        margin-right: 4px;
+
+        @media(max-width: 767px) {
+            position: absolute !important;
+            z-index: -1;
+        }
+    }
+
+    .splide--nav>.splide__track>.splide__list>.splide__slide.is-active {
+        border-color: $hoverColor;
+    }
+
     &__nav-list {
         min-width: 0;
         max-width: 80px;
         margin-right: 4px;      
         max-height: 420px;
-        cursor: grab;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    &__nav-item {
-
+        cursor: pointer;
     }
 
     &__nav-image {
@@ -22,10 +37,6 @@
         height: 136px;
         object-fit: cover;
         object-position: center;
-    }
-
-    &__images-list {
-
     }
 
     &__images-list-item {
@@ -37,5 +48,53 @@
         height: 420px;
         object-fit: cover;
         object-position: center;
+
+        @media(max-width: 576px) {
+            height: 380px;
+            width: 374px;
+        }
+
+        @media(max-width: 425px) {
+            height: 320px;
+            width: 100%;
+        }
+    }
+
+    &__main-slider {
+        width: 416px;
+
+        @media(max-width: 576px) {
+            width: 374px;
+        }
+
+        @media(max-width: 425px) {
+            width: 100%;
+        }
+
+        .splide__arrow {
+            height: 100%;
+            border-radius: 0;
+            width: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(40px);
+            opacity: 1;
+        }
+        
+        .splide__arrow:disabled {
+            background-color: rgba(0, 0, 0, 0.0);
+            pointer-events: none;
+        }
+
+        .splide__arrow--prev {
+            left: 0;
+        }
+
+        .splide__arrow--next {
+            right: 0;
+        }
+
+        .splide__pagination {
+            bottom: 1em;
+        }
     }
 }
