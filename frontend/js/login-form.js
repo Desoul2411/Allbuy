@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
             ajaxSend(formData)
                 .then((response) => {
-                    loginForm.reset(); // очищаем поля формы 
+                    loginForm.reset();
                 })
                 .catch((err) => console.error(err))
         });

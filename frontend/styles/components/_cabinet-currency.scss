@@ -19,10 +19,7 @@
             .cabinet-currency__form-main-content {
                 display: flex;
                 justify-content: space-between;
-
-                @media (max-width:1630px) {
-                    flex-wrap: wrap;
-                }
+                flex-wrap: wrap;
             }
 
             .cabinet-currency__form-submit-button {

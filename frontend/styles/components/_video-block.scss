@@ -1,0 +1,15 @@
+.video-block {
+    background-color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 68px;
+
+    @media(max-width: 767px) {
+        margin-bottom: 40px;
+    }
+
+    &__content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

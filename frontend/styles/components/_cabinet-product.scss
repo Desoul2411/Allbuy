@@ -35,15 +35,24 @@
             text-align: center;
         }
 
+        &-description-text {
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover {
+                color: $hoverColor;
+            }
+        }
+
         &--controls {
             display: flex;
-            text-align: right;
+            text-align: center;
+            justify-content: center;
             padding-right: 20px;
 
             @media (max-width:1468px) {
                 flex-wrap: wrap;
                 flex-direction: column-reverse;
-                align-items: flex-end;
+                align-items: center;
             }
         }
     }

@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
+    let cabinetProductFeedbacks = document.querySelectorAll('.cabinet-feedbacks__td--feedback-text');
+
+    contractDescription(cabinetProductFeedbacks,190);
 
     if(headerCabinetContent) {
         let checkAllCheckbox = document.querySelector('.cabinet-feedbacks__checkbox--check-all-checkbox');

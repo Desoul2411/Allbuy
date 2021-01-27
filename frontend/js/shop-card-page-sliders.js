@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         var shopCardGalleryCarousel = new Glide('#shop-card-gallery-carousel', {
-            type: 'carousel',
             rewind:true,
             startAt: 0,
             perView: 4.6,
@@ -21,25 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
             keyboard: false,
             breakpoints: {
                 1100: {
-                    perView: 3,
+                    perView: 3.5,
                 }, 
                 992: {
-                    perView: 3,
-                    peek: 25
+                    perView: 3.2,
                 }, 
-                767: {
-                    perView: 2,
-                    peek: 25
+                860: {
+                    perView: 2.5,
                 },
+                620: {
+                    perView: 2.2,
+                },
+
                 500: {
-                    focusAt: 'center',
-                    perView: 1,
-                    peek: 50
+                    perView: 1.5,
                 },
                 425: {
-                    focusAt: 'center',
-                    perView: 1,
-                    peek: 25
+                    perView: 1.2,
                 },
             }
         });
@@ -57,25 +54,23 @@ document.addEventListener('DOMContentLoaded', () => {
             keyboard: false,
             breakpoints: {
                 1100: {
-                    perView: 3,
+                    perView: 3.5,
                 }, 
                 992: {
-                    perView: 3,
-                    peek: 25
+                    perView: 3.2,
                 }, 
-                767: {
-                    perView: 2,
-                    peek: 25
+                860: {
+                    perView: 2.5,
                 },
+                620: {
+                    perView: 2.2,
+                },
+
                 500: {
-                    focusAt: 'center',
-                    perView: 1,
-                    peek: 50
+                    perView: 1.5,
                 },
                 425: {
-                    focusAt: 'center',
-                    perView: 1,
-                    peek: 25
+                    perView: 1.2,
                 },
             }
         });
@@ -84,11 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //baguetteBox gallery
         baguetteBox.run('.shop-card__slides', {
-            noScrollbars: true
+            noScrollbars: true,
+            buttons: true
         });
 
         baguetteBox.run('.shop-card-gallery__carousel-slides', {
-            noScrollbars: true
+            noScrollbars: true,
+            buttons: true
         });
     };
 });

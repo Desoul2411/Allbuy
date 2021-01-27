@@ -36,13 +36,13 @@
 
     &__category-name {
         position: absolute;
-        flex-wrap: wrap;
+        white-space: pre-line;
         top: 137px;
         left: 38px;
         font-size: 16px;
         line-height: 125%;
         color: #FFFFFF;
-        max-width: 168px;
+    /*     max-width: 168px; */
         z-index: 10000;
         pointer-events: none;
         padding-right: 10px;

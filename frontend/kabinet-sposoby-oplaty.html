@@ -98,15 +98,9 @@
                     </div>
                     <div class="cabinet-content">
                         <div class="cabinet-content__cabinet-search cabinet-search">
-                            <form action="#" class="cabinet-search__form">
-                                <span class="cabinet-search__title">Управление товарами и ценами <a href="https://buydoors.by/" class="cabinet-search__company-name-link">Байдорс</a></span>
-                                <div class="cabinet-search__search-input-wrapper">
-                                    <svg class="cabinet-search__search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19.7243 18.2609L14.8255 13.2919C16.1146 11.8012 16.7592 10.0621 16.7592 8.07453C16.7592 3.60248 13.0206 0 8.37961 0C3.7386 0 0 3.60248 0 8.07453C0 12.5466 3.7386 16.1491 8.37961 16.1491C10.0555 16.1491 11.7315 15.6522 13.1495 14.6584L18.0484 19.6273C18.3062 19.8758 18.5641 20 18.8219 20C19.0797 20 19.3376 19.8758 19.5954 19.7516C20.1111 19.2547 20.1111 18.6335 19.7243 18.2609ZM8.37961 2.23602C11.7315 2.23602 14.5676 4.84472 14.5676 8.19876C14.5676 11.5528 11.8604 14.1615 8.37961 14.1615C4.89885 14.1615 2.19159 11.5528 2.19159 8.19876C2.19159 4.84472 5.02777 2.23602 8.37961 2.23602Z" fill="#353535"/>
-                                    </svg>                                    
-                                    <input type="text" class="cabinet-search__search-input" placeholder="Поиск товара">
-                                </div>
-                            </form>
+                            <div class="cabinet-content__cabinet-search cabinet-search cabinet-search--no-search-input">
+                                <span class="cabinet-search__title">Настройка способов оплаты<a href="https://buydoors.by/" class="cabinet-search__company-name-link">Байдорс</a></span>
+                            </div>
                         </div>
                         <form action="#" class="cabinet-content__payment-methods-form">
                             <div class="cabinet-content__content-block">
@@ -117,8 +111,14 @@
                                             <label class="cabinet-content__checkbox-label">
                                                 <input class="cabinet-content__checkbox" type="checkbox" name="payment_method" value="наличный расчет">
                                                 <span class="cabinet-content__custom-checkbox"></span>
-                                                наличный расчет
+                                                наличный расчет 
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Наличный расчет</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -126,6 +126,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 безналичный расчет
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Безналичный расчет</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -133,6 +139,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 банковская карточка
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Банковская карточка</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -140,6 +152,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 мобильный и интернет-банкинг
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Мобильный и интернет-банкинг</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -147,6 +165,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 касса банка
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Касса банка</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -154,6 +178,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 наложенный платеж
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Наложенный платеж</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -161,6 +191,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 электронный кошелек
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Электронный кошелек</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -168,16 +204,17 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 карта рассрочки
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Карта рассрочки</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="cabinet-content__checkboxes-group-option">
-                                    <label class="cabinet-content__checkboxes-group-title">Рассрочка</label>
-                                    <div class="cabinet-content__option-description">
-                                        <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
-                                        <span class="cabinet-content__input-hint">Описание способа оплаты</span>
-                                    </div>
-                                    
+                                    <div class="cabinet-content__checkboxes-group-title">Рассрочка</div>
                                     <div class="cabinet-content__checkboxes-group">
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -185,6 +222,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 Халва (МТБанк)
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Халва (МТБанк)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -192,6 +235,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 Любимая карта (Паритетбанк)
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Любимая карта (Паритетбанк)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -199,6 +248,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 МАГНИТ (Беларусбанк)
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: МАГНИТ (Беларусбанк)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -206,6 +261,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 Карта Покупок (Белгазпромбанк)
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Карта Покупок (Белгазпромбанк)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -213,6 +274,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 FUN (БПС-Сбербанк)
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: FUN (БПС-Сбербанк)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -220,6 +287,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 SMART карта (Москва-Минск)
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: SMART карта (Москва-Минск)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="cabinet-content__checkboxes-option">
                                             <label class="cabinet-content__checkbox-label">
@@ -227,6 +300,12 @@
                                                 <span class="cabinet-content__custom-checkbox"></span>
                                                 Черепаха (ВТБ Беларусь)
                                             </label>
+                                            <div class="cabinet-content__option-description">
+                                                <div class="cabinet-content__option-description-wrapper">
+                                                    <input type="text" name="payment_method_description" class="cabinet-content__input cabinet-content__input--description">
+                                                    <span class="cabinet-content__input-hint">Описание способа оплаты: Черепаха (ВТБ Беларусь)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=1024">
     <title>Личный кабинет - новости</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/libs/datepicker.minimal.css">
+    <link rel="stylesheet" href="assets/libs/croppie.css">
+    <link rel="stylesheet" href="assets/libs/jcrop.css">
 </head>
 
 <body class="body-cabinet-content">
@@ -125,7 +128,7 @@
                                         <th class="cabinet-news__table-th cabinet-news__table-th--article-name">Название статьи</th>
                                         <th class="cabinet-news__table-th cabinet-news__table-th--controls">Управление</th>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="cabinet-news__news-container">
                                         <tr class="cabinet-news__news-item active">
                                             <td class="cabinet-news__td cabinet-news__td--active-line"></td>
                                             <td class="cabinet-news__td cabinet-news__td--selected-checkbox">
@@ -136,11 +139,13 @@
                                             </td>
                                             <td class="cabinet-news__td cabinet-news__td--status">Включено</td>
                                             <td class="cabinet-news__td cabinet-news__td--url"><a target="_blank" href="https://buydoors.dom.by//news/77993/">https://buydoors.dom.by//news/77993/</a></td>
-                                            <td class="cabinet-news__td cabinet-news__td--date">26.08.2020</td>
-                                            <td class="cabinet-news__td cabinet-news__td--article-name"><a target="_blank" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/">Металлические двери – это залог спокойствия и безопасности!</a></td>
+                                            <td class="cabinet-news__td cabinet-news__td--date" data-value="26.08.2020">26.08.2020</td>
+                                            <td class="cabinet-news__td cabinet-news__td--article-name">
+                                                <a class="cabinet-news__article-name" target="_blank" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/" data-value="1 - Металлические двери – это залог спокойствия и безопасности!">1 -Металлические двери – это залог спокойствия и безопасности!</a>
+                                            </td>
                                             <td class="cabinet-news__td cabinet-news__td--controls">
                                                 <svg class="cabinet-news__button cabinet-news__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                    <path class="cabinet-news__settings-button-path" fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
                                                 </svg>
                                                 <svg class="cabinet-news__button cabinet-news__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
@@ -157,11 +162,13 @@
                                             </td>
                                             <td class="cabinet-news__td cabinet-news__td--status">Включено</td>
                                             <td class="cabinet-news__td cabinet-news__td--url"><a target="_blank" href="https://buydoors.dom.by//news/77993/">https://buydoors.dom.by//news/77993/</a></td>
-                                            <td class="cabinet-news__td cabinet-news__td--date">26.08.2020</td>
-                                            <td class="cabinet-news__td cabinet-news__td--article-name"><a target="_blank" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/">Металлические двери – это залог спокойствия и безопасности!</a></td>
+                                            <td class="cabinet-news__td cabinet-news__td--date" data-value="26.08.2020">26.08.2020</td>
+                                            <td class="cabinet-news__td cabinet-news__td--article-name">
+                                                <a class="cabinet-news__article-name" target="_blank" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/" data-value="2 - Металлические двери – это залог спокойствия и безопасности!">2 - Металлические двери – это залог спокойствия и безопасности!</a>
+                                            </td>
                                             <td class="cabinet-news__td cabinet-news__td--controls">
                                                 <svg class="cabinet-news__button cabinet-news__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                    <path class="cabinet-news__settings-button-path" fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
                                                 </svg>
                                                 <svg class="cabinet-news__button cabinet-news__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
@@ -178,11 +185,13 @@
                                             </td>
                                             <td class="cabinet-news__td cabinet-news__td--status">Включено</td>
                                             <td class="cabinet-news__td cabinet-news__td--url"><a target="_blank" href="https://buydoors.dom.by//news/77993/">https://buydoors.dom.by//news/77993/</a></td>
-                                            <td class="cabinet-news__td cabinet-news__td--date">26.08.2020</td>
-                                            <td class="cabinet-news__td cabinet-news__td--article-name"><a target="_blank" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/">Металлические двери – это залог спокойствия и безопасности!</a></td>
+                                            <td class="cabinet-news__td cabinet-news__td--date" data-value="26.08.2020">26.08.2020</td>
+                                            <td class="cabinet-news__td cabinet-news__td--article-name">
+                                                <a class="cabinet-news__article-name" target="_blank" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/" data-value="3 - Металлические двери – это залог спокойствия и безопасности!">3 - Металлические двери – это залог спокойствия и безопасности!</a>
+                                            </td>
                                             <td class="cabinet-news__td cabinet-news__td--controls">
                                                 <svg class="cabinet-news__button cabinet-news__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                    <path class="cabinet-news__settings-button-path" fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
                                                 </svg>
                                                 <svg class="cabinet-news__button cabinet-news__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
@@ -199,11 +208,13 @@
                                             </td>
                                             <td class="cabinet-news__td cabinet-news__td--status">Отключено</td>
                                             <td class="cabinet-news__td cabinet-news__td--url"><a target="_blank" href="https://buydoors.dom.by//news/77993/">https://buydoors.dom.by//news/77993/</a></td>
-                                            <td class="cabinet-news__td cabinet-news__td--date">26.08.2020</td>
-                                            <td class="cabinet-news__td cabinet-news__td--article-name"><a target="_blank" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/">Металлические двери – это залог спокойствия и безопасности!</a></td>
+                                            <td class="cabinet-news__td cabinet-news__td--date" data-value="26.08.2020">26.08.2020</td>
+                                            <td class="cabinet-news__td cabinet-news__td--article-name">
+                                                <a class="cabinet-news__article-name" href="http://cmscatalog/places/editNews/id/17333/materialId/77993/" data-value="4 - Металлические двери – это залог спокойствия и безопасности!">4 - Металлические двери – это залог спокойствия и безопасности!</a>
+                                            </td>
                                             <td class="cabinet-news__td cabinet-news__td--controls">
                                                 <svg class="cabinet-news__button cabinet-news__button--settings-button" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                                                    <path class="cabinet-news__settings-button-path" fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
                                                 </svg>
                                                 <svg class="cabinet-news__button cabinet-news__button--delete-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
@@ -275,8 +286,58 @@
             </div>
         </footer>
     </div>  
+    <div class="modal-overlay modal-overlay--edit-news visually-hidden">
+        <div class="modal-edit-news visually-hidden">
+            <div class="modal-edit-news__header">
+                Редактирование новости
+                <svg class="modal-edit-news__close-button" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.7256 14.1748L21.203 19.6523C21.4114 19.8607 21.5285 20.1433 21.5285 20.438C21.5285 20.7328 21.4114 21.0154 21.203 21.2238C20.9946 21.4322 20.712 21.5493 20.4173 21.5493C20.1225 21.5493 19.8399 21.4322 19.6315 21.2238L14.1541 15.7464L8.66515 21.2353C8.45675 21.4437 8.1741 21.5608 7.87938 21.5608C7.58466 21.5608 7.30201 21.4437 7.09361 21.2353C6.88521 21.0269 6.76813 20.7443 6.76813 20.4495C6.76813 20.1548 6.88521 19.8722 7.09361 19.6638L12.5825 14.1748L7.0609 8.65322C6.8525 8.44482 6.73543 8.16217 6.73543 7.86745C6.73543 7.57272 6.8525 7.29007 7.0609 7.08167C7.2693 6.87327 7.55195 6.7562 7.84668 6.7562C8.1414 6.7562 8.42405 6.87327 8.63245 7.08167L14.1541 12.6033L19.6642 7.09317C19.8726 6.88477 20.1552 6.76769 20.45 6.76769C20.7447 6.76769 21.0273 6.88477 21.2357 7.09317C21.4441 7.30157 21.5612 7.58422 21.5612 7.87894C21.5612 8.17366 21.4441 8.45631 21.2357 8.66471L15.7247 14.1757L15.7256 14.1748Z" fill="white"></path>
+                </svg>                        
+            </div>
+            <form action="#" class="modal-edit-news__form">
+                <div class="modal-edit-news__content">
+                    <div class="modal-edit-news__input-wrapper modal-edit-news__input-wrapper--news-name">
+                        <label for="modal-edit-news-name" class="modal-edit-news__label modal-edit-news__label--news-name">Название</label>
+                        <input id="modal-edit-news-name" type="text" class="modal-edit-news__input modal-edit-news__input--news-name">
+                    </div>
+                    <div class="modal-edit-news__image-block">
+                        <label class="modal-edit-news__label modal-edit-news__label--image-block">Логотип</label>
+                        <div class="modal-edit-news__image-container">
+                            <img id="image" src="assets/images/main-product-card-image.jpg" alt="изображение товара" class="modal-edit-news__image">
+                        </div>
+                        <div class="modal-edit-news__image-block-controls">
+                            <div class="modal-edit-news__upload-image-button">
+                                <span class="modal-edit-news__upload-image-button-name">Загрузить новое изображение</span> 
+                                <input class="modal-edit-news__upload-image-input" type="file" name="image" id="upload" value="Choose a file" accept="image/*">
+                            </div>
+                            <button class="modal-edit-news__delete-image-button" type="button">Сбросить</button>
+                        </div>
+                        <div id="image-preview" class="modal-edit-news__image-preview-modal visually-hidden">
+                            <button class="modal-edit-news__cut-image-button" type="button">Сохранить</button>
+                        </div>
+                    </div>
+                    <div class="modal-edit-news__input-wrapper modal-edit-news__input-wrapper--placement-date">
+                        <label for="begin-news-placement-date" class="modal-edit-news__label">Дата начала размещения</label>
+                        <input id="begin-news-placement-date" name="begin_news_placement_date" type="text" class="modal-edit-news__input modal-edit-news__input--begin-placement-date" readonly>
+                    </div>
+                    <div class="modal-edit-news__input-wrapper modal-edit-news__input-wrapper--placement-date">
+                        <label for="end-news-placement-date" class="modal-edit-news__label">Дата конца размещения</label>
+                        <input id="end-news-placement-date" name="end_news_placement_date" type="text" class="modal-edit-news__input modal-edit-news__input--end-placement-date" readonly>
+                    </div>
+                    <div class="modal-edit-news__input-wrapper modal-edit-news__input-wrapper--placement-date">
+                        <label for="news-text" class="modal-edit-news__label">Текст новости</label>
+                        <textarea id="news-text" name="news_text" type="text" class="modal-edit-news__input modal-edit-news__input--news-text"></textarea>
+                    </div>
+                    <button class="modal-edit-news__send-button">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="assets/libs/move-elements.js"></script>
     <script src="assets/libs/easy-smooth-scroll-easing.js"></script>
+    <script src="assets/libs/datepicker.js"></script>
+    <script src="assets/libs/jcrop.js"></script>
+    <script src="assets/libs/croppie.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

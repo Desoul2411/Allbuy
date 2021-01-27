@@ -1,0 +1,169 @@
+.modal-overlay--edit-feedback {
+    min-width: 1024px;
+}
+
+.modal-edit-feedback {
+    position: absolute;
+    top: 80px;
+    width: 1120px;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.16);
+
+    @media(max-width: 1200px) {
+        width: 90%;
+    }
+
+    @media(max-width: 1024px) {
+        top: 30px;
+    }
+
+    &__header {
+        position: relative;
+        background: $hoverColor;
+        @include acrom-bold;
+        font-size: 20px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 8px 0;
+        text-align: center;
+    
+        @media(max-width: 600px) {
+            font-size: 16px;
+        }
+    }
+
+    &__close-button {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 34px;
+        cursor: pointer;
+    }
+
+    &__body {
+        background: #F9F9F9;
+        padding: 20px 40px 28px 40px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        @include acrom-bold;
+        font-size: 16px;
+        line-height: 32px;
+        line-height: 200%;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    &__input {
+        @include cabinet-big-input-style;
+        @include acrom-500;
+        height: 48px;
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        font-size: 16px;
+        line-height: 125%;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    &__top-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__author-name {
+        @include acrom-500;
+        font-size: 16px;
+        line-height: 125%;
+        color: $mainDarkColor;
+    }
+
+    &__select-wrapper {
+        display: flex;  
+        align-items: center;
+
+        &:first-of-type {
+            margin-bottom: 25px;
+        }
+
+        label {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__select {
+        margin-left: 13px;
+        width: 140px;
+        height: 23.83px;
+        outline: none;
+        background: #FFFFFF;
+        border: 1px solid #EBEBEB;
+        @include acrom-normal;
+        font-size: 12px;
+        line-height: 200%;
+        color: #353535;
+    }
+
+    &__answer-author {
+        margin-bottom: 20px;
+        width: 500px;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    &__feedback {
+        margin-bottom: 40px;
+        width: 90%;
+    }
+
+    &__feedback-text {
+        @include acrom-500;
+        font-style: 13px;
+        line-height: 154%;
+        color: $mainDarkColor;
+    }
+
+    &__text-field {
+        background: #FFFFFF;
+        border: 1px solid #EDEDED;
+        color: #7D7D7D;
+        @include acrom-500;
+        font-style: 13px;
+        line-height: 154%;
+        padding: 20px;
+        outline: none;
+        resize: none;
+        margin-bottom: 32px;
+    }
+
+    &__button {
+        background: #FFFFFF;
+        border: 1px solid $orangeColor;
+        box-sizing: border-box;
+        width: 242px;
+        height: 54px;
+        color: $orangeColor;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: $orangeColor;
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF
+        }
+    }
+}
+

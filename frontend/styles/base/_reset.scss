@@ -38,6 +38,9 @@ html, body {
 body {
   line-height: 1;
   /*  padding: 0 !important; */
+  display: flex;
+  flex-direction: column;
+
   @media (max-width:1024px) {
     padding: 0px !important;
   }
@@ -45,6 +48,11 @@ body {
     padding: 0px !important;
   }
 }
+
+main {
+  flex-grow: 1;
+}
+
 ol, ul {
   list-style: none;
 }

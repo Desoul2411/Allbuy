@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
 
     if(headerCabinetContent) {
-        let body = document.querySelector('body');
         let cabinetMenuButton = document.querySelector('.header__cabinet-menu-button');
         let cabinetMenu = document.querySelector('.cabinet-menu--content-page');
         let cabinetMenuOverlay = document.querySelector('.cabinet-menu-overlay');

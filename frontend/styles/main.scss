@@ -56,6 +56,7 @@
 @import "components/main-card-gallery";
 @import "components/main-card-info";
 @import "components/seller-card";
+@import "components/video-block";
 
 /* kartochka-magazina */
 @import "components/return-back.scss";
@@ -88,6 +89,7 @@
 @import 'components/cabinet-edit-goods';
 @import 'components/cabinet-product';
 @import 'components/cabinet-pagination';
+@import 'components/modal-edit-product-description';
 
 /*kabinet-dostavka*/
 @import 'components/cabinet-delivery';
@@ -97,9 +99,11 @@
 
 /*kabinet-novosti*/
 @import 'components/cabinet-news';
+@import 'components/modal-edit-news';
 
 /*kabinet-otzivi*/
 @import 'components/cabinet-feedbacks';
+@import 'components/modal-edit-feedback';
 
 /*kabinet-fotogalereya*/
 @import 'components/cabinet-photogallery';

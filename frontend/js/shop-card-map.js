@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }).addTo(map);
 
         var orangeIcon = L.icon ({
-            iconUrl: '../assets/images/map-marker-icon.png'
+            iconUrl: './assets/images/map-marker-icon.png'
         })
 
         var marker1 = L.marker([53.85328, 27.42091], {

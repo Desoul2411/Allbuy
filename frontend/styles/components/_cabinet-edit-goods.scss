@@ -42,12 +42,25 @@
             width: 200px;
         }
 
+        &--unit {
+            text-align: center;
+        }
+
+        &--update {
+            text-align: center;
+        }
+
+        &--in-stock {
+            text-align: center;
+        }
+
         &--description {
             width: 220px;
         }
 
         &--control {
-            padding-right: 25px;
+            text-align: center;
+            padding-right: 20px;
             width: 85px;
         }
     }

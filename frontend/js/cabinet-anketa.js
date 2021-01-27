@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="cabinet-content__work-time-input-option cabinet-content__work-time-input-option--opening-time">
                     <label class="cabinet-content__input-small-label">Время открытия</label>
-                    <input type="text" name="work_time_opening_time" class="cabinet-content__input cabinet-content__input--work-time cabinet-content__input--opening-time">
+                    <input type="text" name="work_time_opening_time" autocomplete="off" class="cabinet-content__input cabinet-content__input--work-time cabinet-content__input--opening-time">
                     <div class="cabinet-content__timepicker-widget timepicker-widget visually-hidden">
                         <span class="timepicker-widget__headline">Выберите время</span>
                         <div class="timepicker-widget__content">

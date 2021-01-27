@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
         if (submitAppButtons && submitAppCloseButton && submitAppModal) {
-    
             submitAppButtons.forEach(submitAppButton => {
                 submitAppButton.addEventListener('click', (e) => {
                     let currentSellerCard = e.target.parentElement.parentElement.parentElement;

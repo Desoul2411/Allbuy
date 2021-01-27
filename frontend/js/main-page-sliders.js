@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var glide = new Glide('#promo-slider', {
             type: 'carousel',
             focusAt: 'center',
+            autoplay: 3000,
             rewind:true,
             peek: 50,
             breakpoints: {

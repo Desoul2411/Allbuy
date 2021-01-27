@@ -1,9 +1,10 @@
 .filters {
     background-color: #FFFFFF;
     position: relative;
-    z-index: 200003;
+    
 
     @media(max-width: 1080px) {
+        z-index: 200003;
         height: 100vh;
         min-height: -webkit-fill-available;
     }

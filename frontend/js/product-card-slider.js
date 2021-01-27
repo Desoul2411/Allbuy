@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if(productCardMain) {
         //baguetteBox gallery
         baguetteBox.run('.main-card-gallery__images-list', {
-            noScrollbars: true
+            noScrollbars: true,
+            buttons: true
         });
     };
 });
