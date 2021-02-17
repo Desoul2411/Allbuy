@@ -27,7 +27,16 @@
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        
+
+            path {
+                transition: 0.2s;
+            }
+
+         &:hover {
+            path {
+                stroke:	#CCCCCC;
+            }
+        }
     }
 
     &__arrow-left {
@@ -45,6 +54,7 @@
             display: block;
         } 
     }
+    
 
     &__list {
         display: flex;
