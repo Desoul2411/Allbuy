@@ -8,9 +8,9 @@
 }
 
 .container-wide--cabinet-main {
-    @media (max-width: 1330px)  {
+    @media (max-width: 768px)  {
         width: auto;
-        padding: 0 16px;
+        padding: 0 20px;
     }
 }
 
@@ -46,11 +46,7 @@
 }
 
 .container-cabinet  {
-    margin-right: 40px;
-
-    @media (max-width: 1330px)  {
-        margin-right: 0px;
-    }
+    padding-right: 40px;
 }
 
 .container-cabinet--main {

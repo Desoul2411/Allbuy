@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let photogalleryItems = document.querySelectorAll('.cabinet-photogallery__photogallery-item');
         let checkAllCheckbox = document.querySelector('.cabinet-photogallery__checkbox--check-all-checkbox');
         let photogalleryItemsCheckboxes = document.querySelectorAll('.cabinet-photogallery__checkbox--selected-checkbox');
-        let switchCheckbox = document.querySelector('.cabinet-photogallery__checkbox-label--switch-on-off-selected');
         
         const deleteTableItem = (elemnetsToDelete, deleteButtonClass) => {
             elemnetsToDelete.forEach(element => {
@@ -31,12 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                 })
             };
-        };
-
-
-        //Switch on/off photogallery
-        if(switchCheckbox) {
-            switchCheckbox.addEventListener('change', (e) => switchOffOnItems(e.target, '.cabinet-photogallery__photogallery-item', '.cabinet-photogallery__checkbox--selected-checkbox', '.cabinet-photogallery__td--status'));
         };
 
         // Delete news-item when click 'X' button

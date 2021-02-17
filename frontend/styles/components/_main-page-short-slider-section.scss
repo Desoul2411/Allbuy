@@ -62,12 +62,10 @@
             transition: .3s;
         }
 
-        @media (min-width: 1024px)  {
-            &:hover {
-                transform: translateY(-8px);
-                &:after {
-                    opacity: 1;
-                }
+        &:hover {
+            transform: translateY(-8px);
+            &:after {
+                opacity: 1;
             }
         }
 

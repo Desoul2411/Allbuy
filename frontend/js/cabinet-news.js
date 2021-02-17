@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let newsItems = document.querySelectorAll('.cabinet-news__news-item');
         let checkAllCheckbox = document.querySelector('.cabinet-news__checkbox--check-all-checkbox');
         let productNewsCheckboxes = document.querySelectorAll('.cabinet-news__checkbox--selected-checkbox');
-        let switchCheckbox = document.querySelector('.cabinet-news__checkbox--switch_on_off_selected');
         
         const deleteTableItem = (elemnetsToDelete, deleteButtonClass) => {
             elemnetsToDelete.forEach(element => {
@@ -17,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         };
+
         
         const checkAllCheckboxes = (checkAllCheckboxElement, checkboxesToCheckElements) => {
             if(checkAllCheckboxElement) {
@@ -27,16 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else {
                             checkboxesToCheckElement.checked = false;
                         }
-                    });
-                });
+                    })
+                })
             };
         };
 
-        //Switch on/off news
-        if(switchCheckbox) {
-            switchCheckbox.addEventListener('change', (e) => switchOffOnItems(e.target, '.cabinet-news__news-item', '.cabinet-news__checkbox--selected-checkbox', '.cabinet-news__td--status'));
-        }
-        
         // Delete news-item when click 'X' button
         deleteTableItem(newsItems, '.cabinet-news__button--delete-button');
         

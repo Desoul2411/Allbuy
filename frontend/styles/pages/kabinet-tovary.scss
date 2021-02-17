@@ -1,9 +1,5 @@
 .body-cabinet-content {
-    min-width: 1024px;
-}
-
-.body-cabinet-content--kabinet-tovary {
-    min-width: 1024px;
+    min-width: 1150px;
 }
 
 .cabinet-content {
@@ -13,10 +9,6 @@
     &__cabinet-filter {
         padding: 0px 20px 0px 40px;
         margin-bottom: 16px;
-    }
-
-    @media (max-width: 1330px)  {
-        margin-right: 16px;
     }
 }
 

@@ -37,7 +37,7 @@ function enableScroll () {
 
 
 //Cabinet functions
-function contractDescription (descriptionsToContract, contractToWhatAmount) {
+const contractDescription = (descriptionsToContract, contractToWhatAmount) => {
     descriptionsToContract.forEach(description => {
         let descriptionText = description.textContent;
         
@@ -49,25 +49,4 @@ function contractDescription (descriptionsToContract, contractToWhatAmount) {
             return false
         }
     })
-};
-
-
-function switchOffOnItems (switchCheckbox, itemsElemsCollectionClass, itemsCheckboxClass, stasusFieldClass) {
-    let itemsElemsCollection = document.querySelectorAll(itemsElemsCollectionClass);
-            
-    if(itemsElemsCollection[0]) {
-        itemsElemsCollection.forEach(itemElem => {
-            if (switchCheckbox.checked) {
-                if(itemElem.querySelector(itemsCheckboxClass).checked && !itemElem.classList.contains('active')) {
-                    itemElem.classList.add('active');
-                    itemElem.querySelector(stasusFieldClass).textContent = 'Включено';
-                };
-            } else if (!switchCheckbox.checked) {
-                if(itemElem.querySelector(itemsCheckboxClass).checked && itemElem.classList.contains('active')) {
-                    itemElem.classList.remove('active');
-                    itemElem.querySelector(stasusFieldClass).textContent = 'Выключено';
-                };
-            };
-        });
-    };
 };

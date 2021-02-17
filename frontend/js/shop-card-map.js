@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         var marker1 = L.marker([53.85328, 27.42091], {
             icon: orangeIcon
+            
           }).bindPopup('<p>ООО Новосёлкин<br />Меньковский тракт,2</p>').addTo(map).openPopup();
     };
 });

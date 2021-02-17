@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let videoItems = document.querySelectorAll('.cabinet-video__video-item');
         let checkAllCheckbox = document.querySelector('.cabinet-video__checkbox--check-all-checkbox');
         let videoItemsCheckboxes = document.querySelectorAll('.cabinet-video__checkbox--selected-checkbox');
-        let switchCheckbox = document.querySelector('.cabinet-video__checkbox--switch_on_off_selected');
         
         const deleteTableItem = (elemnetsToDelete, deleteButtonClass) => {
             elemnetsToDelete.forEach(element => {
@@ -31,11 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                 })
             };
-        };
-
-        //Switch on/off video
-        if(switchCheckbox) {
-            switchCheckbox.addEventListener('change', (e) => switchOffOnItems(e.target, '.cabinet-video__video-item', '.cabinet-video__checkbox--selected-checkbox', '.cabinet-video__td--status'));
         };
 
         // Delete news-item when click 'X' button
