@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click',() => {
                 const {itemValue} = item.dataset;
                 item.parentNode.dataset.totalValue = itemValue;
-                console.log(itemValue);
-                //запрос на бэкэнд
+                console.log(itemValue); //to send to back-end
             })
         );
     };

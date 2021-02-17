@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             timepickerWidget.classList.add('visually-hidden');
                         });
                     });
-                }
+                };
                 
 
                 body.addEventListener('click',(e) => {
@@ -193,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //Remove work time
         removeElement(workTimeListItems);
 
+        //Choose time
         chooseOpeningTime(workTimeListItems);
     };
 });
@@ -949,28 +950,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
-    let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
-
-    if(headerCabinetContent) {
-        let paginationPages = document.querySelectorAll('.cabinet-pagination__page');
-        let firstPaginationPage = document.querySelector('.cabinet-pagination__page--first-page');
-        let lastPaginationPage = document.querySelector('.cabinet-pagination__page--last-page');
-
-        /* paginationPages.forEach(page => {
-            let pageNumber = page.textContent;
-        }) */
-        
-/*         let lastVsisvlePageNumber = +paginationPages[paginationPages.length - 1].textContent;
-        if (lastVsisvlePageNumber > 8) {
-            firstPaginationPage.classList.remove('hidden');
-        }
-        
-        if(!lastPaginationPage.nextElementSibling) {
-
-        } */
-    }
-});
-document.addEventListener('DOMContentLoaded', () => {
     let cabinetPaymentMethodsForm = document.querySelector('.cabinet-content__payment-methods-form');
 
     if(cabinetPaymentMethodsForm) {
@@ -1041,17 +1020,6 @@ document.addEventListener('DOMContentLoaded', () => {
         checkAllCheckboxes(checkAllCheckbox,photogalleryItemsCheckboxes);
     }
 });
-/* document.addEventListener('DOMContentLoaded', () => {
-    let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
-    let timepickerWidget = document.querySelector('.timepicker-widget');
-    let setTimeButton = document.querySelector('.timepicker-widget__button--set-time');
-    
-    if(headerCabinetContent && timepickerWidget) {
-        
-
-        
-    }
-}); */
 document.addEventListener('DOMContentLoaded', () => {
     let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
 
@@ -1225,7 +1193,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 const body = document.querySelector('body');
 
-
 //Common modal window functions
 function closeModal (modal,overlay) {
     enableScroll();
@@ -1296,7 +1263,6 @@ function switchOffOnItems (switchCheckbox, itemsElemsCollectionClass, itemsCheck
         });
     };
 };
-
 
 document.addEventListener('DOMContentLoaded', () => {
     let loginForm = document.querySelector('.login__form');
@@ -1787,7 +1753,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     
             submitAppCloseButton.addEventListener('click', () => closeModal(submitAppModal, overlaySubmitAppModal));
-        }
+        };
 
         //phone input mask
         phoneMask('.modal-submit-app__input--phone');
@@ -2081,8 +2047,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click',() => {
                 const {itemValue} = item.dataset;
                 item.parentNode.dataset.totalValue = itemValue;
-                console.log(itemValue);
-                //запрос на бэкэнд
+                console.log(itemValue); //to send to back-end
             })
         );
     };

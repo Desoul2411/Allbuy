@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             timepickerWidget.classList.add('visually-hidden');
                         });
                     });
-                }
+                };
                 
 
                 body.addEventListener('click',(e) => {
@@ -193,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //Remove work time
         removeElement(workTimeListItems);
 
+        //Choose time
         chooseOpeningTime(workTimeListItems);
     };
 });

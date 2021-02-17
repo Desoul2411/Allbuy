@@ -1,6 +1,5 @@
 const body = document.querySelector('body');
 
-
 //Common modal window functions
 function closeModal (modal,overlay) {
     enableScroll();

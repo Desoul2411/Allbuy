@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     
             submitAppCloseButton.addEventListener('click', () => closeModal(submitAppModal, overlaySubmitAppModal));
-        }
+        };
 
         //phone input mask
         phoneMask('.modal-submit-app__input--phone');
