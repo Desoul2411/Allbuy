@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let changeCurrencySelect = document.querySelector('.cabinet-edit-goods__table-controls-select--change-currency');
         let cabinetProductDescriptions = document.querySelectorAll('.cabinet-product__item-description-text');
         let retailPriceInputs = document.querySelectorAll('.cabinet-product__price-input--retail-price');
+        let priceInputs = document.querySelectorAll('.cabinet-product__price-input');
         
-
         const switchOnOffProduct = (currentInputValue, productCardsLooped) => {
             if(currentInputValue) {
                 productCardsLooped.classList.add('active');
@@ -97,6 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         };
 
+        const validatePriceInputValue = (priceInput) => {
+            priceInput.addEventListener('change', (e) => {
+                if(isNaN(e.target.value)) {
+                    e.target.value = '';
+                }
+                return;
+            })
+        };
+
+        //validate price value entered
+        priceInputs.forEach(priceInput => {
+            validatePriceInputValue(priceInput)
+        });
 
         //Switch on/off (active/not active) product
         activateDisactivateProduct(productCards, retailPriceInputs);

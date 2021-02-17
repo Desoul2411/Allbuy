@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         leftMainMenuArrow.addEventListener('click', () => {
             easyScroll({
                 'scrollableDomEle': mainMenuList,
-                'duration': 400,
+                'duration': 300,
                 'direction': 'left',
-                'easingPreset': 'linear'
+                'easingPreset': 'easeOutQuad'
             });
             
         });
@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         righttMainMenuArrow.addEventListener('click', () => {
             easyScroll({
                 'scrollableDomEle': mainMenuList,
-                'duration': 400,
+                'duration': 300,
                 'direction': 'right',
-                'easingPreset': 'linear'
+                'easingPreset': 'easeOutQuad'
             });
         });
 

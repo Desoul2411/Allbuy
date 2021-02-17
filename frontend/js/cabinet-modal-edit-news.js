@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let uploadedImage = document.querySelector('.modal-edit-news__image');
         let cutImageButton = document.querySelector('.modal-edit-news__cut-image-button');
         let addNewsButton = document.querySelector('.cabinet-news__link-button');
-        let editNewsModalTitle = document.querySelector('.modal-edit-news__header');
+        let editNewsModalTitle = document.querySelector('.modal-edit-news__headline');
 
         const openAddNewsModal = (e) => {
             e.preventDefault();

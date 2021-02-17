@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         shopCardGalleryCarousel.mount();
         
 
-
         var shopCardCategoryCarousel = new Glide('#shop-card-categories-carousel', {
         /*  type: 'carousel', */
             rewind:true,

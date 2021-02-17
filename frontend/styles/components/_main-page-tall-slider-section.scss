@@ -60,12 +60,15 @@
             
         }
 
-        &:hover {
-            transform: translateY(-8px);
-            &:after {
-                opacity: 1;
+        @media (min-width: 1024px)  {
+            &:hover {
+                transform: translateY(-8px);
+                &:after {
+                    opacity: 1;
+                }
             }
         }
+        
 
         @media (max-width: 425px)  {
             max-width: 100%;
