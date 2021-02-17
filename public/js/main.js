@@ -198,6 +198,160 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.addEventListener('DOMContentLoaded', () => {
     let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
+
+    if(headerCabinetContent) {
+        let addDeliveryOptionButton = document.querySelector('.cabinet-delivery__add-delivery-option-button');
+        let deliveryOptionList = document.querySelector('.cabinet-delivery');
+        let deliveryOptionHtml = `
+        <div class="cabinet-delivery__cabinet-delivery-option">
+            <div class="cabinet-delivery__input-option">
+                <label class="cabinet-content__input-small-label">Зона</label>
+                <input type="text" name="delivery_zone" class="cabinet-delivery__input" disabled="">
+            </div>
+            <div class="cabinet-delivery__input-option">
+                <label class="cabinet-content__input-small-label">Категории</label>
+                <input type="text" name="delivery_category" class="cabinet-delivery__input" disabled=""> 
+            </div>
+            <div class="cabinet-delivery__input-option">
+                <label class="cabinet-content__input-small-label">Описание</label>
+                <input type="text" name="delivery_description" class="cabinet-delivery__input" disabled="">
+            </div>
+            <div class="cabinet-delivery__delivery-option-controls">
+                <svg class="cabinet-content__control-button cabinet-content__control-button--delivery-edit" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7272 8.61179L21.4141 9.25101C21.7692 9.37531 22 9.71268 22 10.0856V11.9144C22 12.2873 21.7869 12.6247 21.4318 12.749L19.745 13.3882C19.5497 14.134 19.2478 14.8442 18.8749 15.5012L19.6206 17.1525C19.7805 17.4899 19.7095 17.8806 19.4431 18.1469L18.1469 19.4431C17.8805 19.7094 17.4899 19.7805 17.1526 19.6207L15.5012 18.8749C14.8442 19.2478 14.134 19.5496 13.3882 19.745L12.749 21.4318C12.6248 21.7692 12.2874 22 11.9144 22H10.0856C9.71265 22 9.37524 21.7869 9.25098 21.4318L8.61182 19.745C7.86597 19.5496 7.15576 19.2478 6.49878 18.8749L4.84741 19.6207C4.51013 19.7805 4.11951 19.7094 3.85315 19.4431L2.55688 18.1469C2.29053 17.8806 2.21948 17.4899 2.37939 17.1525L3.12512 15.5012C2.7522 14.8442 2.45032 14.134 2.255 13.3882L0.568237 12.749C0.230835 12.6069 0 12.2873 0 11.9144V10.0856C0 9.71268 0.213135 9.37531 0.568237 9.25101L2.255 8.61179C2.45032 7.86603 2.7522 7.15578 3.12512 6.49879L2.37939 4.84746C2.21948 4.51009 2.29053 4.11945 2.55688 3.8531L3.85315 2.5569C4.11951 2.29056 4.51013 2.21953 4.84741 2.37933L6.49878 3.12511C7.15576 2.75221 7.86597 2.45036 8.61182 2.25505L9.25098 0.568207C9.39307 0.230835 9.71265 0 10.0856 0H11.8967C12.2695 0 12.6069 0.213074 12.7312 0.568207L13.3705 2.25505C14.1162 2.45036 14.8264 2.75221 15.4834 3.12511L17.1348 2.37933C17.4722 2.21953 17.8628 2.29056 18.1292 2.5569L19.4253 3.8531C19.6917 4.11945 19.7627 4.51009 19.6029 4.84746L18.8572 6.49879C19.23 7.15578 19.5319 7.86603 19.7272 8.61179ZM11 18C14.866 18 18 14.866 18 11C18 7.134 14.866 4 11 4C7.13403 4 4 7.134 4 11C4 14.866 7.13403 18 11 18Z" fill="#353535"></path>
+                </svg>                                            
+                <svg class="cabinet-content__control-button cabinet-content__control-button--delete" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="#353535" stroke-width="3"></path>
+                </svg>                                            
+            </div>
+        </div>`;
+
+
+        let deliveryOptions = document.querySelectorAll('.cabinet-delivery__cabinet-delivery-option');
+
+        const addElement = (addElementButton, elementsContainer, elementHTML, elementsCollectionClass) => {
+            if (addElementButton && elementsContainer && elementHTML) {
+                addElementButton.addEventListener('click', () => {
+                    elementsContainer.insertAdjacentHTML('beforeend', elementHTML);
+                    //refresh elementsCollection after adding new element
+                    elementsCollection = document.querySelectorAll(elementsCollectionClass);
+                    removeElement(elementsCollection);
+                });
+            };
+        };
+
+        const removeElement = (elementsCollection) => {
+            elementsCollection.forEach(element =>  {
+                element.addEventListener('click', (e) => {
+                    let deleteButton = element.querySelector('.cabinet-content__control-button--delete');
+                    if(e.target === deleteButton || e.target === deleteButton.children[0]) {
+                        e.currentTarget.remove();
+                    }
+                })
+            });
+        };
+
+        //Add phone number
+        addElement(addDeliveryOptionButton, deliveryOptionList, deliveryOptionHtml, '.cabinet-delivery__cabinet-delivery-option');
+
+        //Remove phone number
+        removeElement(deliveryOptions);
+    };
+});
+document.addEventListener('DOMContentLoaded', () => {
+
+    const cabinetEditFeedbacksModal = document.querySelector('.modal-edit-feedback');
+
+    if (cabinetEditFeedbacksModal) {
+        let overlay = document.querySelector('.modal-overlay');
+        let editFeedbackForm = document.querySelector('.modal-edit-feedback__form');
+        let cabinetEditFeedbacktModalCloseButton = document.querySelector('.modal-edit-feedback__close-button')
+        let feedbackItems = document.querySelectorAll('.cabinet-feedbacks__feedbacks-item');
+        let editFeedbackModalFeedbackAuthor = document.querySelector('.modal-edit-feedback__author-name');
+        let editFeedbackModalFeedbackStatus = document.querySelector('.modal-edit-feedback__select--feedback-status');
+        let editFeedbackModalFeedbackText = document.querySelector('.modal-edit-feedback__feedback-text');
+
+
+        const closeEditFeedbacksModal = () => {
+            feedbackItems.forEach(feedbackItem => {
+                feedbackItem.classList.remove('currently-edited');
+            });
+            closeModal(cabinetEditFeedbacksModal,overlay);
+        };
+
+        const transferFeedbackDataToModal = (event) => {
+            if(event.target.classList.contains('cabinet-feedbacks__button--settings-button') || event.target.tagName === 'path') {
+                openModal(cabinetEditFeedbacksModal,overlay);
+                let currentFeedbackText = event.currentTarget.querySelector('.cabinet-feedbacks__td--feedback-text').dataset.value;
+                let currentFeedbackAuthor = event.currentTarget.querySelector('.cabinet-feedbacks__td--author').textContent;
+                let currentFeedbackStatus = event.currentTarget.querySelector('.cabinet-feedbacks__td--status').textContent;
+
+                event.currentTarget.classList.add('currently-edited');
+                editFeedbackModalFeedbackAuthor.textContent = currentFeedbackAuthor;
+                editFeedbackModalFeedbackText.textContent = currentFeedbackText;
+
+                for (let i = 0; i < editFeedbackModalFeedbackStatus.options.length; i++) {
+                    if(editFeedbackModalFeedbackStatus.options[i].value === currentFeedbackStatus) {
+                        editFeedbackModalFeedbackStatus.options[i].selected = 'true';
+                    }
+                }; 
+            };
+        };
+
+        feedbackItems.forEach(feedbackItem => {
+            feedbackItem.addEventListener('click', transferFeedbackDataToModal);
+        });
+
+        const ajaxSendFeedbackData = async (formData) => {
+            const fetchResp = await fetch('../mail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (!fetchResp.ok) {
+                throw new Error(`Ошибка! Cтатус ошибки ${fetchResp.status}`);
+            }
+            return await fetchResp.text();
+        };
+
+        const setEditedFeedbackActiveStatus = (currentFeedbackItem,editedFeedbackActiveStatusValue) => {
+            if (editedFeedbackActiveStatusValue === 'Выключено' && currentFeedbackItem.classList.contains('active')) {
+                currentFeedbackItem.classList.remove('active');
+            } else if (editedFeedbackActiveStatusValue === 'Включено' && !currentFeedbackItem.classList.contains('active')) {
+                currentFeedbackItem.classList.add('active');
+            };
+            let currentFeedbackActiveStatus = currentFeedbackItem.querySelector('.cabinet-feedbacks__td--status');
+            currentFeedbackActiveStatus.textContent = editedFeedbackActiveStatusValue;
+        }; 
+
+        editFeedbackForm.addEventListener('submit',(event) => {
+            event.preventDefault();
+            let currentFeedbackItem = document.querySelector('.currently-edited');
+            let editedFeedbackActiveStatusValue = editFeedbackModalFeedbackStatus.value;
+            
+            //AJAX
+            const formData = new FormData(event.currentTarget);
+            ajaxSendFeedbackData(formData)
+                .then((response) => {
+                    cabinetEditProductForm.reset();
+                    //Pass response to setEditedDescription function. Edit function before passing
+                })
+                .catch((err) => console.error(err));
+
+            setEditedFeedbackActiveStatus(currentFeedbackItem,editedFeedbackActiveStatusValue);
+            closeEditFeedbacksModal();
+        });
+
+        cabinetEditFeedbacktModalCloseButton.addEventListener('click', closeEditFeedbacksModal);
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeEditFeedbacksModal();
+            };
+        });
+    };
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
     
 
     if(headerCabinetContent) {
@@ -327,6 +481,168 @@ document.addEventListener('DOMContentLoaded', () => {
             changeCurrencySelect.addEventListener('change', changeCardParameters);
         };
     };
+});
+document.addEventListener('DOMContentLoaded', () => {
+
+    const cabinetEditProductModal = document.querySelector('.modal-edit-product-description');
+
+    if (cabinetEditProductModal) {
+        let overlay = document.querySelector('.modal-overlay');
+        let cabinetEditProductForm = document.querySelector('.modal-edit-product-description__form');
+        let cabinetEditProductModal = document.querySelector('.modal-edit-product-description');
+        let cabinetProductDescriptions = document.querySelectorAll('.cabinet-product__item-description-text');
+        let cabinetEditProductModalCloseButton = document.querySelector('.modal-ask-question__close-button');
+        let modalTextField = document.querySelector('.modal-edit-product-description__text-field');
+        
+
+        contractDescription(cabinetProductDescriptions,60);
+
+        const closeEditProductModal = () => {
+            cabinetProductDescriptions.forEach(descriptionItem => {
+                descriptionItem.classList.remove('currently-edited');
+            });
+            closeModal(cabinetEditProductModal,overlay);
+            contractDescription(cabinetProductDescriptions,60);
+        }
+
+        const ajaxSendNewProductDescription = async (formData) => {
+            const fetchResp = await fetch('../mail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (!fetchResp.ok) {
+                throw new Error(`Ошибка! Cтатус ошибки ${fetchResp.status}`);
+            }
+            return await fetchResp.text();
+        };
+
+        const setEditedDescription = (currentDesription) => {
+            if(modalTextField.value === '') {
+                currentDesription.textContent = 'Изменить';
+                currentDesription.dataset.value = '';
+            } else {
+                currentDesription.dataset.value = modalTextField.value;
+                currentDesription.textContent = modalTextField.value;
+                contractDescription(cabinetProductDescriptions);
+            }
+        };
+
+        cabinetProductDescriptions.forEach(descriptionItem => {
+            descriptionItem.addEventListener('click', (event)=> {
+                openModal(cabinetEditProductModal,overlay);
+
+                let currentDescriptionText = event.target.dataset.value;
+                event.target.classList.add('currently-edited');
+                
+                if(currentDescriptionText === 'Изменить') {
+                    modalTextField.value = ''
+                } else {
+                    modalTextField.value = currentDescriptionText;
+                }
+            });
+        });
+
+        cabinetEditProductForm.addEventListener('submit',(event) => {
+            event.preventDefault();
+            let currentDesription = document.querySelector('.currently-edited');
+            
+            //AJAX
+            const formData = new FormData(event.currentTarget);
+            ajaxSendNewProductDescription(formData)
+                .then((response) => {
+                    cabinetEditProductForm.reset();
+                    //Pass response to setEditedDescription function. Edit function before passing
+                })
+                .catch((err) => console.error(err));
+
+            setEditedDescription(currentDesription);
+            closeEditProductModal();
+        });
+
+        cabinetEditProductModalCloseButton.addEventListener('click', closeEditProductModal);
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeEditProductModal();
+            };
+        });
+    };
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
+    let cabinetProductFeedbacks = document.querySelectorAll('.cabinet-feedbacks__td--feedback-text');
+
+    contractDescription(cabinetProductFeedbacks,190);
+
+    if(headerCabinetContent) {
+        let checkAllCheckbox = document.querySelector('.cabinet-feedbacks__checkbox--check-all-checkbox');
+        let feedbackItemsCheckboxes = document.querySelectorAll('.cabinet-feedbacks__checkbox--check-checkbox');
+        
+        const checkAllCheckboxes = (checkAllCheckboxElement, checkboxesToCheckElements) => {
+            if(checkAllCheckboxElement) {
+                checkAllCheckboxElement.addEventListener('change', (e) => {
+                    checkboxesToCheckElements.forEach(checkboxesToCheckElement => {
+                        if(e.target.checked) {
+                            checkboxesToCheckElement.checked = true;
+                        } else {
+                            checkboxesToCheckElement.checked = false;
+                        }
+                    })
+                })
+            };
+        };
+        
+        // CheckAll checkboxes when check 'check-all-checkbox' checkbox
+        checkAllCheckboxes(checkAllCheckbox,feedbackItemsCheckboxes);
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
+
+    if(headerCabinetContent) {
+        let cabinetMenuButton = document.querySelector('.header__cabinet-menu-button');
+        let cabinetMenu = document.querySelector('.cabinet-menu--content-page');
+        let cabinetMenuOverlay = document.querySelector('.cabinet-menu-overlay');
+        let cabinetCloseButton = document.querySelector('.cabinet-menu__close-button');
+
+        const disableScroll = () => {
+            let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+            let pagePosition = window.scrollY;
+            body.style.paddingRight = paddingOffset;
+            body.classList.add('disable-scroll');
+            body.dataset.position = pagePosition;
+            body.style.top = -pagePosition + 'px';
+        };
+
+        const enableScroll  = () => {
+            let pagePosition = parseInt(document.body.dataset.position, 10);
+            body.style.top = 'auto';
+            body.classList.remove('disable-scroll');
+            body.style.paddingRight = '0px';
+            window.scroll({top: pagePosition, left: 0});
+            body.removeAttribute('data-position');
+        };
+
+        const openCabinetMenu = () => {
+            disableScroll();
+            body.style.overflow = 'hidden';
+            cabinetMenu.classList.add('shown');
+            cabinetMenuOverlay.classList.remove('visually-hidden');
+            cabinetMenuButton.classList.add('visually-hidden');
+        };
+
+        const closeCabinetMenu = () => {
+            enableScroll();
+            body.style.overflow = 'auto';
+            cabinetMenu.classList.remove('shown');
+            cabinetMenuOverlay.classList.add('visually-hidden');
+            cabinetMenuButton.classList.remove('visually-hidden');
+        };
+
+        cabinetMenuButton.addEventListener('click', openCabinetMenu);
+        cabinetCloseButton.addEventListener('click', closeCabinetMenu);
+        cabinetMenuOverlay.addEventListener('click', closeCabinetMenu);
+    }
 });
 document.addEventListener('DOMContentLoaded', () => {
     const modalEditNews = document.querySelector('.modal-edit-news');
@@ -636,6 +952,51 @@ document.addEventListener('DOMContentLoaded', () => {
     let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
 
     if(headerCabinetContent) {
+        let paginationPages = document.querySelectorAll('.cabinet-pagination__page');
+        let firstPaginationPage = document.querySelector('.cabinet-pagination__page--first-page');
+        let lastPaginationPage = document.querySelector('.cabinet-pagination__page--last-page');
+
+        /* paginationPages.forEach(page => {
+            let pageNumber = page.textContent;
+        }) */
+        
+/*         let lastVsisvlePageNumber = +paginationPages[paginationPages.length - 1].textContent;
+        if (lastVsisvlePageNumber > 8) {
+            firstPaginationPage.classList.remove('hidden');
+        }
+        
+        if(!lastPaginationPage.nextElementSibling) {
+
+        } */
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let cabinetPaymentMethodsForm = document.querySelector('.cabinet-content__payment-methods-form');
+
+    if(cabinetPaymentMethodsForm) {
+        let paymentMethodCheckboxes = cabinetPaymentMethodsForm.querySelectorAll('.cabinet-content__checkbox');
+        let paymentMethodDescriptions = document.querySelectorAll('.cabinet-content__option-description');
+
+        const showDescriptionAccordeon = (checkboxes, descriptions) => {
+            for (let i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].addEventListener('change', ()=> {
+                    if(checkboxes[i].checked) {
+                        let descriptionHeight = descriptions[i].querySelector('.cabinet-content__option-description-wrapper').clientHeight;
+                        descriptions[i].style.height = descriptionHeight + 'px';
+                    } else {
+                        descriptions[i].style.height = 0;
+                    }
+                });
+            };
+        };
+
+        showDescriptionAccordeon(paymentMethodCheckboxes,paymentMethodDescriptions);
+    };
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
+
+    if(headerCabinetContent) {
         let photogalleryItems = document.querySelectorAll('.cabinet-photogallery__photogallery-item');
         let checkAllCheckbox = document.querySelector('.cabinet-photogallery__checkbox--check-all-checkbox');
         let photogalleryItemsCheckboxes = document.querySelectorAll('.cabinet-photogallery__checkbox--selected-checkbox');
@@ -680,6 +1041,17 @@ document.addEventListener('DOMContentLoaded', () => {
         checkAllCheckboxes(checkAllCheckbox,photogalleryItemsCheckboxes);
     }
 });
+/* document.addEventListener('DOMContentLoaded', () => {
+    let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
+    let timepickerWidget = document.querySelector('.timepicker-widget');
+    let setTimeButton = document.querySelector('.timepicker-widget__button--set-time');
+    
+    if(headerCabinetContent && timepickerWidget) {
+        
+
+        
+    }
+}); */
 document.addEventListener('DOMContentLoaded', () => {
     let headerCabinetContent = document.querySelector('.header--cabinet-content-page');
 
@@ -726,6 +1098,130 @@ document.addEventListener('DOMContentLoaded', () => {
         // CheckAll checkboxes when check 'check-all-checkbox' checkbox
         checkAllCheckboxes(checkAllCheckbox,videoItemsCheckboxes);
     }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.main--catalog')) {
+        let body = document.querySelector('body');
+        let showFilterBlockButton = document.querySelector('.catalog-content__show-filter-block-button');
+        let filtersBlock = document.querySelector('.catalog-aside');
+        let filtersBlockOverlay = document.querySelector('.catalog-aside__mobile-overlay');
+        let filtersBlockCloseButton = document.querySelector('.filters__close-filter-button');
+
+        const disableScroll = () => {
+            let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+            let pagePosition = window.scrollY;
+            body.style.paddingRight = paddingOffset;
+            body.classList.add('disable-scroll');
+            body.dataset.position = pagePosition;
+            body.style.top = -pagePosition + 'px';
+        };
+    
+        const enableScroll  = () => {
+            let pagePosition = parseInt(document.body.dataset.position, 10);
+            body.style.top = 'auto';
+            body.classList.remove('disable-scroll');
+            body.style.paddingRight = '0px';
+            window.scroll({top: pagePosition, left: 0});
+            body.removeAttribute('data-position');
+        };
+        
+        const showFiltersBlock = () => {
+            disableScroll();
+            filtersBlock.classList.add('is-shown');
+            filtersBlockOverlay.classList.remove('visually-hidden');
+            body.classList.add('isFiltersBlockShown');
+        };
+
+        const hideFiltersBlock = () => {
+            enableScroll();
+            filtersBlock.classList.remove('is-shown');
+            filtersBlockOverlay.classList.add('visually-hidden');
+            body.classList.remove('isFiltersBlockShown');
+        };
+
+        showFilterBlockButton.addEventListener('click', showFiltersBlock);
+        filtersBlockOverlay.addEventListener('click', hideFiltersBlock);
+        filtersBlockCloseButton.addEventListener('click', hideFiltersBlock);
+    };
+});
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.main--catalog')) {
+        let resetFilterButton = document.querySelector('.filters__reset-button');
+        let filterButtonCheckboxes = document.querySelectorAll('.filter-button__input');
+        let catalogContentFilterButtonInputs = document.querySelector('.catalog-content__filter-buttons').querySelectorAll('.filter-button__input');
+        let filtersBlockFilterButtonTextNodes = document.querySelector('.filters').querySelectorAll('.filter-button__text');
+
+        synchronizeCheckedFilterButtons = (e) => {
+            let currentFilterButtonName = e.currentTarget.nextElementSibling.textContent;
+            filtersBlockFilterButtonTextNodes.forEach(filterBlockButtonTextNode => {
+                if (currentFilterButtonName === filterBlockButtonTextNode.textContent && !filterBlockButtonTextNode.previousElementSibling.checked) {
+                    filterBlockButtonTextNode.previousElementSibling.checked = true;
+                } else if (currentFilterButtonName === filterBlockButtonTextNode.textContent && filterBlockButtonTextNode.previousElementSibling.checked) {
+                    filterBlockButtonTextNode.previousElementSibling.checked = false
+                }
+            });
+        };
+
+        const toggleHiddenFilterButtons = (menuColumnClass,menuListClass,menuDotsClass,showHiddenItemsArrowClass, itemsAmountToShow) => {
+            let menuColumns = document.querySelectorAll(menuColumnClass);
+
+            menuColumns.forEach((item) => {
+                let menuItemsAmount =  item.querySelectorAll(menuListClass).length;
+
+                if (menuItemsAmount > itemsAmountToShow){
+                    let currentListItems =  item.querySelectorAll(menuListClass);
+                    let showMoreItemsDots = item.querySelector(menuDotsClass);
+                    let showHiddenItemsArrow = item.querySelector(showHiddenItemsArrowClass);
+            
+                    showMoreItemsDots.style.display = 'flex';
+            
+                    currentListItems.forEach((listItem,index) => {
+                        index > itemsAmountToShow - 1 && listItem.classList.add('hidden');
+                    });
+            
+                    showMoreItemsDots.addEventListener('click', () => {
+                        currentListItems.forEach((listItem,index) => {
+                            if (index > itemsAmountToShow - 1) {
+                                listItem.classList.remove('hidden');
+                                showMoreItemsDots.style.display = 'none';
+
+                                if(showHiddenItemsArrow) {
+                                    showHiddenItemsArrow.style.display = 'flex';
+                                }
+                            };
+                        });
+                    });
+
+                    if(showHiddenItemsArrow) {
+                        showHiddenItemsArrow.addEventListener('click', () => {
+                            currentListItems.forEach((listItem,index) => {
+                                index > itemsAmountToShow - 1 && listItem.classList.add('hidden');
+                                showHiddenItemsArrow.style.display = 'none';
+                                showMoreItemsDots.style.display = 'flex';
+                            });
+                        });
+                    };
+                    
+                } else {
+                    item.querySelector(menuDotsClass).style.display = 'none';
+                };
+            });
+        };
+
+        const resetFilters = () => {
+            filterButtonCheckboxes.forEach(item => item.checked = false);
+        };
+
+        catalogContentFilterButtonInputs.forEach(item => {
+            item.addEventListener('change', synchronizeCheckedFilterButtons);
+        });
+        
+        //reset filter
+        resetFilterButton.addEventListener('click', resetFilters);
+
+        toggleHiddenFilterButtons('.filters__filter-buttons', '.filter-button', '.filters__show-more-dots', '.filters__hide-arrow', 6);
+        toggleHiddenFilterButtons('.catalog-content__filter-buttons', '.filter-button', '.catalog-content__show-more-dots', '.filters__hide-arrow', 6);
+    };
 });
 const body = document.querySelector('body');
 
@@ -800,6 +1296,40 @@ function switchOffOnItems (switchCheckbox, itemsElemsCollectionClass, itemsCheck
         });
     };
 };
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let loginForm = document.querySelector('.login__form');
+
+    if(loginForm) {
+        const ajaxSend = async (formData) => {
+            const fetchResp = await fetch('../mail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (!fetchResp.ok) {
+                throw new Error(`Ошибка! Cтатус ошибки ${fetchResp.status}`);
+            }
+            return await fetchResp.text();
+        };
+        
+        
+        
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+        
+            ajaxSend(formData)
+                .then((response) => {
+                    loginForm.reset();
+                })
+                .catch((err) => console.error(err))
+        });
+    };
+});
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     let header = document.querySelector('.header');
@@ -1165,6 +1695,217 @@ document.addEventListener('DOMContentLoaded', () => {
     };  
 });
 document.addEventListener('DOMContentLoaded', () => {
+    let productCardMain = document.querySelector('.main--product-card');
+    
+    if(productCardMain) {
+        let body = document.querySelector('body');
+        let modalOverlay = document.querySelector('.modal-overlay');
+        let overlayAskQuestionModal = document.querySelector('.modal-overlay--ask-question');
+        let overlaySubmitAppModal = document.querySelector('.modal-overlay--submit-app');
+        let askQuestionModal = document.querySelector('.modal-ask-question');
+        let askQuestionButton = document.querySelector('.main-card-info__ask-question-button');
+        let askModalCloseButton = document.querySelector('.modal-ask-question__close-button');
+        let submitAppModal = document.querySelector('.modal-submit-app');
+        let submitAppButtons = document.querySelectorAll('.seller-card__leave-app-link-button');
+        let submitAppCloseButton = document.querySelector('.modal-submit-app__close-button');
+        
+        const disableScroll = () => {
+            let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+            let pagePosition = window.scrollY;
+            body.style.paddingRight = paddingOffset;
+            body.classList.add('disable-scroll');
+            body.dataset.position = pagePosition;
+            body.style.top = -pagePosition + 'px';
+        };
+    
+        const enableScroll  = () => {
+            let pagePosition = parseInt(document.body.dataset.position, 10);
+            body.style.top = 'auto';
+            body.classList.remove('disable-scroll');
+            body.style.paddingRight = '0px';
+            window.scroll({top: pagePosition, left: 0});
+            body.removeAttribute('data-position');
+        };
+    
+        const closeModal = (modal,overlay) => {
+            enableScroll();
+            body.style.overflow = 'auto';
+            modal.classList.add('visually-hidden');
+            overlay.classList.add('visually-hidden'); 
+        };
+    
+        const openModal = (modal,overlay) => {
+            disableScroll();
+            body.style.overflow = 'hidden';
+            modal.classList.remove('visually-hidden'); 
+            overlay.classList.remove('visually-hidden');
+        };
+    
+    
+        const setSellerParametersToModal = (currentSellerCard) => {
+            let currentSellerLogoSrc = currentSellerCard.querySelector('.seller-card__seller-logo').getAttribute('src');
+            let currentSellerName =  currentSellerCard.querySelector('.seller-card__seller-name').textContent;
+            let currentSellerRating = currentSellerCard.querySelector('.seller-card__seller-rating-amount').textContent;
+            let currentSellerPrice = currentSellerCard.querySelector('.seller-card__product-price-amount').textContent;
+    
+            let submitAppModalSellerLogo = submitAppModal.querySelector('.modal-submit-app__seller-logo');
+            let submitAppModalSellerName = submitAppModal.querySelector('.modal-submit-app__seller-name');
+            let submitAppModalSellerRating = submitAppModal.querySelector('.modal-submit-app__seller-rating-amount');
+            let submitAppModalSellerPrice = submitAppModal.querySelector('.modal-submit-app__price-amount');
+    
+            submitAppModalSellerLogo.setAttribute('src',currentSellerLogoSrc);
+            submitAppModalSellerName.textContent = currentSellerName;
+            submitAppModalSellerRating.textContent = currentSellerRating;
+            submitAppModalSellerPrice.textContent = currentSellerPrice;
+        };
+    
+        overlaySubmitAppModal.addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeModal(submitAppModal, overlaySubmitAppModal)
+            };
+        });
+    
+        overlayAskQuestionModal.addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeModal(askQuestionModal, overlayAskQuestionModal)
+            };
+        });
+    
+        if (askQuestionButton && askModalCloseButton && askQuestionModal) {
+            askQuestionButton.addEventListener('click', () => openModal(askQuestionModal, overlayAskQuestionModal));
+            askModalCloseButton.addEventListener('click', () => closeModal(askQuestionModal, overlayAskQuestionModal));
+        }
+    
+        if (submitAppButtons && submitAppCloseButton && submitAppModal) {
+            submitAppButtons.forEach(submitAppButton => {
+                submitAppButton.addEventListener('click', (e) => {
+                    let currentSellerCard = e.target.parentElement.parentElement.parentElement;
+                    openModal(submitAppModal, overlaySubmitAppModal);
+                    setSellerParametersToModal(currentSellerCard);
+                    
+                });
+            });
+    
+            submitAppCloseButton.addEventListener('click', () => closeModal(submitAppModal, overlaySubmitAppModal));
+        }
+
+        //phone input mask
+        phoneMask('.modal-submit-app__input--phone');
+        phoneMask('.modal-ask-question__input--phone');
+
+        let navSlider = new Splide( '#nav-slider', {
+            direction  : 'ttb',
+            height: 420,
+            perPage: 3,
+            perMove: 1,
+            pagination: false,
+            arrows: false,
+            isNavigation: true,
+            focus: 'center',
+            cover: true,
+        }).mount();
+
+        let mainSlider = new Splide( '#main-slider', {
+            perPage: 1,
+            perMove: 1,
+            pagination: false,
+            breakpoints: {
+                767: {
+                    pagination: true,
+                },
+            }
+        });
+
+        mainSlider.sync(navSlider).mount();
+    };
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let productCardMain = document.querySelector('.main--product-card');
+    
+    if(productCardMain) {
+        //baguetteBox gallery
+        baguetteBox.run('.main-card-gallery__images-list', {
+            noScrollbars: true,
+            buttons: true
+        });
+    };
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let header = document.querySelector('.header');
+
+    if(!header.classList.contains('header--cabinet-content-page') && !header.classList.contains('header--cabinet-main')) {
+        let body = document.querySelector('body');
+        let searchMobileIcon = document.querySelector('.header__search-mobile-icon');
+        let clearSearchResultsButton = document.querySelector('.search-modal__clear-button');
+        let searchResaultsContainer = document.querySelector('.search-modal__search-results-groups');
+        let searchModalCloseButton = document.querySelector('.search-modal__back-arrow-button');
+        let searchModal = document.querySelector('.search-modal');
+        let searchModalOverlay = document.querySelector('.search-modal-overlay');
+        let headerSearchField = document.querySelector('.header__search-input');
+        let modalSearchField = document.querySelector('.search-modal__search-input');
+
+        const disableScroll = () => {
+            let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+            let pagePosition = window.scrollY;
+            body.style.paddingRight = paddingOffset;
+            body.classList.add('disable-scroll');
+            body.dataset.position = pagePosition;
+            body.style.top = -pagePosition + 'px';
+        };
+
+        const enableScroll  = () => {
+            let pagePosition = parseInt(document.body.dataset.position, 10);
+            body.style.top = 'auto';
+            body.classList.remove('disable-scroll');
+            body.style.paddingRight = '0px';
+            window.scroll({top: pagePosition, left: 0});
+            body.removeAttribute('data-position');
+        };
+
+        const closeModal = (modal,overlay) => {
+            enableScroll();
+            body.style.overflow = 'auto';
+            modal.classList.add('visually-hidden');
+            overlay.classList.add('visually-hidden'); 
+        };
+
+        const openModal = (modal,overlay) => {
+            disableScroll();
+            body.style.overflow = 'hidden';
+            modal.classList.remove('visually-hidden'); 
+            overlay.classList.remove('visually-hidden');
+        };
+
+        //Open search modal
+        headerSearchField.addEventListener('click', () => {
+            openModal(searchModal,searchModalOverlay);
+            setInterval(() => {
+                modalSearchField.focus()
+            },100);
+        });
+
+        searchMobileIcon.addEventListener('click', () => {
+            openModal(searchModal,searchModalOverlay);
+            setInterval(() => {
+                modalSearchField.focus()
+            },100);
+        });
+
+        const clearSearchResults = () => {
+            searchResaultsContainer.innerHTML = '';
+        };
+
+        //Close search modal
+        searchModalCloseButton.addEventListener('click',() => closeModal(searchModal,searchModalOverlay));
+
+        //Close search modal when click on overlay
+        searchModalOverlay.addEventListener('click',() => closeModal(searchModal,searchModalOverlay));
+
+        //Clear search results
+        clearSearchResultsButton.addEventListener('click', clearSearchResults);
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
     let shopCardMap = document.querySelector('.shop-card-page-map');
 
     if(shopCardMap) {
@@ -1323,6 +2064,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         var group = L.layerGroup(markerList)
             .addTo(map); 
+    };
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let shopCardPageMain = document.querySelector('.main--shop-card');
+
+    if(shopCardPageMain) {
+        const ratingItemList = document.querySelectorAll('.star-rating__item');
+        const ratingItemsArray = Array.prototype.slice.call(ratingItemList);
+
+        ratingItemsArray.forEach(item =>
+            item.addEventListener('click',() => {
+                const {itemValue} = item.dataset;
+                item.parentNode.dataset.totalValue = itemValue;
+                console.log(itemValue);
+                //запрос на бэкэнд
+            })
+        );
     };
 });
 
