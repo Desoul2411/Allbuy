@@ -53,6 +53,7 @@
         will-change: transform;
         transform: translateX(0);
         transition: transform .12s;
+        overflow-y: hidden;
 
         @media (max-width: 1700px) {
             justify-content: flex-start;
