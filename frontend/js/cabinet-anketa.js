@@ -122,46 +122,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 let setTimeButton = workTimeListItem.querySelector('.timepicker-widget__button--set-time');
                 let timepickerWidget = workTimeListItem.querySelector('.timepicker-widget');
 
-                workTimeInput.addEventListener('click', (e) => {
-                    let timeHoursField = workTimeListItem.querySelector('.timepicker-widget__time-hours');
-                    let timeMinutesField = workTimeListItem.querySelector('.timepicker-widget__time-minutes');
-
-                    let hoursInput = workTimeListItem.querySelector('.timepicker-widget__content-item-field--hours');
-                    let minutesInput = workTimeListItem.querySelector('.timepicker-widget__content-item-field--minutes');
-                    let hoursInputValue,minutesInputValue;
-
-                    let currentWorkTimeInput = e.currentTarget;
-
-                    timepickerWidget.classList.remove('visually-hidden');
+                if(workTimeInput) {
+                    workTimeInput.addEventListener('click', (e) => {
+                        let timeHoursField = workTimeListItem.querySelector('.timepicker-widget__time-hours');
+                        let timeMinutesField = workTimeListItem.querySelector('.timepicker-widget__time-minutes');
     
-                    hoursInput.addEventListener('change', (e)=> {
-                        hoursInputValue = e.target.value;
-                        if(hoursInputValue <= 9) {
-                            timeHoursField.innerText = 0 + hoursInputValue;
-                        } else {
-                            timeHoursField.innerText = hoursInputValue;
-                        }
-                    });
+                        let hoursInput = workTimeListItem.querySelector('.timepicker-widget__content-item-field--hours');
+                        let minutesInput = workTimeListItem.querySelector('.timepicker-widget__content-item-field--minutes');
+                        let hoursInputValue,minutesInputValue;
     
-                    minutesInput.addEventListener('change', (e)=> {
-                        minutesInputValue = e.target.value;
-                        if(minutesInputValue <= 9) {
-                            timeMinutesField.innerText = 0 + minutesInputValue;
-                        } else {
-                            timeMinutesField.innerText = minutesInputValue;
-                        }
-                    });
+                        let currentWorkTimeInput = e.currentTarget;
     
-                    setTimeButton.addEventListener('click', () => {
-                        let hours = timeHoursField.textContent;
-                        let minutes = timeMinutesField.textContent;
-                        workTimeInput.value = `${hours}:${minutes}`;
-                        timepickerWidget.classList.add('visually-hidden');
+                        timepickerWidget.classList.remove('visually-hidden');
+        
+                        hoursInput.addEventListener('change', (e)=> {
+                            hoursInputValue = e.target.value;
+                            if(hoursInputValue <= 9) {
+                                timeHoursField.innerText = 0 + hoursInputValue;
+                            } else {
+                                timeHoursField.innerText = hoursInputValue;
+                            }
+                        });
+        
+                        minutesInput.addEventListener('change', (e)=> {
+                            minutesInputValue = e.target.value;
+                            if(minutesInputValue <= 9) {
+                                timeMinutesField.innerText = 0 + minutesInputValue;
+                            } else {
+                                timeMinutesField.innerText = minutesInputValue;
+                            }
+                        });
+        
+                        setTimeButton.addEventListener('click', () => {
+                            let hours = timeHoursField.textContent;
+                            let minutes = timeMinutesField.textContent;
+                            workTimeInput.value = `${hours}:${minutes}`;
+                            timepickerWidget.classList.add('visually-hidden');
+                        });
                     });
-                });
+                }
+                
 
                 body.addEventListener('click',(e) => {
-                    if(!timepickerWidget.classList.contains('visually-hidden')) {
+                    if(timepickerWidget && !timepickerWidget.classList.contains('visually-hidden')) {
                         let timepickerWidgetChildren = timepickerWidget.querySelectorAll('.timepicker-widget *');
 
                         for (let i = 0; i <= timepickerWidgetChildren.length - 1; i++) {
